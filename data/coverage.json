@@ -1,0 +1,226 @@
+{
+ "updated_at": "2026-11-18T22:56:46.069934+00:00",
+ "keep_days": 400,
+ "states": {
+  "AK": {
+   "status": "ok",
+   "rows": 1,
+   "latest_notice": "2026-07-06"
+  },
+  "AL": {
+   "status": "could not be read",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "AZ": {
+   "status": "ok",
+   "rows": 50,
+   "latest_notice": "2026-10-29"
+  },
+  "CA": {
+   "status": "ok",
+   "rows": 1696,
+   "latest_notice": "2026-11-16"
+  },
+  "CO": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "CT": {
+   "status": "ok",
+   "rows": 20,
+   "latest_notice": "2026-10-29"
+  },
+  "DC": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "DE": {
+   "status": "ok",
+   "rows": 6,
+   "latest_notice": "2026-11-12"
+  },
+  "FL": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "GA": {
+   "status": "could not be read",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "HI": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "IA": {
+   "status": "ok",
+   "rows": 107,
+   "latest_notice": "2026-11-10"
+  },
+  "ID": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "IL": {
+   "status": "ok",
+   "rows": 122,
+   "latest_notice": "2026-11-05"
+  },
+  "IN": {
+   "status": "could not be read",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "KS": {
+   "status": "ok",
+   "rows": 9,
+   "latest_notice": "2026-11-10"
+  },
+  "KY": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "LA": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "MA": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "MD": {
+   "status": "could not be read",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "ME": {
+   "status": "ok",
+   "rows": 7,
+   "latest_notice": "2026-10-12"
+  },
+  "MI": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "MO": {
+   "status": "could not be read",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "MS": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "MT": {
+   "status": "ok",
+   "rows": 6,
+   "latest_notice": "2026-07-21"
+  },
+  "ND": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "NE": {
+   "status": "ok",
+   "rows": 9,
+   "latest_notice": "2026-11-04"
+  },
+  "NJ": {
+   "status": "no notices in the last 400 days",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "NM": {
+   "status": "no notices in the last 400 days",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "NY": {
+   "status": "ok",
+   "rows": 243,
+   "latest_notice": "2026-11-04"
+  },
+  "OH": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "OK": {
+   "status": "ok",
+   "rows": 15,
+   "latest_notice": "2026-11-09"
+  },
+  "OR": {
+   "status": "ok",
+   "rows": 101,
+   "latest_notice": "2026-10-30"
+  },
+  "PA": {
+   "status": "no notices in the last 400 days",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "RI": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "SC": {
+   "status": "ok",
+   "rows": 50,
+   "latest_notice": "2026-12-31"
+  },
+  "SD": {
+   "status": "ok",
+   "rows": 4,
+   "latest_notice": "2026-08-10"
+  },
+  "TN": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "TX": {
+   "status": "no data from the state site",
+   "rows": 0,
+   "latest_notice": null
+  },
+  "UT": {
+   "status": "ok",
+   "rows": 20,
+   "latest_notice": "2026-10-30"
+  },
+  "VA": {
+   "status": "ok",
+   "rows": 80,
+   "latest_notice": "2026-11-13"
+  },
+  "VT": {
+   "status": "ok",
+   "rows": 8,
+   "latest_notice": "2026-10-20"
+  },
+  "WA": {
+   "status": "ok",
+   "rows": 207,
+   "latest_notice": "2027-01-05"
+  },
+  "WI": {
+   "status": "ok",
+   "rows": 869,
+   "latest_notice": "2026-11-17"
+  }
+ }
+}
