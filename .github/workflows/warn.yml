@@ -1,0 +1,33 @@
+name: WARN notices
+on:
+  schedule:
+    - cron: "37 10 * * *"   # every day, 10:37 UTC
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency: warn
+jobs:
+  load:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install warn-scraper warn-transformer
+      - name: Download every state's WARN list (a failing state is skipped)
+        run: |
+          mkdir -p raw
+          for st in $(python -c "from warn import utils; print(' '.join(utils.get_all_scrapers()))"); do
+            timeout 900 warn-scraper "$st" --data-dir raw --log-level WARNING || echo "skipped $st"
+          done
+      - name: Clean into data/
+        run: python ingest.py raw data
+      - name: Commit
+        run: |
+          git config user.name "jobgps-bot"
+          git config user.email "jobgps-bot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "WARN notices $(date -u +%F)"
+          git push
