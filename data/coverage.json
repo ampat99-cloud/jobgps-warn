@@ -1,226 +1,220 @@
 {
- "updated_at": "2026-11-18T22:56:46.069934+00:00",
+ "updated_at": "2026-11-19T01:56:51.892568+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
-   "status": "ok",
    "rows": 1,
-   "latest_notice": "2026-07-06"
+   "latest_notice": "2026-07-06",
+   "status": "ok"
   },
   "AL": {
-   "status": "could not be read",
    "rows": 0,
-   "latest_notice": null
+   "status": "could not be read",
+   "error": "KeyError: 'company'"
   },
   "AZ": {
-   "status": "ok",
-   "rows": 50,
-   "latest_notice": "2026-10-29"
+   "rows": 60,
+   "latest_notice": "2026-11-10",
+   "status": "ok"
   },
   "CA": {
-   "status": "ok",
-   "rows": 1696,
-   "latest_notice": "2026-11-16"
+   "rows": 1692,
+   "latest_notice": "2026-11-16",
+   "status": "ok"
   },
   "CO": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site",
+   "error": "Traceback (most recent call last): | KeyError: 'CO Notifications'"
   },
   "CT": {
-   "status": "ok",
    "rows": 20,
-   "latest_notice": "2026-10-29"
+   "latest_notice": "2026-10-29",
+   "status": "ok"
   },
   "DC": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site",
+   "error": "Traceback (most recent call last):"
   },
   "DE": {
-   "status": "ok",
    "rows": 6,
-   "latest_notice": "2026-11-12"
+   "latest_notice": "2026-11-12",
+   "status": "ok"
   },
   "FL": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site",
+   "error": "Traceback (most recent call last): | IndexError: list index out of range"
   },
   "GA": {
-   "status": "could not be read",
    "rows": 0,
-   "latest_notice": null
+   "status": "could not be read",
+   "error": "KeyError: 'Type of Layoff or Closure'"
   },
   "HI": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site",
+   "error": "2026-11-19 01:49:28,093 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
   },
   "IA": {
-   "status": "ok",
    "rows": 107,
-   "latest_notice": "2026-11-10"
+   "latest_notice": "2026-11-10",
+   "status": "ok"
   },
   "ID": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site",
+   "error": "Traceback (most recent call last): | raise PdfminerException(e) | pdfplumber.utils.exceptions.PdfminerException: No /Root object! - Is this really a PDF?"
   },
   "IL": {
-   "status": "ok",
-   "rows": 122,
-   "latest_notice": "2026-11-05"
+   "rows": 121,
+   "latest_notice": "2026-11-05",
+   "status": "ok"
   },
   "IN": {
-   "status": "could not be read",
    "rows": 0,
-   "latest_notice": null
+   "status": "could not be read",
+   "error": "KeyError: 'All/td>'"
   },
   "KS": {
-   "status": "ok",
    "rows": 9,
-   "latest_notice": "2026-11-10"
+   "latest_notice": "2026-11-10",
+   "status": "ok"
   },
   "KY": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site",
+   "error": "Traceback (most recent call last): | ModuleNotFoundError: No module named 'pyquery'"
   },
   "LA": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site",
+   "error": "Traceback (most recent call last): | TypeError: write() argument must be str, not None"
   },
   "MA": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site"
   },
   "MD": {
-   "status": "could not be read",
    "rows": 0,
-   "latest_notice": null
+   "status": "could not be read",
+   "error": "AttributeError: 'list' object has no attribute 'strip'"
   },
   "ME": {
-   "status": "ok",
-   "rows": 7,
-   "latest_notice": "2026-10-12"
+   "rows": 8,
+   "latest_notice": "2026-10-12",
+   "status": "ok"
   },
   "MI": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site",
+   "error": "Traceback (most recent call last): | ModuleNotFoundError: No module named 'pyquery'"
   },
   "MO": {
-   "status": "could not be read",
    "rows": 0,
-   "latest_notice": null
+   "status": "could not be read",
+   "error": "KeyError: '03/20/0202'"
   },
   "MS": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site"
   },
   "MT": {
-   "status": "ok",
    "rows": 6,
-   "latest_notice": "2026-07-21"
+   "latest_notice": "2026-07-21",
+   "status": "ok"
   },
   "ND": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site"
   },
   "NE": {
-   "status": "ok",
    "rows": 9,
-   "latest_notice": "2026-11-04"
+   "latest_notice": "2026-11-04",
+   "status": "ok"
   },
   "NJ": {
-   "status": "no notices in the last 400 days",
    "rows": 0,
-   "latest_notice": null
+   "status": "no notices in the last 400 days"
   },
   "NM": {
-   "status": "no notices in the last 400 days",
    "rows": 0,
-   "latest_notice": null
+   "status": "no notices in the last 400 days"
   },
   "NY": {
-   "status": "ok",
    "rows": 243,
-   "latest_notice": "2026-11-04"
+   "latest_notice": "2026-11-04",
+   "status": "ok"
   },
   "OH": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site",
+   "error": "Traceback (most recent call last):"
   },
   "OK": {
-   "status": "ok",
    "rows": 15,
-   "latest_notice": "2026-11-09"
+   "latest_notice": "2026-11-09",
+   "status": "ok"
   },
   "OR": {
-   "status": "ok",
    "rows": 101,
-   "latest_notice": "2026-10-30"
+   "latest_notice": "2026-10-30",
+   "status": "ok"
   },
   "PA": {
-   "status": "no notices in the last 400 days",
    "rows": 0,
-   "latest_notice": null
+   "status": "no notices in the last 400 days"
   },
   "RI": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site",
+   "error": "Traceback (most recent call last): | UnboundLocalError: cannot access local variable 'headers' where it is not associated with a value"
   },
   "SC": {
-   "status": "ok",
    "rows": 50,
-   "latest_notice": "2026-12-31"
+   "latest_notice": "2026-12-31",
+   "status": "ok"
   },
   "SD": {
-   "status": "ok",
    "rows": 4,
-   "latest_notice": "2026-08-10"
+   "latest_notice": "2026-08-10",
+   "status": "ok"
   },
   "TN": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site",
+   "error": "2026-11-19 01:54:46,137 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
   },
   "TX": {
-   "status": "no data from the state site",
    "rows": 0,
-   "latest_notice": null
+   "status": "no data from the state site",
+   "error": "Traceback (most recent call last): | raise Exception(\"Scraper isn't scraping.\") | Exception: Scraper isn't scraping."
   },
   "UT": {
-   "status": "ok",
    "rows": 20,
-   "latest_notice": "2026-10-30"
+   "latest_notice": "2026-10-30",
+   "status": "ok"
   },
   "VA": {
-   "status": "ok",
-   "rows": 80,
-   "latest_notice": "2026-11-13"
+   "rows": 79,
+   "latest_notice": "2026-11-13",
+   "status": "ok"
   },
   "VT": {
-   "status": "ok",
    "rows": 8,
-   "latest_notice": "2026-10-20"
+   "latest_notice": "2026-10-20",
+   "status": "ok"
   },
   "WA": {
-   "status": "ok",
-   "rows": 207,
-   "latest_notice": "2027-01-05"
+   "rows": 208,
+   "latest_notice": "2027-01-18",
+   "status": "ok"
   },
   "WI": {
-   "status": "ok",
    "rows": 869,
-   "latest_notice": "2026-11-17"
+   "latest_notice": "2026-11-17",
+   "status": "ok"
   }
  }
 }
