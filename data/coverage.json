@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T02:33:07.893814+00:00",
+ "updated_at": "2026-11-19T19:26:04.909434+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
@@ -21,8 +21,8 @@
    "read_by": "cleaner"
   },
   "CA": {
-   "rows": 1692,
-   "latest_notice": "2026-11-16",
+   "rows": 1705,
+   "latest_notice": "2026-11-18",
    "status": "ok",
    "read_by": "cleaner"
   },
@@ -61,7 +61,7 @@
   "HI": {
    "rows": 0,
    "status": "no data from the state site",
-   "error": "2026-11-19 02:27:57,570 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
+   "error": "2026-11-19 19:16:29,349 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
   },
   "IA": {
    "rows": 107,
@@ -93,8 +93,8 @@
    "read_by": "cleaner"
   },
   "KY": {
-   "rows": 41,
-   "latest_notice": "2026-12-31",
+   "rows": 42,
+   "latest_notice": "2027-01-13",
    "status": "ok",
    "read_by": "cleaner"
   },
@@ -207,10 +207,9 @@
    "read_by": "cleaner"
   },
   "TN": {
-   "rows": 65,
-   "latest_notice": "2026-11-09",
-   "status": "ok",
-   "read_by": "cleaner"
+   "rows": 0,
+   "status": "no data from the state site",
+   "error": "Traceback (most recent call last): | raise ConnectionError(err, request=request) | requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   "TX": {
    "rows": 0,
