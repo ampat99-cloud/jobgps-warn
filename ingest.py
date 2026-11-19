@@ -41,19 +41,29 @@ def as_date(v):
         return None
 
 
+def scrape_error(raw_dir: Path, st: str):
+    """Last meaningful lines of that state's scraper log (written by the workflow), so a failure can be fixed."""
+    log = raw_dir.parent / "logs" / f"{st}.txt"
+    if not log.exists():
+        return None
+    lines = [l.strip() for l in log.read_text(errors="replace").splitlines() if l.strip()]
+    err = [l for l in lines if re.search(r"Error|Exception|Traceback|HTTP|status|refused|timed out|403|404|500", l)]
+    return " | ".join((err or lines)[-3:])[:600] or None
+
+
 def collect(raw_dir: Path, today: datetime.date):
     cutoff = today - datetime.timedelta(days=KEEP_DAYS)
     rows, coverage = [], []
     for st in wtu.get_all_transformers():
         path = raw_dir / f"{st}.csv"
         if not path.exists():
-            coverage.append({"state": st.upper(), "rows": 0, "latest_notice": None, "status": "no data from the state site"})
+            coverage.append({"state": st.upper(), "rows": 0, "latest_notice": None, "status": "no data from the state site", "error": scrape_error(raw_dir, st)})
             continue
         try:
             items = import_module(f"warn_transformer.transformers.{st}").Transformer(raw_dir).transform()
         except Exception as e:  # one broken state must never stop the others
             logging.warning("%s failed: %s", st, e)
-            coverage.append({"state": st.upper(), "rows": 0, "latest_notice": None, "status": "could not be read"})
+            coverage.append({"state": st.upper(), "rows": 0, "latest_notice": None, "status": "could not be read", "error": f"{type(e).__name__}: {e}"[:600]})
             continue
         kept, latest = 0, None
         for it in items:
@@ -102,7 +112,7 @@ def write_files(rows, coverage, out: Path, now_iso: str):
     for k, v in shards.items():
         (out / "warn" / f"{k}.json").write_text(json.dumps(v, separators=(",", ":")))
     (out / "coverage.json").write_text(json.dumps({"updated_at": now_iso, "keep_days": KEEP_DAYS,
-        "states": {c["state"]: {"status": c["status"], "rows": c["rows"], "latest_notice": c["latest_notice"]} for c in coverage}}, indent=1))
+        "states": {c["state"]: {k: v for k, v in c.items() if k != "state" and v is not None} for c in coverage}}, indent=1))
 
 
 def main():
