@@ -7,7 +7,7 @@ WARN notices are public employer filings.
 
 Usage:  python ingest.py raw data   (writes data/coverage.json and data/warn/<letter>.json; the workflow commits them)
 """
-import datetime, json, logging, re, sys
+import csv, datetime, hashlib, json, logging, re, sys
 from importlib import import_module
 from pathlib import Path
 
@@ -41,6 +41,59 @@ def as_date(v):
         return None
 
 
+# When a state's cleaner breaks (the state renamed a column, a typo'd date), read the raw CSV by its column names instead.
+COMPANY_COL = re.compile(r"company|employer|business|organi[sz]ation|firm", re.I)
+NOT_COMPANY = re.compile(r"address|city|county|contact|phone|type|naics|industry|\bid\b|number|zip|state", re.I)
+DATE_COL = re.compile(r"date", re.I)
+DATE_PREFER = re.compile(r"notice|received|notif|warn|filed", re.I)
+DATE_AVOID = re.compile(r"effective|layoff date|separation|closing|closure date|end|start|begin", re.I)
+JOBS_COL = re.compile(r"employees|affected|workers|jobs|layoffs|positions|headcount|total", re.I)
+LOC_COL = re.compile(r"city|location|county|address|site", re.I)
+DATE_FORMATS = ["%m/%d/%Y", "%Y-%m-%d", "%m/%d/%y", "%B %d, %Y", "%b %d, %Y", "%d-%b-%y", "%d-%b-%Y", "%m-%d-%Y", "%Y/%m/%d", "%m.%d.%Y", "%Y-%m-%d %H:%M:%S"]
+
+
+def parse_date(v):
+    v = (v or "").strip()
+    if not v:
+        return None
+    for fmt in DATE_FORMATS:
+        try:
+            return datetime.datetime.strptime(v[:len(datetime.datetime(2026, 12, 31, 23, 59, 59).strftime(fmt))] if fmt.endswith("%S") else v, fmt).date()
+        except Exception:
+            pass
+    try:
+        from dateutil import parser as dp
+        return dp.parse(v, fuzzy=True).date()
+    except Exception:
+        return None
+
+
+def fallback_rows(path: Path):
+    with open(path, newline="", encoding="utf-8", errors="replace") as f:
+        rows = list(csv.DictReader(f))
+    if not rows:
+        return []
+    hdr = [h for h in rows[0].keys() if h]
+
+    def pick(rx, bad=None, prefer=None):
+        cands = [h for h in hdr if rx.search(h) and not (bad and bad.search(h))]
+        if prefer:
+            cands = [h for h in cands if prefer.search(h)] or cands
+        return cands[0] if cands else None
+
+    cc, dc = pick(COMPANY_COL, NOT_COMPANY), pick(DATE_COL, DATE_AVOID, DATE_PREFER) or pick(DATE_COL)
+    jc, lc = pick(JOBS_COL), pick(LOC_COL)
+    if not cc or not dc:
+        raise ValueError(f"raw columns not recognised: {hdr[:12]}")
+    out = []
+    for r in rows:
+        jobs = re.sub(r"[^0-9]", "", str(r.get(jc) or ""))[:7] if jc else ""
+        out.append({"hash_id": hashlib.sha1(json.dumps(r, sort_keys=True).encode()).hexdigest()[:40], "company": (r.get(cc) or "").strip(),
+                    "notice_date": parse_date(r.get(dc)), "location": (r.get(lc) or "").strip() if lc else None,
+                    "jobs": int(jobs) if jobs else None, "effective_date": None, "is_closure": None})
+    return out
+
+
 def scrape_error(raw_dir: Path, st: str):
     """Last meaningful lines of that state's scraper log (written by the workflow), so a failure can be fixed."""
     log = raw_dir.parent / "logs" / f"{st}.txt"
@@ -59,12 +112,16 @@ def collect(raw_dir: Path, today: datetime.date):
         if not path.exists():
             coverage.append({"state": st.upper(), "rows": 0, "latest_notice": None, "status": "no data from the state site", "error": scrape_error(raw_dir, st)})
             continue
+        how = "cleaner"
         try:
             items = import_module(f"warn_transformer.transformers.{st}").Transformer(raw_dir).transform()
         except Exception as e:  # one broken state must never stop the others
-            logging.warning("%s failed: %s", st, e)
-            coverage.append({"state": st.upper(), "rows": 0, "latest_notice": None, "status": "could not be read", "error": f"{type(e).__name__}: {e}"[:600]})
-            continue
+            logging.warning("%s cleaner failed: %s", st, e)
+            try:
+                items, how = fallback_rows(path), "raw columns"
+            except Exception as e2:
+                coverage.append({"state": st.upper(), "rows": 0, "latest_notice": None, "status": "could not be read", "error": f"{type(e).__name__}: {e} / raw: {e2}"[:600]})
+                continue
         kept, latest = 0, None
         for it in items:
             nd = as_date(it.get("notice_date"))
@@ -87,8 +144,24 @@ def collect(raw_dir: Path, today: datetime.date):
                 "jobs": it.get("jobs"),
                 "is_closure": it.get("is_closure"),
             })
+        if not kept and how == "cleaner":
+            # The cleaner ran but kept nothing recent: try the raw columns once before calling the state empty.
+            try:
+                raw = fallback_rows(path)
+                if any((d := r["notice_date"]) and cutoff <= d <= today for r in raw):
+                    for it in raw:
+                        nd, key = it["notice_date"], norm_name(it["company"])
+                        if nd is None or nd < cutoff or nd > today + datetime.timedelta(days=60) or len(key) < 2:
+                            continue
+                        latest = nd if latest is None or nd > latest else latest
+                        kept += 1
+                        rows.append({"hash_id": f"{st}:{it['hash_id']}", "state": st.upper(), "company": it["company"][:200], "key": key[:200], "key2": loose_key(key)[:200],
+                                     "location": (it["location"] or None) and it["location"][:200], "notice_date": nd.isoformat(), "effective_date": None, "jobs": it["jobs"], "is_closure": None})
+                    how = "raw columns"
+            except Exception as e:
+                logging.warning("%s raw read failed: %s", st, e)
         coverage.append({"state": st.upper(), "rows": kept, "latest_notice": latest.isoformat() if latest else None,
-                         "status": "ok" if kept else "no notices in the last 400 days"})
+                         "status": "ok" if kept else "no notices in the last 400 days", "read_by": how})
     # same notice listed twice by a state: keep one
     rows = list({r["hash_id"]: r for r in rows}.values())
     return rows, coverage
