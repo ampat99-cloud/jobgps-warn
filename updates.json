@@ -1,0 +1,10 @@
+{
+ "items": [
+  {
+   "id": "2026-11-18-v2.10.15",
+   "date": "18 Nov 2026",
+   "title": "JobGPS 2.10.15",
+   "body": "Reads Dover and UKG job pages, follows a company’s own job-board link, and checks layoff notices in 27 states."
+  }
+ ]
+}
