@@ -1,7 +1,7 @@
 name: WARN notices
 on:
   schedule:
-    - cron: "37 10 * * *"   # every day, 10:37 UTC
+    - cron: "37 10 * * *"→ Runs at 10:37   # every day, 10:37 UTC
   workflow_dispatch: {}
 permissions:
   contents: write
@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install warn-scraper warn-transformer
+      - run: pip install warn-scraper warn-transformer pyquery python-dateutil
       - name: Download every state's WARN list (a failing state is skipped)
         run: |
           mkdir -p raw logs
