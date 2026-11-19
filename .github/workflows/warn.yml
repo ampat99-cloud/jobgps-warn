@@ -18,9 +18,10 @@ jobs:
       - run: pip install warn-scraper warn-transformer
       - name: Download every state's WARN list (a failing state is skipped)
         run: |
-          mkdir -p raw
+          mkdir -p raw logs
           for st in $(python -c "from warn import utils; print(' '.join(utils.get_all_scrapers()))"); do
-            timeout 900 warn-scraper "$st" --data-dir raw --log-level WARNING || echo "skipped $st"
+            timeout 900 warn-scraper "$st" --data-dir raw --log-level WARNING > "logs/$st.txt" 2>&1 || echo "skipped $st"
+            tail -n 3 "logs/$st.txt"
           done
       - name: Clean into data/
         run: python ingest.py raw data
