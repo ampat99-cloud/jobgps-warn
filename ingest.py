@@ -44,10 +44,10 @@ def as_date(v):
 # When a state's cleaner breaks (the state renamed a column, a typo'd date), read the raw CSV by its column names instead.
 COMPANY_COL = re.compile(r"company|employer|business|organi[sz]ation|firm", re.I)
 NOT_COMPANY = re.compile(r"address|city|county|contact|phone|type|naics|industry|\bid\b|number|zip|state", re.I)
-DATE_COL = re.compile(r"date", re.I)
+DATE_COL = re.compile(r"date|received", re.I)
 DATE_PREFER = re.compile(r"notice|received|notif|warn|filed", re.I)
 DATE_AVOID = re.compile(r"effective|layoff date|separation|closing|closure date|end|start|begin", re.I)
-JOBS_COL = re.compile(r"employees|affected|workers|jobs|layoffs|positions|headcount|total", re.I)
+JOBS_COL = re.compile(r"employees|affected|workers|jobs|layoffs|positions|headcount|total|#", re.I)
 LOC_COL = re.compile(r"city|location|county|address|site", re.I)
 DATE_FORMATS = ["%m/%d/%Y", "%Y-%m-%d", "%m/%d/%y", "%B %d, %Y", "%b %d, %Y", "%d-%b-%y", "%d-%b-%Y", "%m-%d-%Y", "%Y/%m/%d", "%m.%d.%Y", "%Y-%m-%d %H:%M:%S"]
 
@@ -81,7 +81,9 @@ def fallback_rows(path: Path):
             cands = [h for h in cands if prefer.search(h)] or cands
         return cands[0] if cands else None
 
-    cc, dc = pick(COMPANY_COL, NOT_COMPANY), pick(DATE_COL, DATE_AVOID, DATE_PREFER) or pick(DATE_COL)
+    # Some states call the employer column "Title" or "Name" (Missouri).
+    cc = pick(COMPANY_COL, NOT_COMPANY) or pick(re.compile(r"^(title|name)\b", re.I))
+    dc = pick(DATE_COL, DATE_AVOID, DATE_PREFER) or pick(DATE_COL)
     jc, lc = pick(JOBS_COL), pick(LOC_COL)
     if not cc or not dc:
         raise ValueError(f"raw columns not recognised: {hdr[:12]}")
