@@ -1,7 +1,7 @@
 name: WARN notices
 on:
   schedule:
-    - cron: "37 10 * * *"→ Runs at 10:37   # every day, 10:37 UTC
+    - cron: "37 10 * * *"   # every day, 10:37 UTC
   workflow_dispatch: {}
 permissions:
   contents: write
