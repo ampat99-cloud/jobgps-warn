@@ -1,26 +1,30 @@
 {
- "updated_at": "2026-11-19T01:56:51.892568+00:00",
+ "updated_at": "2026-11-19T02:20:32.729051+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
    "rows": 1,
    "latest_notice": "2026-07-06",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "AL": {
-   "rows": 0,
-   "status": "could not be read",
-   "error": "KeyError: 'company'"
+   "rows": 41,
+   "latest_notice": "2026-11-06",
+   "status": "ok",
+   "read_by": "raw columns"
   },
   "AZ": {
-   "rows": 60,
-   "latest_notice": "2026-11-10",
-   "status": "ok"
+   "rows": 50,
+   "latest_notice": "2026-10-29",
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "CA": {
    "rows": 1692,
    "latest_notice": "2026-11-16",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "CO": {
    "rows": 0,
@@ -30,7 +34,8 @@
   "CT": {
    "rows": 20,
    "latest_notice": "2026-10-29",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "DC": {
    "rows": 0,
@@ -40,7 +45,8 @@
   "DE": {
    "rows": 6,
    "latest_notice": "2026-11-12",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "FL": {
    "rows": 0,
@@ -49,18 +55,19 @@
   },
   "GA": {
    "rows": 0,
-   "status": "could not be read",
-   "error": "KeyError: 'Type of Layoff or Closure'"
+   "status": "no notices in the last 400 days",
+   "read_by": "raw columns"
   },
   "HI": {
    "rows": 0,
    "status": "no data from the state site",
-   "error": "2026-11-19 01:49:28,093 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
+   "error": "2026-11-19 02:14:36,537 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
   },
   "IA": {
    "rows": 107,
    "latest_notice": "2026-11-10",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "ID": {
    "rows": 0,
@@ -70,22 +77,26 @@
   "IL": {
    "rows": 121,
    "latest_notice": "2026-11-05",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "IN": {
-   "rows": 0,
-   "status": "could not be read",
-   "error": "KeyError: 'All/td>'"
+   "rows": 38,
+   "latest_notice": "2026-11-12",
+   "status": "ok",
+   "read_by": "raw columns"
   },
   "KS": {
    "rows": 9,
    "latest_notice": "2026-11-10",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "KY": {
-   "rows": 0,
-   "status": "no data from the state site",
-   "error": "Traceback (most recent call last): | ModuleNotFoundError: No module named 'pyquery'"
+   "rows": 41,
+   "latest_notice": "2026-12-31",
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "LA": {
    "rows": 0,
@@ -99,22 +110,23 @@
   "MD": {
    "rows": 0,
    "status": "could not be read",
-   "error": "AttributeError: 'list' object has no attribute 'strip'"
+   "error": "AttributeError: 'list' object has no attribute 'strip' / raw: raw columns not recognised: []"
   },
   "ME": {
-   "rows": 8,
+   "rows": 7,
    "latest_notice": "2026-10-12",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "MI": {
    "rows": 0,
    "status": "no data from the state site",
-   "error": "Traceback (most recent call last): | ModuleNotFoundError: No module named 'pyquery'"
+   "error": "Traceback (most recent call last): | KeyError: 'Site address'"
   },
   "MO": {
    "rows": 0,
    "status": "could not be read",
-   "error": "KeyError: '03/20/0202'"
+   "error": "KeyError: '03/20/0202' / raw: raw columns not recognised: ['Received Sort descending', 'Title', 'Industry', 'Location(s)', 'County', 'Region', 'Type', 'Layoff date(s)', '# affected', 'Notes']"
   },
   "MS": {
    "rows": 0,
@@ -123,7 +135,8 @@
   "MT": {
    "rows": 6,
    "latest_notice": "2026-07-21",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "ND": {
    "rows": 0,
@@ -132,39 +145,48 @@
   "NE": {
    "rows": 9,
    "latest_notice": "2026-11-04",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "NJ": {
-   "rows": 0,
-   "status": "no notices in the last 400 days"
+   "rows": 93,
+   "latest_notice": "2027-01-03",
+   "status": "ok",
+   "read_by": "raw columns"
   },
   "NM": {
    "rows": 0,
-   "status": "no notices in the last 400 days"
+   "status": "no notices in the last 400 days",
+   "read_by": "cleaner"
   },
   "NY": {
    "rows": 243,
    "latest_notice": "2026-11-04",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "OH": {
    "rows": 0,
    "status": "no data from the state site",
-   "error": "Traceback (most recent call last):"
+   "error": "Traceback (most recent call last): | raise ValueError(\"Could not find JSON data div\") | ValueError: Could not find JSON data div"
   },
   "OK": {
    "rows": 15,
    "latest_notice": "2026-11-09",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "OR": {
    "rows": 101,
    "latest_notice": "2026-10-30",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "PA": {
-   "rows": 0,
-   "status": "no notices in the last 400 days"
+   "rows": 69,
+   "latest_notice": "2027-01-18",
+   "status": "ok",
+   "read_by": "raw columns"
   },
   "RI": {
    "rows": 0,
@@ -174,17 +196,19 @@
   "SC": {
    "rows": 50,
    "latest_notice": "2026-12-31",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "SD": {
    "rows": 4,
    "latest_notice": "2026-08-10",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "TN": {
    "rows": 0,
    "status": "no data from the state site",
-   "error": "2026-11-19 01:54:46,137 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
+   "error": "2026-11-19 02:18:20,794 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
   },
   "TX": {
    "rows": 0,
@@ -194,27 +218,32 @@
   "UT": {
    "rows": 20,
    "latest_notice": "2026-10-30",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "VA": {
    "rows": 79,
    "latest_notice": "2026-11-13",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "VT": {
    "rows": 8,
    "latest_notice": "2026-10-20",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "WA": {
    "rows": 208,
    "latest_notice": "2027-01-18",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "WI": {
    "rows": 869,
    "latest_notice": "2026-11-17",
-   "status": "ok"
+   "status": "ok",
+   "read_by": "cleaner"
   }
  }
 }
