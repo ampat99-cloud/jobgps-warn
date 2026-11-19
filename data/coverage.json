@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T02:20:32.729051+00:00",
+ "updated_at": "2026-11-19T02:33:07.893814+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
@@ -15,8 +15,8 @@
    "read_by": "raw columns"
   },
   "AZ": {
-   "rows": 50,
-   "latest_notice": "2026-10-29",
+   "rows": 51,
+   "latest_notice": "2026-11-10",
    "status": "ok",
    "read_by": "cleaner"
   },
@@ -61,7 +61,7 @@
   "HI": {
    "rows": 0,
    "status": "no data from the state site",
-   "error": "2026-11-19 02:14:36,537 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
+   "error": "2026-11-19 02:27:57,570 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
   },
   "IA": {
    "rows": 107,
@@ -113,7 +113,7 @@
    "error": "AttributeError: 'list' object has no attribute 'strip' / raw: raw columns not recognised: []"
   },
   "ME": {
-   "rows": 7,
+   "rows": 8,
    "latest_notice": "2026-10-12",
    "status": "ok",
    "read_by": "cleaner"
@@ -124,9 +124,10 @@
    "error": "Traceback (most recent call last): | KeyError: 'Site address'"
   },
   "MO": {
-   "rows": 0,
-   "status": "could not be read",
-   "error": "KeyError: '03/20/0202' / raw: raw columns not recognised: ['Received Sort descending', 'Title', 'Industry', 'Location(s)', 'County', 'Region', 'Type', 'Layoff date(s)', '# affected', 'Notes']"
+   "rows": 43,
+   "latest_notice": "2026-11-17",
+   "status": "ok",
+   "read_by": "raw columns"
   },
   "MS": {
    "rows": 0,
@@ -206,9 +207,10 @@
    "read_by": "cleaner"
   },
   "TN": {
-   "rows": 0,
-   "status": "no data from the state site",
-   "error": "2026-11-19 02:18:20,794 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
+   "rows": 65,
+   "latest_notice": "2026-11-09",
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "TX": {
    "rows": 0,
