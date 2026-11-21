@@ -46,7 +46,7 @@ COMPANY_COL = re.compile(r"company|employer|business|organi[sz]ation|firm", re.I
 NOT_COMPANY = re.compile(r"address|city|county|contact|phone|type|naics|industry|\bid\b|number|zip|state", re.I)
 DATE_COL = re.compile(r"date|received", re.I)
 DATE_PREFER = re.compile(r"notice|received|notif|warn|filed", re.I)
-DATE_AVOID = re.compile(r"effective|layoff date|separation|closing|closure date|end|start|begin", re.I)
+DATE_AVOID = re.compile(r"effective|layoff date|separation|closing|closure date|\bend\b|\bstart|\bbegin", re.I)
 JOBS_COL = re.compile(r"employees|affected|workers|jobs|layoffs|positions|headcount|total|#", re.I)
 LOC_COL = re.compile(r"city|location|county|address|site", re.I)
 DATE_FORMATS = ["%m/%d/%Y", "%Y-%m-%d", "%m/%d/%y", "%B %d, %Y", "%b %d, %Y", "%d-%b-%y", "%d-%b-%Y", "%m-%d-%Y", "%Y/%m/%d", "%m.%d.%Y", "%Y-%m-%d %H:%M:%S"]
@@ -90,7 +90,7 @@ def fallback_rows(path: Path):
     out = []
     for r in rows:
         jobs = re.sub(r"[^0-9]", "", str(r.get(jc) or ""))[:7] if jc else ""
-        out.append({"hash_id": hashlib.sha1(json.dumps(r, sort_keys=True).encode()).hexdigest()[:40], "company": (r.get(cc) or "").strip(),
+        out.append({"hash_id": hashlib.sha1(json.dumps(sorted((str(k), str(v)) for k, v in r.items())).encode()).hexdigest()[:40], "company": (r.get(cc) or "").strip(),
                     "notice_date": parse_date(r.get(dc)), "location": (r.get(lc) or "").strip() if lc else None,
                     "jobs": int(jobs) if jobs else None, "effective_date": None, "is_closure": None})
     return out
@@ -106,17 +106,40 @@ def scrape_error(raw_dir: Path, st: str):
     return " | ".join((err or lines)[-3:])[:600] or None
 
 
+# Every state plus DC, so the coverage file says something true about each one.
+ALL_STATES = ("ak al ar az ca co ct dc de fl ga hi ia id il in ks ky la ma md me mi mn mo ms mt nc nd ne nh nj nm nv ny oh ok or pa ri sc sd tn tx ut va vt wa wi wv wy").split()
+# Checked 20 Nov 2026 from GitHub's servers: these state sites refuse automated reading (or have no public list), so they stay empty here.
+NO_READER = {
+    "ma": "state site refuses automated reading (403)", "nv": "state site refuses automated reading (403)",
+    "tn": "state site refuses automated reading (403)", "nh": "state site refuses automated reading (403)",
+    "wy": "state site refuses automated reading (403)", "nd": "state site blocks readers outside its area",
+    "mn": "state site puts readers behind a bot check", "ar": "state WARN page has moved; no public list found yet",
+    "hi": "state WARN page has moved; no public list found yet", "wv": "no reader written yet",
+}
+
+
 def collect(raw_dir: Path, today: datetime.date):
     cutoff = today - datetime.timedelta(days=KEEP_DAYS)
     rows, coverage = [], []
-    for st in wtu.get_all_transformers():
+    try:
+        direct = set(json.loads((raw_dir / "direct.json").read_text()))
+    except Exception:
+        direct = set()
+    cleaners = set(wtu.get_all_transformers())
+    for st in sorted(set(ALL_STATES) | cleaners | direct):
         path = raw_dir / f"{st}.csv"
         if not path.exists():
-            coverage.append({"state": st.upper(), "rows": 0, "latest_notice": None, "status": "no data from the state site", "error": scrape_error(raw_dir, st)})
+            if st in cleaners:
+                coverage.append({"state": st.upper(), "rows": 0, "latest_notice": None, "status": NO_READER.get(st, "no data from the state site"), "error": scrape_error(raw_dir, st)})
+            else:
+                coverage.append({"state": st.upper(), "rows": 0, "latest_notice": None, "status": NO_READER.get(st, "no reader for this state yet")})
             continue
         how = "cleaner"
         try:
-            items = import_module(f"warn_transformer.transformers.{st}").Transformer(raw_dir).transform()
+            if st in direct or st not in cleaners:
+                items, how = fallback_rows(path), "direct reader" if st in direct else "raw columns"
+            else:
+                items = import_module(f"warn_transformer.transformers.{st}").Transformer(raw_dir).transform()
         except Exception as e:  # one broken state must never stop the others
             logging.warning("%s cleaner failed: %s", st, e)
             try:
