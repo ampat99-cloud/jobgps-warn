@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T02:07:59.023581+00:00",
+ "updated_at": "2026-11-21T02:22:15.794974+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
@@ -19,8 +19,8 @@
    "status": "state WARN page has moved; no public list found yet"
   },
   "AZ": {
-   "rows": 61,
-   "latest_notice": "2026-11-18",
+   "rows": 25,
+   "latest_notice": "2026-09-15",
    "status": "ok",
    "read_by": "cleaner"
   },
@@ -68,7 +68,7 @@
   "HI": {
    "rows": 0,
    "status": "state WARN page has moved; no public list found yet",
-   "error": "2026-11-21 01:55:07,591 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
+   "error": "2026-11-21 02:16:09,175 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
   },
   "IA": {
    "rows": 107,
@@ -107,9 +107,10 @@
    "read_by": "cleaner"
   },
   "LA": {
-   "rows": 0,
-   "status": "no data from the state site",
-   "error": "Traceback (most recent call last): | TypeError: write() argument must be str, not None"
+   "rows": 23,
+   "latest_notice": "2026-11-10",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "MA": {
    "rows": 0,
@@ -122,14 +123,14 @@
    "read_by": "direct reader"
   },
   "ME": {
-   "rows": 8,
+   "rows": 7,
    "latest_notice": "2026-10-12",
    "status": "ok",
    "read_by": "cleaner"
   },
   "MI": {
-   "rows": 63,
-   "latest_notice": "2027-01-18",
+   "rows": 73,
+   "latest_notice": "2026-11-20",
    "status": "ok",
    "read_by": "direct reader"
   },
@@ -138,10 +139,9 @@
    "status": "state site puts readers behind a bot check"
   },
   "MO": {
-   "rows": 43,
-   "latest_notice": "2026-11-17",
-   "status": "ok",
-   "read_by": "direct reader"
+   "rows": 0,
+   "status": "no notices in the last 400 days",
+   "read_by": "cleaner"
   },
   "MS": {
    "rows": 17,
@@ -156,8 +156,10 @@
    "read_by": "cleaner"
   },
   "NC": {
-   "rows": 0,
-   "status": "no reader for this state yet"
+   "rows": 60,
+   "latest_notice": "2026-03-24",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "ND": {
    "rows": 0,
@@ -180,9 +182,10 @@
    "read_by": "raw columns"
   },
   "NM": {
-   "rows": 0,
-   "status": "no notices in the last 400 days",
-   "read_by": "cleaner"
+   "rows": 5,
+   "latest_notice": "2026-10-30",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "NV": {
    "rows": 0,
@@ -237,14 +240,16 @@
    "read_by": "cleaner"
   },
   "TN": {
-   "rows": 0,
-   "status": "state site refuses automated reading (403)",
-   "error": "2026-11-21 02:03:07,473 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
+   "rows": 65,
+   "latest_notice": "2026-11-09",
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "TX": {
-   "rows": 0,
-   "status": "no data from the state site",
-   "error": "Traceback (most recent call last): | raise Exception(\"Scraper isn't scraping.\") | Exception: Scraper isn't scraping."
+   "rows": 156,
+   "latest_notice": "2026-11-17",
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "UT": {
    "rows": 20,
@@ -278,7 +283,7 @@
   },
   "WV": {
    "rows": 0,
-   "status": "no reader written yet"
+   "status": "no public list found on the state site"
   },
   "WY": {
    "rows": 0,

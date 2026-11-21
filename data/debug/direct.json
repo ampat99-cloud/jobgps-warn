@@ -134,7 +134,7 @@
      "company": "Tessera Therapeutics",
      "notice_date": "1/6/26",
      "location": "",
-     "jobs": 1
+     "jobs": 90
     },
     {
      "company": "Alan Ritchey",
@@ -146,25 +146,25 @@
   },
   "MI": {
    "ok": true,
-   "rows": 117,
+   "rows": 131,
    "sample": [
     {
      "company": "AUTOKINITON (Euclid Manufacturing Co.)",
-     "notice_date": "1/18/2027",
-     "location": "",
-     "jobs": null
+     "notice_date": "2026-11-20",
+     "location": "1500 Euclid Ave., Detroit, MI 48211",
+     "jobs": 136
     },
     {
      "company": "Detroit Chassis, LLC",
-     "notice_date": "12/31/2026",
-     "location": "",
-     "jobs": null
+     "notice_date": "2026-11-04",
+     "location": "6501 Lynch Road, Detroit, MI 48234",
+     "jobs": 175
     },
     {
-     "company": "ADAC Automotive",
-     "notice_date": "12/18/2026",
-     "location": "",
-     "jobs": null
+     "company": "Family Endeavors, Inc.",
+     "notice_date": "2026-11-04",
+     "location": "Remote",
+     "jobs": 8
     }
    ]
   },
@@ -172,25 +172,82 @@
    "ok": false,
    "error": "ValueError: no table settings on the page",
    "where": [
-    "  File \"/home/runner/work/jobgps-warn/jobgps-warn/direct_states.py\", line 267, in read_ga",
+    "  File \"/home/runner/work/jobgps-warn/jobgps-warn/direct_states.py\", line 274, in read_ga",
     "    raise ValueError(\"no table settings on the page\")",
     "ValueError: no table settings on the page"
    ]
   },
   "NC": {
-   "ok": false,
-   "rows": 0,
-   "sample": []
+   "ok": true,
+   "rows": 119,
+   "sample": [
+    {
+     "company": "Avelo Airlines, Inc.",
+     "notice_date": "1/7/2026",
+     "location": "New Hanover County",
+     "jobs": 82
+    },
+    {
+     "company": "Avelo Airlines, Inc.",
+     "notice_date": "1/7/2026",
+     "location": "Wake County",
+     "jobs": 78
+    },
+    {
+     "company": "Thermo Fisher Scientific",
+     "notice_date": "1/8/2026",
+     "location": "Buncombe County",
+     "jobs": 423
+    }
+   ]
   },
   "NM": {
-   "ok": false,
-   "rows": 0,
-   "sample": []
+   "ok": true,
+   "rows": 9,
+   "sample": [
+    {
+     "company": "Atkore HDPE, LLC",
+     "notice_date": "4/27/26",
+     "location": "Bernalillo",
+     "jobs": 51
+    },
+    {
+     "company": "Conduent",
+     "notice_date": "6/29/26",
+     "location": "Bernalillo",
+     "jobs": 11
+    },
+    {
+     "company": "Sierra Lobo",
+     "notice_date": "9/15/26",
+     "location": "Otero",
+     "jobs": 242
+    }
+   ]
   },
   "LA": {
-   "ok": false,
-   "rows": 0,
-   "sample": []
+   "ok": true,
+   "rows": 44,
+   "sample": [
+    {
+     "company": "Dr. Reddy\u2019s Laboratories 8800 Line Ave Shreveport, LA 71106",
+     "notice_date": "1/7/25",
+     "location": "",
+     "jobs": 107
+    },
+    {
+     "company": "International Paper Company 4537 Hwy 480 Campti, LA 71411",
+     "notice_date": "2/13/25",
+     "location": "",
+     "jobs": 481
+    },
+    {
+     "company": "Boeing Company 13800 Old Gentilly Rd New Orleans, LA 70129",
+     "notice_date": "2/15/25",
+     "location": "",
+     "jobs": 89
+    }
+   ]
   },
   "MS": {
    "ok": true,
@@ -200,19 +257,19 @@
      "company": "Conduent Commercial Solutions, LLC",
      "notice_date": "6/29/26",
      "location": "Remote \u2013 Statewide",
-     "jobs": null
+     "jobs": 35
     },
     {
      "company": "Morrison Healthcare",
      "notice_date": "7/21/26",
      "location": "Pascagoula and Ocean Springs",
-     "jobs": 2026
+     "jobs": 86
     },
     {
      "company": "Hood Industries",
      "notice_date": "7/6/26",
      "location": "Wiggins",
-     "jobs": 2026
+     "jobs": 259
     }
    ]
   },
@@ -241,28 +298,24 @@
    ]
   },
   "MO": {
-   "ok": true,
-   "rows": 86,
-   "sample": [
-    {
-     "company": "TelaForce, LLC",
-     "notice_date": "01/19/2026",
-     "location": "Kansas City",
-     "jobs": 104
-    },
-    {
-     "company": "Greenbrier Manufacturing",
-     "notice_date": "01/22/2026",
-     "location": "Kennett",
-     "jobs": 94
-    },
-    {
-     "company": "National Aviation Services (NAS)",
-     "notice_date": "01/31/2026",
-     "location": "St. Louis (city)",
-     "jobs": 48
-    }
-   ]
+   "ok": false,
+   "rows": 0,
+   "sample": []
+  },
+  "WV": {
+   "ok": false,
+   "rows": 0,
+   "sample": []
+  },
+  "HI": {
+   "ok": false,
+   "rows": 0,
+   "sample": []
+  },
+  "AR": {
+   "ok": false,
+   "rows": 0,
+   "sample": []
   }
  },
  "notes": {
@@ -393,248 +446,107 @@
    "Name": "None",
    "Html": "<div class=\"com-wrapper search-results__section\"><div class=\"p-1\">\r\n<div class=\"row\">\r\n    <div class=\"col-12 col-md-12 col-lg-12\">\r\n        <div class=\"search-results__section-content\">\r\n            <div><a class=\"content-title-link\" href=\"\" target=\"_blank\" rel=\"noopener noreferrer\"></a></div>\r\n            <div><h3>AUTOKINITON (Euclid Manufacturing Co.)</h3>\n<ul class=\"disc\">\n    <li><strong>Site address: </strong>1500 Euclid Ave., Detroit, MI 48211</li>\n    <li><strong>County:</strong> Wayne</li>\n    <li><strong>Type of company action:</strong> Facility closure</li>\n    <li><strong>Reason for company action: </strong>Not reported</li>\n    <li><strong>First layoff date:</strong> 1/18/2027</li>\n    <li><strong>Closure date:</strong> Not reported</li>\n    <li><strong>Number of jobs impacted:</strong> 136</li>\n</ul></div>\r\n            <div>\r\n                \r\n                                    Closure\r\n                                \r\n                                    2026\r\n                                \r\n                                    Wayne\r\n                                \r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n</div></div>"
   },
-  "pdf_first_rows": [
-   [
-    [
-     "WARN Summary by County/Parish As of 2026-04-08 08:38:00 Eastern Standard Time/EST",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     ""
-    ],
-    [
-     "",
-     "County",
-     "Warn Number",
-     "Date of Notice",
-     "Date Received by NC",
-     "Effective Date",
-     "WARN Notice: WARN Notice Name",
-     "WARN notice type",
-     "Type of layoff or closure",
-     "Number affected at this location",
-     "Address 1",
-     "City",
-     ""
-    ],
-    [
-     "",
-     "New Hanover County",
-     "202600001",
-     "1/7/2026",
-     "1/7/2026",
-     "3/6/2026",
-     "Avelo Airlines, Inc.",
-     "Closure",
-     "Permanent",
-     "82",
-     "1740 Airport Blvd.",
-     "Wilmington",
-     ""
-    ],
-    [
-     "",
-     "Wake County",
-     "202600002",
-     "1/7/2026",
-     "1/7/2026",
-     "3/6/2026",
-     "Avelo Airlines, Inc.",
-     "Closure",
-     "Permanent",
-     "78",
-     "2400 John Brantley Boulevard",
-     "Morrisville",
-     ""
-    ]
-   ],
-   [
-    [
-     "WARN Summary by County/Parish As of 2026-07-17 10:52:10 Eastern Standard Time/EST",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     ""
-    ],
-    [
-     "",
-     "County",
-     "Warn Number",
-     "Date of Notice",
-     "Date Received by NC",
-     "Effective Date",
-     "WARN Notice: WARN Notice Name",
-     "WARN notice type",
-     "Type of layoff or closure",
-     "Number affected at this location",
-     "Address 1",
-     "City",
-     ""
-    ],
-    [
-     "",
-     "Durham County",
-     "202500001",
-     "1/6/2025",
-     "1/6/2025",
-     "12/15/2025",
-     "Resilience US, Inc.",
-     "Layoff",
-     "Permanent",
-     "120",
-     "1733 TW Alexander Dr",
-     "Durham",
-     ""
-    ],
-    [
-     "",
-     "Mecklenburg County",
-     "202500002",
-     "1/13/2025",
-     "1/13/2025",
-     "8/29/2025",
-     "Eaton",
-     "Closure",
-     "Permanent",
-     "76",
-     "5910 Long Creek Park Drive",
-     "Charlotte",
-     ""
-    ]
-   ],
-   [
-    [
-     "NOTICE DATE",
-     "JOB SITE NAME",
-     "COUNTY NAME",
-     "WDA NAME",
-     "TOTAL LAYOFF NUMBER",
-     "LAYOFF DATE",
-     "RECEIVED DATE",
-     "CITY NAME"
-    ],
-    [
-     "4/27/26",
-     "Atkore HDPE, LLC",
-     "Bernalillo",
-     "Central Region",
-     "51",
-     "6/30/26",
-     "5/6/26",
-     "Albuquerque"
-    ],
-    [
-     "6/29/26",
-     "Conduent",
-     "Bernalillo",
-     "Central Region",
-     "11",
-     "July - August 2026",
-     "6/29/26",
-     "Albuquerque"
-    ],
-    [
-     "9/15/26",
-     "Sierra Lobo",
-     "Otero",
-     "Eastern Region",
-     "242",
-     "11/29/26",
-     "9/22/26",
-     "Alamogordo"
-    ]
-   ],
-   [
-    [
-     "NOTICE DATE",
-     "JOB SITE NAME",
-     "COUNTY NAME",
-     "WDA NAME",
-     "TOTAL LAYOFF NUMBER",
-     "LAYOFF DATE",
-     "RECEIVED DATE",
-     "CITY NAME"
-    ],
-    [
-     "5/1/25",
-     "The GEO Group, Inc.",
-     "Lea",
-     "Eastern Region",
-     "203",
-     "6/30/25",
-     "5/1/25",
-     "Hobbs"
-    ],
-    [
-     "7/16/25",
-     "Intel",
-     "Sandoval",
-     "Central Region",
-     "227",
-     "July-September 2025",
-     "7/16/25",
-     "Rio Rancho"
-    ],
-    [
-     "7/24/25",
-     "ECS",
-     "Bernalillo",
-     "Central Region",
-     "140",
-     "9/30/25",
-     "7/24/25",
-     "Albuquerque"
-    ]
-   ]
+  "GA_around": [
+   "www.tcsg.edu/wp-includes/js/dist/api-fetch.min.js\"></script>\n<script id=\"wp-api-fetch-js-after\">\nwp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( \"https://www.tcsg.edu/wp-json/\" ) );\nwp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( \"804b3526bb\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"e3dfe455f3\",\"hash_nonce\":\"8e3267c337\",\"logout_nonce\":\"d862014bfe\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<s",
+   "p.apiFetch.use( wp.apiFetch.createRootURLMiddleware( \"https://www.tcsg.edu/wp-json/\" ) );\nwp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( \"804b3526bb\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"e3dfe455f3\",\"hash_nonce\":\"8e3267c337\",\"logout_nonce\":\"d862014bfe\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/asset",
+   ") );\nwp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( \"804b3526bb\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"e3dfe455f3\",\"hash_nonce\":\"8e3267c337\",\"logout_nonce\":\"d862014bfe\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https",
+   "createNonceMiddleware( \"804b3526bb\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"e3dfe455f3\",\"hash_nonce\":\"8e3267c337\",\"logout_nonce\":\"d862014bfe\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https://www.tcsg.edu/wp-json/\" /><link rel=\"alternat",
+   "b3526bb\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"e3dfe455f3\",\"hash_nonce\":\"8e3267c337\",\"logout_nonce\":\"d862014bfe\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https://www.tcsg.edu/wp-json/\" /><link rel=\"alternate\" title=\"JSON\" type=\"appli",
+   "e-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"e3dfe455f3\",\"hash_nonce\":\"8e3267c337\",\"logout_nonce\":\"d862014bfe\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https://www.tcsg.edu/wp-json/\" /><link rel=\"alternate\" title=\"JSON\" type=\"application/json\" href=\"https://www.tcsg.edu/wp-json/wp/v2/pages/77462\" /><link rel=\"EditURI\" type=\"application/rsd+xml\" title=\"RSD\" href=\"https://www.tcsg.edu/xmlrpc.php?rsd\" />\n<link rel=\"canonical\" href=\"https://www.tcsg.edu/warn-public-view/\" />\n<link rel='shortlink' href='https:/"
   ],
   "NC_pdfs": [
    [
     "open",
-    [],
-    0
+    [
+     "",
+     "County",
+     "Warn Number",
+     "Date of Notice",
+     "Date Received by NC",
+     "Effective Date",
+     "WARN Notice: WARN Notice Name",
+     "WARN notice type",
+     "Type of layoff or closure",
+     "Number affected at this location",
+     "Address 1",
+     "City",
+     ""
+    ],
+    30
    ],
    [
     "open",
-    [],
-    0
+    [
+     "",
+     "County",
+     "Warn Number",
+     "Date of Notice",
+     "Date Received by NC",
+     "Effective Date",
+     "WARN Notice: WARN Notice Name",
+     "WARN notice type",
+     "Type of layoff or closure",
+     "Number affected at this location",
+     "Address 1",
+     "City",
+     ""
+    ],
+    89
    ]
   ],
   "NM_pdfs": [
    [
     "2026_WARN.pdf",
-    [],
-    0
+    [
+     "NOTICE DATE",
+     "JOB SITE NAME",
+     "COUNTY NAME",
+     "WDA NAME",
+     "TOTAL LAYOFF NUMBER",
+     "LAYOFF DATE",
+     "RECEIVED DATE",
+     "CITY NAME"
+    ],
+    5
    ],
    [
     "2025_WARN.pdf",
-    [],
-    0
+    [
+     "NOTICE DATE",
+     "JOB SITE NAME",
+     "COUNTY NAME",
+     "WDA NAME",
+     "TOTAL LAYOFF NUMBER",
+     "LAYOFF DATE",
+     "RECEIVED DATE",
+     "CITY NAME"
+    ],
+    4
    ]
   ],
   "LA_pdfs": [
    [
     "WarnNotices2025.pdf",
-    "HTTPError: 404 Client Error: Not Found for url: https://www.laworks.net/Downloads/Downloads/WFD/WarnNotices2025.pdf"
+    [
+     "Company Name",
+     "Notice Date",
+     "Layoff Date",
+     "Employees Affected",
+     "Industry"
+    ],
+    25
    ],
    [
     "WarnNotices2026.pdf",
-    "HTTPError: 404 Client Error: Not Found for url: https://www.laworks.net/Downloads/Downloads/WFD/WarnNotices2026.pdf"
+    [
+     "Company Name",
+     "Address",
+     "Notice Date",
+     "Layoff Date",
+     "Employees Affected",
+     "Industry"
+    ],
+    20
    ]
   ],
   "MS_pdfs": [
@@ -777,6 +689,163 @@
      "Effective or Commencing Date"
     ],
     201
+   ]
+  ],
+  "pdf_first_rows": [
+   [
+    [
+     "Field",
+     "Information"
+    ],
+    [
+     "Company Name",
+     "ECM Energy Services"
+    ],
+    [
+     "Site Address",
+     "1500 Industrial Rd W, Bridgeport, WV 26301"
+    ],
+    [
+     "Primary Contact",
+     "Michael Caseman, President & CEO"
+    ]
+   ],
+   [],
+   [],
+   [
+    [
+     "Position Titles",
+     "Number Impacted"
+    ],
+    [
+     "Customer Experience Associate I",
+     "3"
+    ],
+    [
+     "Customer Experience Associate II",
+     "3"
+    ]
+   ],
+   [],
+   [
+    [
+     "Oahu Lower Kunia Site",
+     ""
+    ],
+    [
+     "Total Full Time Employees",
+     "133"
+    ],
+    [
+     "No. of Affected Employees",
+     "62"
+    ],
+    [
+     "Site Address:",
+     ""
+    ]
+   ],
+   [],
+   []
+  ],
+  "WV_discover": [
+   [
+    "https://workforcewv.org/businesses/layoffs-downsizing/warn-listing/",
+    0,
+    []
+   ],
+   [
+    "https://workforcewv.org/job-seeker/layoffs-downsizing/warn-listing/",
+    0,
+    []
+   ],
+   [
+    "https://www.ecfr.gov/current/title-20/chapter-V/part-639",
+    0,
+    []
+   ],
+   [
+    "https://uscode.house.gov/view.xhtml?path=/prelim@title29/chapter23&edition=prelim",
+    "HTTPError"
+   ],
+   [
+    "https://workforcewv.org/wp-content/uploads/2026/08/ECM-Energy-Services-WARN-8-19-26.pdf",
+    0,
+    []
+   ],
+   [
+    "https://workforcewv.org/wp-content/uploads/2026/08/Eagle-Horizon-Resources-WARN-08-2026.pdf",
+    0,
+    []
+   ],
+   [
+    "https://workforcewv.org/wp-content/uploads/2026/07/WARN-Notice-Workforce-July-2026-revisedsigned.pdf",
+    0,
+    []
+   ],
+   [
+    "https://workforcewv.org/wp-content/uploads/2026/07/WARN-Notice-State-West-Virginia-Conduent.pdf",
+    0,
+    []
+   ]
+  ],
+  "HI_discover": [
+   [
+    "https://labor.hawaii.gov/wdc/",
+    0,
+    []
+   ],
+   [
+    "https://labor.hawaii.gov/",
+    0,
+    []
+   ],
+   [
+    "https://labor.hawaii.gov/wdc/2026-warn-notices/",
+    0,
+    []
+   ],
+   [
+    "https://labor.hawaii.gov/wdd/warn-notices/",
+    0,
+    []
+   ],
+   [
+    "https://labor.hawaii.gov/wdd/files/2026/08/July-31-2026-Watabe-Wedding-Corporation-Michels-Restaurant_WARN.pdf",
+    0,
+    []
+   ],
+   [
+    "https://labor.hawaii.gov/wdd/files/2026/07/July-22-2026-Bayer-Research-and-Development-Services_WARN.pdf",
+    0,
+    []
+   ],
+   [
+    "https://labor.hawaii.gov/wdd/files/2026/07/June-30-2026-Adventist-Health_WARN.pdf",
+    0,
+    []
+   ],
+   [
+    "https://labor.hawaii.gov/wdd/files/2026/07/June-29-2026-Alii-Health-Center_WARN.pdf",
+    0,
+    []
+   ]
+  ],
+  "AR_discover": [
+   [
+    "https://dws.arkansas.gov/",
+    0,
+    []
+   ],
+   [
+    "https://dws.arkansas.gov/workforce-services/employers/",
+    0,
+    []
+   ],
+   [
+    "https://dws.arkansas.gov/workforce-services/employers/dislocated-worker-services/",
+    0,
+    []
    ]
   ]
  }
