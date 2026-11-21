@@ -167,7 +167,7 @@ def read_mo():
 
 
 # ---------------------------------------------------------------- Excel and spreadsheet helpers
-def rows_from_grid(grid, company_rx=r"company|employer|business|organization", date_rx=r"notice|received|notif|warn date|date"):
+def rows_from_grid(grid, company_rx=r"company|employer|business|organization|notice name|site name|organi[sz]ation name", date_rx=r"notice|received|notif|warn date|date"):
     """grid = list of lists. Finds the header row, then maps company / date / location / jobs by column name."""
     for hi, row in enumerate(grid[:30]):
         cells = [clean(c) for c in row]
@@ -180,7 +180,9 @@ def rows_from_grid(grid, company_rx=r"company|employer|business|organization", d
         if di is None:
             continue
         li = next((i for i, c in enumerate(cells) if re.search(r"city|location|county|address", c, re.I)), None)
-        ji = next((i for i, c in enumerate(cells) if re.search(r"employees|affected|workers|jobs|number|#", c, re.I) and i not in (ci, di)), None)
+        ji = next((i for i, c in enumerate(cells) if re.search(r"employees|affected|workers|jobs|layoff number|total notified", c, re.I) and i not in (ci, di)), None)
+        if ji is None:
+            ji = next((i for i, c in enumerate(cells) if re.search(r"number|#", c, re.I) and not re.search(r"warn|event|phone|naics", c, re.I) and i not in (ci, di)), None)
         out = []
         for row in grid[hi + 1:]:
             row = list(row) + [None] * 30
@@ -248,12 +250,16 @@ def read_mi():
         lines = [clean(x) for x in content.get_text("\n").split("\n") if clean(x)]
         if not lines:
             continue
-        dnode = h.select_one("[class*=date]")
-        d = date_rx.search(dnode.get_text(" ")) if dnode else None
-        d = d or date_rx.search(h.get_text(" "))
-        loc = next((l.split(":", 1)[1] for l in lines if re.match(r"(.*cit(y|ies)|count(y|ies))\s*:", l, re.I)), "")
-        jobs = next((num(l.split(":", 1)[1]) for l in lines if re.search(r"jobs", l, re.I) and ":" in l), None)
-        rows.append({"company": lines[0], "notice_date": d.group(1) if d else "", "location": clean(loc), "jobs": jobs})
+        pm = re.search(r"searchdata/(\d{4})/(\d{1,2})/(\d{1,2})/", (e.get("Path") or e.get("Url") or ""), re.I)
+        notice = f"{pm.group(1)}-{int(pm.group(2)):02d}-{int(pm.group(3)):02d}" if pm else ""
+        if not notice:
+            d = date_rx.search(h.get_text(" "))
+            notice = d.group(1) if d else ""
+        items = [clean(li.get_text(" ")) for li in h.find_all("li")]
+        name = clean((h.find(["h2", "h3", "h4"]) or content).get_text(" ")) if h.find(["h2", "h3", "h4"]) else lines[0]
+        loc = next((i.split(":", 1)[1] for i in items if re.match(r"(site address|.*cit(y|ies)|count(y|ies))\s*:", i, re.I)), "")
+        jobs = next((num(i.split(":", 1)[1]) for i in items if re.search(r"jobs", i, re.I) and ":" in i), None)
+        rows.append({"company": name, "notice_date": notice, "location": clean(loc)[:150], "jobs": jobs})
     return rows
 
 
@@ -262,7 +268,8 @@ def read_ga():
     page = "https://www.tcsg.edu/warn-public-view/"
     r = get(page)
     html = r.text
-    m = re.search(r"gvDTglobals\.push\((\{.*?\})\);", html, re.S)
+    DEBUG["GA_around"] = [html[max(0, i.start() - 200): i.start() + 900] for i in re.finditer(r"gvDTglobals|admin-ajax|nonce", html)][:6]
+    m = re.search(r"gvDTglobals\.push\((\{.*?\})\);", html, re.S) or re.search(r"gvDTglobals\s*=\s*\[(\{.*?\})\]", html, re.S)
     if not m:
         raise ValueError("no table settings on the page")
     g = json.loads(m.group(1))
@@ -344,7 +351,8 @@ def read_nm():
 
 
 def read_la():
-    return read_pdfs("LA", pdf_links("https://www.laworks.net/Downloads/Downloads_WFD.asp", rf"WarnNotices({YEAR}|{YEAR - 1})"))
+    links = pdf_links("https://www.laworks.net/Downloads/Downloads_WFD.asp", rf"WarnNotices({YEAR}|{YEAR - 1})")
+    return read_pdfs("LA", [re.sub(r"/Downloads/Downloads/", "/Downloads/", u) for u in links])
 
 
 def read_ms():
@@ -356,8 +364,67 @@ def read_id():
     return read_pdfs("ID", pdf_links("https://www.labor.idaho.gov/businesses/layoff-assistance/", r"WARN-Notices"))
 
 
+def grid_of_table(t):
+    return [[clean(c.get_text(" ")) for c in tr.find_all(["td", "th"])] for tr in t.find_all("tr")]
+
+
+def discover(st, starts, follow=r"warn"):
+    """Read a WARN list from a state page: its tables, or the WARN files / pages it links to."""
+    seen, rows, notes = set(), [], []
+    queue = list(starts)
+    while queue and len(seen) < 8:
+        u = queue.pop(0)
+        if u in seen:
+            continue
+        seen.add(u)
+        try:
+            r = get(u)
+        except Exception as e:
+            notes.append([u, f"{type(e).__name__}"])
+            continue
+        ct = r.headers.get("content-type", "").lower()
+        try:
+            if "pdf" in ct or u.lower().split("?")[0].endswith(".pdf"):
+                got, h = pdf_rows(r.content)
+            elif "spreadsheet" in ct or re.search(r"\.xlsx?$", u.lower().split("?")[0]):
+                got, h = read_xlsx(r.content)
+            else:
+                s = BeautifulSoup(r.text, "html.parser")
+                got, h = [], []
+                for t in s.find_all("table"):
+                    g, hh = rows_from_grid(grid_of_table(t))
+                    got += g
+                    h = h or hh
+                if not got:
+                    for a in s.find_all("a", href=True):
+                        href = urljoin(r.url, a["href"])
+                        if re.search(follow, a.get_text(" ") + " " + a["href"], re.I) and href not in seen and href.startswith("http") and not href.startswith("mailto"):
+                            if re.search(r"\.(pdf|xlsx?)(\?|$)", href, re.I) and not re.search(rf"{YEAR}|{YEAR - 1}|notices|list|log|report", href, re.I):
+                                continue
+                            queue.append(href)
+        except Exception as e:
+            got, h = [], f"{type(e).__name__}: {e}"[:150]
+        notes.append([u[:150], len(got), h if isinstance(h, str) else h[:8]])
+        rows += got
+    DEBUG[f"{st}_discover"] = notes
+    return rows
+
+
+def read_wv():
+    return discover("WV", ["https://workforcewv.org/businesses/layoffs-downsizing/warn-listing/"])
+
+
+def read_hi():
+    return discover("HI", ["https://labor.hawaii.gov/wdc/", "https://labor.hawaii.gov/"], follow=r"warn")
+
+
+def read_ar():
+    return discover("AR", ["https://dws.arkansas.gov/", "https://dws.arkansas.gov/workforce-services/employers/"], follow=r"warn")
+
+
 READERS = {"OH": read_oh, "FL": read_fl, "MD": read_md, "DC": read_dc, "RI": read_ri, "CO": read_co, "MI": read_mi, "GA": read_ga,
-           "NC": read_nc, "NM": read_nm, "LA": read_la, "MS": read_ms, "ID": read_id, "MO": read_mo}
+           "NC": read_nc, "NM": read_nm, "LA": read_la, "MS": read_ms, "ID": read_id, "MO": read_mo,
+           "WV": read_wv, "HI": read_hi, "AR": read_ar}  # Texas and California are read by the extension itself
 
 
 def main():

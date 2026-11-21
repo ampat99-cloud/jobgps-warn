@@ -114,7 +114,8 @@ NO_READER = {
     "tn": "state site refuses automated reading (403)", "nh": "state site refuses automated reading (403)",
     "wy": "state site refuses automated reading (403)", "nd": "state site blocks readers outside its area",
     "mn": "state site puts readers behind a bot check", "ar": "state WARN page has moved; no public list found yet",
-    "hi": "state WARN page has moved; no public list found yet", "wv": "no reader written yet",
+    "hi": "state WARN page has moved; no public list found yet", "wv": "no public list found on the state site",
+    "ga": "state list is loaded by a page script that is not read yet", "la": "state list could not be read", "nc": "state list could not be read",
 }
 
 
