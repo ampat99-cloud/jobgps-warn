@@ -456,13 +456,67 @@ def read_hi():
     return letters_list("HI", [f"https://labor.hawaii.gov/wdc/{y}-warn-notices/" for y in YEARS] + ["https://labor.hawaii.gov/wdd/warn-notices/"])
 
 
+# ---------------------------------------------------------------- 21 Nov: the last eight states, from the files their pages link to.
+MN_FILES = ["plant-closing-mass-layoff-warn-2026-october_tcm1045-773345", "plant-closing-mass-layoff-warn-2026-september_tcm1045-770964",
+            "plant-closing-mass-layoff-warn-2026-august_tcm1045-767763", "plant-closing-mass-layoff-warn-2026-july_tcm1045-766204",
+            "plant-closing-mass-layoff-warn-2026-june_tcm1045-758364", "plant-closing-mass-layoff-warn-2026-may_tcm1045-752571",
+            "plant-closing-mass-layoff-warn-2026-april_tcm1045-749441", "plant-closing-mass-layoff-warn-2026-march_tcm1045-742363",
+            "plant-closing-mass-layoff-warn-december-2025_tcm1045-720888", "plant-closing-mass-layoff-warn-october-2025_tcm1045-712065",
+            "plant-closing-mass-layoff-warn-september-2025_tcm1045-712064"]
+
+
+def read_mn():
+    urls = [f"https://mn.gov/deed/assets/{f}.pdf" for f in MN_FILES]
+    try:  # newer months appear on the archive page
+        urls = pdf_links("https://mn.gov/deed/business/layoff-resources/warn-archive/", r"plant-closing-mass-layoff-warn") + urls
+    except Exception as e:
+        DEBUG.setdefault("MN_notes", []).append(f"archive page: {type(e).__name__}")
+    return read_pdfs("MN", list(dict.fromkeys(urls))[:16])
+
+
+def read_nv():
+    return read_pdfs("NV", [f"https://detr.nv.gov/content/media/WARN_and_NonWARN_Master_w_Logo_{y}.pdf" for y in YEARS])
+
+
+def read_nd():
+    return read_pdfs("ND", ["https://jobsnd.com/sites/www/files/documents/jsnd-documents/WARN%20Notices%202015%20to%20present.pdf"])
+
+
+def read_nh():
+    return read_pdfs("NH", ["https://mm.nh.gov/files/uploads/nhes/documents/mass-layoff.pdf"])
+
+
 def read_ar():
-    return discover("AR", ["https://dws.arkansas.gov/", "https://dws.arkansas.gov/workforce-services/employers/"], follow=r"warn")
+    return discover("AR", ["https://dws.arkansas.gov/workforce-services/employers/dislocated-worker-services/"], follow=r"warn|closure|reduction|layoff")
+
+
+def read_wy():
+    rows, notes = [], []
+    for base in ["https://dws.wyo.gov/wp-json/wp/v2/posts?search=WARN&per_page=100", "https://dws.wyo.gov/category/public-notices/"]:
+        try:
+            r = get(base)
+            notes.append([base, r.status_code, r.headers.get("content-type", "")[:40]])
+            if base.endswith("per_page=100"):
+                for p in r.json():
+                    title = clean(BeautifulSoup(p.get("title", {}).get("rendered", ""), "html.parser").get_text(" "))
+                    if re.search(r"warn", title, re.I):
+                        name = clean(re.sub(r"(?i)\bwarn\b.*?(notice|notification)?\s*[-:–]?", "", title)) or title
+                        rows.append({"company": name, "notice_date": (p.get("date") or "")[:10], "location": "", "jobs": None})
+        except Exception as e:
+            notes.append([base, f"{type(e).__name__}"])
+    DEBUG["WY_notes"] = notes
+    return rows
+
+
+def read_ma():
+    return discover("MA", ["https://www.mass.gov/info-details/worker-adjustment-and-retraining-act-warn-weekly-report",
+                           "https://www.mass.gov/info-details/worker-adjustment-and-retraining-notification-act-warn-layoff-and-closure-updates"],
+                    follow=r"warn-report|week-ending|xlsx")
 
 
 READERS = {"OH": read_oh, "FL": read_fl, "MD": read_md, "DC": read_dc, "RI": read_ri, "CO": read_co, "MI": read_mi, "GA": read_ga,
            "NC": read_nc, "NM": read_nm, "LA": read_la, "MS": read_ms, "ID": read_id, "MO": read_mo,
-           "WV": read_wv, "HI": read_hi, "AR": read_ar}  # Texas and California are read by the extension itself
+           "WV": read_wv, "HI": read_hi, "AR": read_ar, "MN": read_mn, "NV": read_nv, "ND": read_nd, "NH": read_nh, "WY": read_wy, "MA": read_ma}  # Texas and California are read by the extension itself
 
 
 def main():
