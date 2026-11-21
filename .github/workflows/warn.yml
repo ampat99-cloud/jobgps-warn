@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install warn-scraper warn-transformer pyquery python-dateutil
+      - run: pip install warn-scraper warn-transformer pyquery python-dateutil requests beautifulsoup4 pdfplumber openpyxl
       - name: Download every state's WARN list (a failing state is skipped)
         run: |
           mkdir -p raw logs
@@ -23,6 +23,8 @@ jobs:
             timeout 900 warn-scraper "$st" --data-dir raw --log-level WARNING > "logs/$st.txt" 2>&1 || echo "skipped $st"
             tail -n 3 "logs/$st.txt"
           done
+      - name: Direct readers for states the standard scrapers cannot read
+        run: python direct_states.py raw || echo "direct readers failed"
       - name: Clean into data/
         run: python ingest.py raw data
       - name: Commit
