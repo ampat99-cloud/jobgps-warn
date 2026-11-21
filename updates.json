@@ -1,6 +1,12 @@
 {
  "items": [
   {
+   "id": "2026-11-21-v2.10.21",
+   "date": "21 Nov 2026",
+   "title": "JobGPS 2.10.21",
+   "body": "Reads Rippling job links through Rippling’s own job service, ADP links that leave out their career-center number, and ContactHR links (used by Remitly and others), which now open the company’s own job page. Torentify is treated as a job portal, not an employer."
+  },
+  {
    "id": "2026-11-21-v2.10.20",
    "date": "21 Nov 2026",
    "title": "JobGPS 2.10.20",
