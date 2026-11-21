@@ -167,7 +167,7 @@ def read_mo():
 
 
 # ---------------------------------------------------------------- Excel and spreadsheet helpers
-def rows_from_grid(grid, company_rx=r"company|employer|business|organization|notice name|site name|organi[sz]ation name", date_rx=r"notice|received|notif|warn date|date"):
+def rows_from_grid(grid, company_rx=r"company|employer|business|organization|notice name|site name|organi[sz]ation name|layoff name", date_rx=r"notice|received|notif|warn date|date"):
     """grid = list of lists. Finds the header row, then maps company / date / location / jobs by column name."""
     for hi, row in enumerate(grid[:30]):
         cells = [clean(c) for c in row]

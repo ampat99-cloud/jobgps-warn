@@ -214,6 +214,43 @@ def write_files(rows, coverage, out: Path, now_iso: str):
         "states": {c["state"]: {k: v for k, v in c.items() if k != "state" and v is not None} for c in coverage}}, indent=1))
 
 
+def keep_yesterday(rows, coverage, out: Path, today):
+    """State sites fail now and then (403, timeouts). A state that was read before but gives nothing today keeps its last good
+    notices (still limited to 400 days) instead of dropping out of the check, and says so in coverage.json."""
+    try:
+        prev = json.loads((out / "coverage.json").read_text())
+    except Exception:
+        return rows, coverage
+    cutoff = (today - datetime.timedelta(days=KEEP_DAYS)).isoformat()
+    def since(st):  # the day this state was last really read
+        rb = str(prev.get("states", {}).get(st, {}).get("read_by", ""))
+        m = re.match(r"kept from (\d{4}-\d{2}-\d{2})", rb)
+        return m.group(1) if m else str(prev.get("updated_at", ""))[:10]
+    oldest = (today - datetime.timedelta(days=14)).isoformat()
+    lost = {c["state"] for c in coverage if c["status"] != "ok" and prev.get("states", {}).get(c["state"], {}).get("status") == "ok" and since(c["state"]) >= oldest}
+    if not lost:
+        return rows, coverage
+    kept = {}
+    for f in (out / "warn").glob("*.json"):
+        try:
+            shard = json.loads(f.read_text())
+        except Exception:
+            continue
+        for key2, items in shard.items():
+            for it in items:
+                st, company, loc, nd, jobs = (it + [None] * 5)[:5]
+                if st in lost and nd and nd >= cutoff:
+                    key = norm_name(company)
+                    rows.append({"hash_id": f"{st.lower()}:kept:{hashlib.sha1((company + nd + str(loc)).encode()).hexdigest()[:20]}", "state": st, "company": company,
+                                 "key": key, "key2": key2, "location": loc or None, "notice_date": nd, "effective_date": None, "jobs": jobs, "is_closure": None})
+                    kept.setdefault(st, []).append(nd)
+    for c in coverage:
+        if c["state"] in kept:
+            c.update(rows=len(kept[c["state"]]), latest_notice=max(kept[c["state"]]), status="ok",
+                     read_by=f"kept from {since(c['state'])} (state site did not answer today: {c['status']})")
+    return rows, coverage
+
+
 def main():
     logging.basicConfig(level="INFO")
     raw_dir = Path(sys.argv[1] if len(sys.argv) > 1 else "raw")
@@ -224,6 +261,7 @@ def main():
     print(f"{len(rows)} notices from {len(ok)} states; {len(coverage) - len(ok)} states without usable data")
     for c in coverage:
         print(f"  {c['state']}: {c['status']} ({c['rows']} notices, latest {c['latest_notice']})")
+    rows, coverage = keep_yesterday(rows, coverage, out, today)
     write_files(rows, coverage, out, datetime.datetime.now(datetime.timezone.utc).isoformat())
     print("written to", out)
 
