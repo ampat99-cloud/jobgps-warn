@@ -1,6 +1,12 @@
 {
  "items": [
   {
+   "id": "2026-11-21-v2.10.20",
+   "date": "21 Nov 2026",
+   "title": "JobGPS 2.10.20",
+   "body": "When a company’s own hiring system lists a job as open, recent layoff news no longer pushes it down to Unconfirmed (it shows Likely real). Reads Rippling job links and more Workday links, and layoff notices now also cover Minnesota and Missouri."
+  },
+  {
    "id": "2026-11-20-v2.10.19",
    "date": "20 Nov 2026",
    "title": "JobGPS 2.10.19",
