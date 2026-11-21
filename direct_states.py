@@ -410,12 +410,50 @@ def discover(st, starts, follow=r"warn"):
     return rows
 
 
+MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December"
+
+
+def letters_list(st, pages):
+    """States that post one letter (PDF) per notice instead of a list: the company and date come from each link."""
+    rows, notes = [], []
+    for page in pages:
+        try:
+            s, r = soup_of(page)
+        except Exception as e:
+            notes.append([page, f"{type(e).__name__}"])
+            continue
+        n = 0
+        for a in s.find_all("a", href=True):
+            href = urljoin(r.url, a["href"])
+            if not re.search(r"warn", href, re.I) or not href.lower().endswith(".pdf"):
+                continue
+            fname = href.rsplit("/", 1)[-1][:-4]
+            text = clean(a.get_text(" "))
+            d = None
+            m = re.match(rf"({MONTHS})-(\d{{1,2}})-(\d{{4}})-(.+?)_WARN", fname, re.I)  # Hawaii: July-31-2026-Company_WARN.pdf
+            if m:
+                d, name = f"{m.group(1)} {m.group(2)}, {m.group(3)}", m.group(4).replace("-", " ")
+            else:
+                name = text if len(text) > 3 and not re.search(r"^(warn|download|pdf|click|here)", text, re.I) else re.sub(r"[-_]+", " ", re.split(r"[-_]WARN", fname, flags=re.I)[0])
+                dm = re.search(r"(\d{1,2})[-_.](\d{1,2})[-_.](\d{2,4})", fname)
+                um = re.search(r"/uploads/(\d{4})/(\d{2})/", href)
+                d = f"{dm.group(1)}/{dm.group(2)}/{dm.group(3)}" if dm else (f"{um.group(1)}-{um.group(2)}-01" if um else None)
+                name = re.sub(r"\b(WARN|Notice|State|West Virginia|signed|revised)\b", " ", name, flags=re.I)
+            name = clean(name)
+            if d and len(name) > 2:
+                rows.append({"company": name, "notice_date": d, "location": "", "jobs": None})
+                n += 1
+        notes.append([page, n])
+    DEBUG[f"{st}_letters"] = notes
+    return rows
+
+
 def read_wv():
-    return discover("WV", ["https://workforcewv.org/businesses/layoffs-downsizing/warn-listing/"])
+    return letters_list("WV", ["https://workforcewv.org/businesses/layoffs-downsizing/warn-listing/"])
 
 
 def read_hi():
-    return discover("HI", ["https://labor.hawaii.gov/wdc/", "https://labor.hawaii.gov/"], follow=r"warn")
+    return letters_list("HI", [f"https://labor.hawaii.gov/wdc/{y}-warn-notices/" for y in YEARS] + ["https://labor.hawaii.gov/wdd/warn-notices/"])
 
 
 def read_ar():
