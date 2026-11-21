@@ -1,0 +1,783 @@
+{
+ "report": {
+  "OH": {
+   "ok": true,
+   "rows": 170,
+   "sample": [
+    {
+     "company": "Morgan Truck Body, LLC",
+     "notice_date": "11/18/2026",
+     "location": "Orrville/Wayne",
+     "jobs": 73
+    },
+    {
+     "company": "National Distribution Centers",
+     "notice_date": "11/17/2026",
+     "location": "Groveport/Franklin",
+     "jobs": 149
+    },
+    {
+     "company": "Saddle Creek Corporation",
+     "notice_date": "11/13/2026",
+     "location": "Groveport/Franklin",
+     "jobs": 150
+    }
+   ]
+  },
+  "FL": {
+   "ok": true,
+   "rows": 492,
+   "sample": [
+    {
+     "company": "Convey Health Solutions",
+     "notice_date": "11-17-26",
+     "location": "100 SE 3rd Ave, Suite 2600 (26th Floor), Fort Lauderdale MULTIPLE LOCATIONS, FL, 33394",
+     "jobs": 59
+    },
+    {
+     "company": "Ideal Cabinetry",
+     "notice_date": "11-16-26",
+     "location": "210 Century Blvd. BARTOW, FL, 33830",
+     "jobs": 165
+    },
+    {
+     "company": "Niagara Bottling, LLC",
+     "notice_date": "10-31-26",
+     "location": "2445 NW 42nd Street OCALA, FL, 34475",
+     "jobs": 57
+    }
+   ]
+  },
+  "MD": {
+   "ok": true,
+   "rows": 268,
+   "sample": [
+    {
+     "company": "Firaxis Games, Inc.",
+     "notice_date": "11/17/2026",
+     "location": "10 Loveton Circle Sparks, MD 21152",
+     "jobs": 37
+    },
+    {
+     "company": "Full Steam Staffing, LLC",
+     "notice_date": "11/17/2026",
+     "location": "9090 Whiskey Bottom Road Laurel, MD 20723",
+     "jobs": 357
+    },
+    {
+     "company": "TidalHealth Primary Care",
+     "notice_date": "11/12/2026",
+     "location": "3304 Hayman Drive, Federalsburg, MD 21629",
+     "jobs": 5
+    }
+   ]
+  },
+  "DC": {
+   "ok": true,
+   "rows": 54,
+   "sample": [
+    {
+     "company": "Elior North America",
+     "notice_date": "February 2, 2026",
+     "location": "Washington, DC",
+     "jobs": 76
+    },
+    {
+     "company": "WP Company LLC",
+     "notice_date": "February 6, 2026",
+     "location": "Washington, DC",
+     "jobs": 277
+    },
+    {
+     "company": "Albertson's/Safeway",
+     "notice_date": "March 13, 2026",
+     "location": "Washington, DC",
+     "jobs": 87
+    }
+   ]
+  },
+  "RI": {
+   "ok": true,
+   "rows": 124,
+   "sample": [
+    {
+     "company": "Endeavors",
+     "notice_date": "2026-10-30",
+     "location": "Texas",
+     "jobs": 3
+    },
+    {
+     "company": "Hasbro, Inc.",
+     "notice_date": "2026-10-08",
+     "location": "Pawtucket, RI",
+     "jobs": 587
+    },
+    {
+     "company": "Conduent",
+     "notice_date": "2026-06-29",
+     "location": "United States",
+     "jobs": 1
+    }
+   ]
+  },
+  "CO": {
+   "ok": true,
+   "rows": 116,
+   "sample": [
+    {
+     "company": "TIAA",
+     "notice_date": "1/2/26",
+     "location": "",
+     "jobs": 101
+    },
+    {
+     "company": "Tessera Therapeutics",
+     "notice_date": "1/6/26",
+     "location": "",
+     "jobs": 1
+    },
+    {
+     "company": "Alan Ritchey",
+     "notice_date": "1/6/26",
+     "location": "",
+     "jobs": 729
+    }
+   ]
+  },
+  "MI": {
+   "ok": true,
+   "rows": 117,
+   "sample": [
+    {
+     "company": "AUTOKINITON (Euclid Manufacturing Co.)",
+     "notice_date": "1/18/2027",
+     "location": "",
+     "jobs": null
+    },
+    {
+     "company": "Detroit Chassis, LLC",
+     "notice_date": "12/31/2026",
+     "location": "",
+     "jobs": null
+    },
+    {
+     "company": "ADAC Automotive",
+     "notice_date": "12/18/2026",
+     "location": "",
+     "jobs": null
+    }
+   ]
+  },
+  "GA": {
+   "ok": false,
+   "error": "ValueError: no table settings on the page",
+   "where": [
+    "  File \"/home/runner/work/jobgps-warn/jobgps-warn/direct_states.py\", line 267, in read_ga",
+    "    raise ValueError(\"no table settings on the page\")",
+    "ValueError: no table settings on the page"
+   ]
+  },
+  "NC": {
+   "ok": false,
+   "rows": 0,
+   "sample": []
+  },
+  "NM": {
+   "ok": false,
+   "rows": 0,
+   "sample": []
+  },
+  "LA": {
+   "ok": false,
+   "rows": 0,
+   "sample": []
+  },
+  "MS": {
+   "ok": true,
+   "rows": 43,
+   "sample": [
+    {
+     "company": "Conduent Commercial Solutions, LLC",
+     "notice_date": "6/29/26",
+     "location": "Remote \u2013 Statewide",
+     "jobs": null
+    },
+    {
+     "company": "Morrison Healthcare",
+     "notice_date": "7/21/26",
+     "location": "Pascagoula and Ocean Springs",
+     "jobs": 2026
+    },
+    {
+     "company": "Hood Industries",
+     "notice_date": "7/6/26",
+     "location": "Wiggins",
+     "jobs": 2026
+    }
+   ]
+  },
+  "ID": {
+   "ok": true,
+   "rows": 201,
+   "sample": [
+    {
+     "company": "Amy's Kitchen, LLC",
+     "notice_date": "9/17/2026",
+     "location": "221 Phil Meador Ave",
+     "jobs": 49
+    },
+    {
+     "company": "JeniusBank (digital banking unit of SMBC Manubank)",
+     "notice_date": "8/10/2026",
+     "location": "277 Park Avenue",
+     "jobs": 106
+    },
+    {
+     "company": "Fortrex",
+     "notice_date": "7/1/2026",
+     "location": "17365 S Cole Road",
+     "jobs": 53
+    }
+   ]
+  },
+  "MO": {
+   "ok": true,
+   "rows": 86,
+   "sample": [
+    {
+     "company": "TelaForce, LLC",
+     "notice_date": "01/19/2026",
+     "location": "Kansas City",
+     "jobs": 104
+    },
+    {
+     "company": "Greenbrier Manufacturing",
+     "notice_date": "01/22/2026",
+     "location": "Kennett",
+     "jobs": 94
+    },
+    {
+     "company": "National Aviation Services (NAS)",
+     "notice_date": "01/31/2026",
+     "location": "St. Louis (city)",
+     "jobs": 48
+    }
+   ]
+  }
+ },
+ "notes": {
+  "RI_headers": [
+   [
+    "WARN Date",
+    "Date Received",
+    "Company Name",
+    "Location of Layoffs",
+    "Number Affected",
+    "Effective Date",
+    "Closing Yes/No",
+    "Union Yes/No",
+    "Union Address",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "WARN Date",
+    "Date Received",
+    "Company Name",
+    "Location of Layoffs",
+    "Number Affected",
+    "Effective Date",
+    "Closing Yes/No",
+    "Union Yes/No",
+    "Union Address",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "WARN Date",
+    "Date Received",
+    "Company Name",
+    "Location of Layoffs",
+    "Number Affected",
+    "Effective Date",
+    "Closing Yes/No",
+    "Union Yes/No",
+    "Union Address",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "WARN Date",
+    "Date Received",
+    "Company Name (* Denotes Covid 19 Related WARN)",
+    "Location of Layoffs",
+    "Number Affected",
+    "Effective Date",
+    "Closing Yes/No",
+    "Union Yes/No",
+    "Union Address",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ]
+  ],
+  "CO_headers": [
+   [
+    "Company",
+    "WARN Date",
+    "Received",
+    "Total Notified",
+    "CO Notifications",
+    "WARN Letter",
+    "NAICS",
+    "Workforce Area",
+    "# Permanent",
+    "#Temp",
+    "Reduced Hours",
+    "#Furloughs",
+    "Begin Date",
+    "End Date",
+    "Reason for Layoffs",
+    "Occupations Impacted",
+    ""
+   ],
+   [
+    "Company",
+    "WARN Date",
+    "Received",
+    "Total Notified",
+    "CO Layoffs",
+    "WARN Letter",
+    "NAICS",
+    "Workforce Area",
+    "# Permanent",
+    "#Temp",
+    "Reduced Hours",
+    "#Furloughs",
+    "Begin Date",
+    "End Date",
+    "Reason for Layoffs",
+    "Occupations Impacted"
+   ]
+  ],
+  "MI_sample": {
+   "Id": "62f39d52-2e48-48b2-bdb9-9e3fce32b76b",
+   "Language": "en",
+   "Path": "/sitecore/content/Websites/leo/Home/bureaus-agencies/wd/data-public-notices/Warn Notices/SearchData/2026/11/20/13/47/Autokiniton-Euclid-Manufacturing",
+   "Url": "/leo/bureaus-agencies/wd/data-public-notices/warn-notices/searchdata/2026/11/20/13/47/autokiniton-euclid-manufacturing",
+   "Name": "None",
+   "Html": "<div class=\"com-wrapper search-results__section\"><div class=\"p-1\">\r\n<div class=\"row\">\r\n    <div class=\"col-12 col-md-12 col-lg-12\">\r\n        <div class=\"search-results__section-content\">\r\n            <div><a class=\"content-title-link\" href=\"\" target=\"_blank\" rel=\"noopener noreferrer\"></a></div>\r\n            <div><h3>AUTOKINITON (Euclid Manufacturing Co.)</h3>\n<ul class=\"disc\">\n    <li><strong>Site address: </strong>1500 Euclid Ave., Detroit, MI 48211</li>\n    <li><strong>County:</strong> Wayne</li>\n    <li><strong>Type of company action:</strong> Facility closure</li>\n    <li><strong>Reason for company action: </strong>Not reported</li>\n    <li><strong>First layoff date:</strong> 1/18/2027</li>\n    <li><strong>Closure date:</strong> Not reported</li>\n    <li><strong>Number of jobs impacted:</strong> 136</li>\n</ul></div>\r\n            <div>\r\n                \r\n                                    Closure\r\n                                \r\n                                    2026\r\n                                \r\n                                    Wayne\r\n                                \r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n</div></div>"
+  },
+  "pdf_first_rows": [
+   [
+    [
+     "WARN Summary by County/Parish As of 2026-04-08 08:38:00 Eastern Standard Time/EST",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "County",
+     "Warn Number",
+     "Date of Notice",
+     "Date Received by NC",
+     "Effective Date",
+     "WARN Notice: WARN Notice Name",
+     "WARN notice type",
+     "Type of layoff or closure",
+     "Number affected at this location",
+     "Address 1",
+     "City",
+     ""
+    ],
+    [
+     "",
+     "New Hanover County",
+     "202600001",
+     "1/7/2026",
+     "1/7/2026",
+     "3/6/2026",
+     "Avelo Airlines, Inc.",
+     "Closure",
+     "Permanent",
+     "82",
+     "1740 Airport Blvd.",
+     "Wilmington",
+     ""
+    ],
+    [
+     "",
+     "Wake County",
+     "202600002",
+     "1/7/2026",
+     "1/7/2026",
+     "3/6/2026",
+     "Avelo Airlines, Inc.",
+     "Closure",
+     "Permanent",
+     "78",
+     "2400 John Brantley Boulevard",
+     "Morrisville",
+     ""
+    ]
+   ],
+   [
+    [
+     "WARN Summary by County/Parish As of 2026-07-17 10:52:10 Eastern Standard Time/EST",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "County",
+     "Warn Number",
+     "Date of Notice",
+     "Date Received by NC",
+     "Effective Date",
+     "WARN Notice: WARN Notice Name",
+     "WARN notice type",
+     "Type of layoff or closure",
+     "Number affected at this location",
+     "Address 1",
+     "City",
+     ""
+    ],
+    [
+     "",
+     "Durham County",
+     "202500001",
+     "1/6/2025",
+     "1/6/2025",
+     "12/15/2025",
+     "Resilience US, Inc.",
+     "Layoff",
+     "Permanent",
+     "120",
+     "1733 TW Alexander Dr",
+     "Durham",
+     ""
+    ],
+    [
+     "",
+     "Mecklenburg County",
+     "202500002",
+     "1/13/2025",
+     "1/13/2025",
+     "8/29/2025",
+     "Eaton",
+     "Closure",
+     "Permanent",
+     "76",
+     "5910 Long Creek Park Drive",
+     "Charlotte",
+     ""
+    ]
+   ],
+   [
+    [
+     "NOTICE DATE",
+     "JOB SITE NAME",
+     "COUNTY NAME",
+     "WDA NAME",
+     "TOTAL LAYOFF NUMBER",
+     "LAYOFF DATE",
+     "RECEIVED DATE",
+     "CITY NAME"
+    ],
+    [
+     "4/27/26",
+     "Atkore HDPE, LLC",
+     "Bernalillo",
+     "Central Region",
+     "51",
+     "6/30/26",
+     "5/6/26",
+     "Albuquerque"
+    ],
+    [
+     "6/29/26",
+     "Conduent",
+     "Bernalillo",
+     "Central Region",
+     "11",
+     "July - August 2026",
+     "6/29/26",
+     "Albuquerque"
+    ],
+    [
+     "9/15/26",
+     "Sierra Lobo",
+     "Otero",
+     "Eastern Region",
+     "242",
+     "11/29/26",
+     "9/22/26",
+     "Alamogordo"
+    ]
+   ],
+   [
+    [
+     "NOTICE DATE",
+     "JOB SITE NAME",
+     "COUNTY NAME",
+     "WDA NAME",
+     "TOTAL LAYOFF NUMBER",
+     "LAYOFF DATE",
+     "RECEIVED DATE",
+     "CITY NAME"
+    ],
+    [
+     "5/1/25",
+     "The GEO Group, Inc.",
+     "Lea",
+     "Eastern Region",
+     "203",
+     "6/30/25",
+     "5/1/25",
+     "Hobbs"
+    ],
+    [
+     "7/16/25",
+     "Intel",
+     "Sandoval",
+     "Central Region",
+     "227",
+     "July-September 2025",
+     "7/16/25",
+     "Rio Rancho"
+    ],
+    [
+     "7/24/25",
+     "ECS",
+     "Bernalillo",
+     "Central Region",
+     "140",
+     "9/30/25",
+     "7/24/25",
+     "Albuquerque"
+    ]
+   ]
+  ],
+  "NC_pdfs": [
+   [
+    "open",
+    [],
+    0
+   ],
+   [
+    "open",
+    [],
+    0
+   ]
+  ],
+  "NM_pdfs": [
+   [
+    "2026_WARN.pdf",
+    [],
+    0
+   ],
+   [
+    "2025_WARN.pdf",
+    [],
+    0
+   ]
+  ],
+  "LA_pdfs": [
+   [
+    "WarnNotices2025.pdf",
+    "HTTPError: 404 Client Error: Not Found for url: https://www.laworks.net/Downloads/Downloads/WFD/WarnNotices2025.pdf"
+   ],
+   [
+    "WarnNotices2026.pdf",
+    "HTTPError: 404 Client Error: Not Found for url: https://www.laworks.net/Downloads/Downloads/WFD/WarnNotices2026.pdf"
+   ]
+  ],
+  "MS_pdfs": [
+   [
+    "warn-py2026-qtr-1-jul-sep-2026.pdf",
+    [
+     "Date of Notice",
+     "Company Name",
+     "City",
+     "County",
+     "Workforce Area",
+     "Event Number",
+     "NAICS CODE & Description",
+     "Type of Action",
+     "Number Affected",
+     "Date of Action",
+     "Reason \u2013 Comments"
+    ],
+    7
+   ],
+   [
+    "warn-py2025-qtr-2-oct-dec-2025.pdf",
+    [
+     "Date of Notice",
+     "Company Name (City) (County) (Zip)",
+     "Workforce Area",
+     "Event Number",
+     "",
+     "",
+     "",
+     "Type of Action # Affected",
+     "Date of Action",
+     "Reason / Comments"
+    ],
+    4
+   ],
+   [
+    "warn-py2025-qtr-4-apr-jun-2026.pdf",
+    [
+     "Date of Notice",
+     "Company Name",
+     "",
+     "",
+     "City",
+     "County",
+     "Workforce Area",
+     "Event Number",
+     "NAICS CODE & Description",
+     "",
+     "",
+     "Type of Action",
+     "Number Affected",
+     "Date of Action",
+     "Reason \u2013 Comments",
+     "",
+     ""
+    ],
+    9
+   ],
+   [
+    "warn-py2025-qtr-3-jan-mar-2026.pdf",
+    [
+     "Date of Notice",
+     "Company Name",
+     "City",
+     "County",
+     "Workforce Area",
+     "Event Number",
+     "NAICS CODE & Description",
+     "",
+     "",
+     "Type of Action",
+     "Number Affected",
+     "Date of Action",
+     "Reason \u2013 Comments",
+     "",
+     ""
+    ],
+    11
+   ],
+   [
+    "warn-py2025-qtr-1-jul-sep-2025.pdf",
+    [
+     "Date of Notice",
+     "Company Name (City) (County)",
+     "Workforce Area",
+     "Event Number",
+     "NAICS CODE \u2013 Description",
+     "Type of Action",
+     "Number Affected",
+     "Date of Action",
+     "Reason / Comments"
+    ],
+    12
+   ],
+   [
+    "warn-py2024-q4-warn-apr2025-jun2025.pdf",
+    [
+     "",
+     "Date of",
+     "",
+     "",
+     "Company Name",
+     "",
+     "",
+     "Workforce",
+     "",
+     "",
+     "Event",
+     "",
+     "",
+     "NAICS CODE \u2013",
+     "",
+     "",
+     "Type of",
+     "",
+     "",
+     "Number",
+     "",
+     "",
+     "Date of",
+     "",
+     "Reason / Comments"
+    ],
+    1
+   ]
+  ],
+  "ID_pdfs": [
+   [
+    "Idaho-WARN-Notices.pdf",
+    [
+     "Date of Letter",
+     "Updates",
+     "Company",
+     "Address",
+     "City",
+     "State",
+     "Zip",
+     "No. of Employees Affected",
+     "Effective or Commencing Date"
+    ],
+    201
+   ]
+  ]
+ }
+}

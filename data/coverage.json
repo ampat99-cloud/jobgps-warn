@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T19:02:53.829658+00:00",
+ "updated_at": "2026-11-21T02:07:59.023581+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
@@ -14,22 +14,27 @@
    "status": "ok",
    "read_by": "raw columns"
   },
+  "AR": {
+   "rows": 0,
+   "status": "state WARN page has moved; no public list found yet"
+  },
   "AZ": {
-   "rows": 52,
+   "rows": 61,
    "latest_notice": "2026-11-18",
    "status": "ok",
    "read_by": "cleaner"
   },
   "CA": {
-   "rows": 1701,
+   "rows": 1698,
    "latest_notice": "2026-11-18",
    "status": "ok",
    "read_by": "cleaner"
   },
   "CO": {
-   "rows": 0,
-   "status": "no data from the state site",
-   "error": "Traceback (most recent call last): | KeyError: 'CO Notifications'"
+   "rows": 59,
+   "latest_notice": "2026-11-19",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "CT": {
    "rows": 20,
@@ -38,9 +43,10 @@
    "read_by": "cleaner"
   },
   "DC": {
-   "rows": 0,
-   "status": "no data from the state site",
-   "error": "Traceback (most recent call last):"
+   "rows": 19,
+   "latest_notice": "2026-09-14",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "DE": {
    "rows": 6,
@@ -49,9 +55,10 @@
    "read_by": "cleaner"
   },
   "FL": {
-   "rows": 0,
-   "status": "no data from the state site",
-   "error": "Traceback (most recent call last): | IndexError: list index out of range"
+   "rows": 258,
+   "latest_notice": "2026-11-17",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "GA": {
    "rows": 0,
@@ -60,8 +67,8 @@
   },
   "HI": {
    "rows": 0,
-   "status": "no data from the state site",
-   "error": "2026-11-20 18:55:09,504 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
+   "status": "state WARN page has moved; no public list found yet",
+   "error": "2026-11-21 01:55:07,591 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
   },
   "IA": {
    "rows": 107,
@@ -70,9 +77,10 @@
    "read_by": "cleaner"
   },
   "ID": {
-   "rows": 0,
-   "status": "no data from the state site",
-   "error": "Traceback (most recent call last): | raise PdfminerException(e) | pdfplumber.utils.exceptions.PdfminerException: No /Root object! - Is this really a PDF?"
+   "rows": 9,
+   "latest_notice": "2026-09-17",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "IL": {
    "rows": 121,
@@ -105,31 +113,41 @@
   },
   "MA": {
    "rows": 0,
-   "status": "no data from the state site"
+   "status": "state site refuses automated reading (403)"
   },
   "MD": {
-   "rows": 0,
-   "status": "could not be read",
-   "error": "AttributeError: 'list' object has no attribute 'strip' / raw: raw columns not recognised: []"
+   "rows": 161,
+   "latest_notice": "2026-11-17",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "ME": {
-   "rows": 0,
-   "status": "no notices in the last 400 days",
+   "rows": 8,
+   "latest_notice": "2026-10-12",
+   "status": "ok",
    "read_by": "cleaner"
   },
   "MI": {
+   "rows": 63,
+   "latest_notice": "2027-01-18",
+   "status": "ok",
+   "read_by": "direct reader"
+  },
+  "MN": {
    "rows": 0,
-   "status": "no data from the state site",
-   "error": "Traceback (most recent call last): | KeyError: 'Site address'"
+   "status": "state site puts readers behind a bot check"
   },
   "MO": {
-   "rows": 0,
-   "status": "no notices in the last 400 days",
-   "read_by": "cleaner"
+   "rows": 43,
+   "latest_notice": "2026-11-17",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "MS": {
-   "rows": 0,
-   "status": "no data from the state site"
+   "rows": 17,
+   "latest_notice": "2026-07-21",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "MT": {
    "rows": 6,
@@ -137,15 +155,23 @@
    "status": "ok",
    "read_by": "cleaner"
   },
+  "NC": {
+   "rows": 0,
+   "status": "no reader for this state yet"
+  },
   "ND": {
    "rows": 0,
-   "status": "no data from the state site"
+   "status": "state site blocks readers outside its area"
   },
   "NE": {
    "rows": 9,
    "latest_notice": "2026-11-04",
    "status": "ok",
    "read_by": "cleaner"
+  },
+  "NH": {
+   "rows": 0,
+   "status": "state site refuses automated reading (403)"
   },
   "NJ": {
    "rows": 93,
@@ -158,6 +184,10 @@
    "status": "no notices in the last 400 days",
    "read_by": "cleaner"
   },
+  "NV": {
+   "rows": 0,
+   "status": "state site refuses automated reading (403)"
+  },
   "NY": {
    "rows": 243,
    "latest_notice": "2026-11-04",
@@ -165,9 +195,10 @@
    "read_by": "cleaner"
   },
   "OH": {
-   "rows": 0,
-   "status": "no data from the state site",
-   "error": "Traceback (most recent call last): | raise ValueError(\"Could not find JSON data div\") | ValueError: Could not find JSON data div"
+   "rows": 93,
+   "latest_notice": "2026-11-18",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "OK": {
    "rows": 16,
@@ -188,9 +219,10 @@
    "read_by": "raw columns"
   },
   "RI": {
-   "rows": 0,
-   "status": "no data from the state site",
-   "error": "Traceback (most recent call last): | UnboundLocalError: cannot access local variable 'headers' where it is not associated with a value"
+   "rows": 7,
+   "latest_notice": "2026-10-30",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "SC": {
    "rows": 50,
@@ -206,14 +238,13 @@
   },
   "TN": {
    "rows": 0,
-   "status": "no data from the state site",
-   "error": "Traceback (most recent call last): | raise ConnectionError(err, request=request) | requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+   "status": "state site refuses automated reading (403)",
+   "error": "2026-11-21 02:03:07,473 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
   },
   "TX": {
-   "rows": 156,
-   "latest_notice": "2026-11-17",
-   "status": "ok",
-   "read_by": "cleaner"
+   "rows": 0,
+   "status": "no data from the state site",
+   "error": "Traceback (most recent call last): | raise Exception(\"Scraper isn't scraping.\") | Exception: Scraper isn't scraping."
   },
   "UT": {
    "rows": 20,
@@ -244,6 +275,14 @@
    "latest_notice": "2026-11-17",
    "status": "ok",
    "read_by": "cleaner"
+  },
+  "WV": {
+   "rows": 0,
+   "status": "no reader written yet"
+  },
+  "WY": {
+   "rows": 0,
+   "status": "state site refuses automated reading (403)"
   }
  }
 }
