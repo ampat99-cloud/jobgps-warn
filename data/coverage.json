@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T02:43:37.372618+00:00",
+ "updated_at": "2026-11-21T05:20:24.687043+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
@@ -19,7 +19,7 @@
    "status": "state WARN page has moved; no public list found yet"
   },
   "AZ": {
-   "rows": 29,
+   "rows": 25,
    "latest_notice": "2026-09-15",
    "status": "ok",
    "read_by": "cleaner"
@@ -124,7 +124,7 @@
    "read_by": "direct reader"
   },
   "ME": {
-   "rows": 8,
+   "rows": 7,
    "latest_notice": "2026-10-12",
    "status": "ok",
    "read_by": "cleaner"
@@ -140,10 +140,9 @@
    "status": "state site puts readers behind a bot check"
   },
   "MO": {
-   "rows": 43,
-   "latest_notice": "2026-11-17",
-   "status": "ok",
-   "read_by": "direct reader"
+   "rows": 0,
+   "status": "no notices in the last 400 days",
+   "read_by": "cleaner"
   },
   "MS": {
    "rows": 17,
@@ -165,7 +164,8 @@
   },
   "ND": {
    "rows": 0,
-   "status": "state site blocks readers outside its area"
+   "status": "no notices in the last 400 days",
+   "read_by": "direct reader"
   },
   "NE": {
    "rows": 9,
@@ -242,15 +242,15 @@
    "read_by": "cleaner"
   },
   "TN": {
-   "rows": 65,
-   "latest_notice": "2026-11-09",
-   "status": "ok",
-   "read_by": "cleaner"
+   "rows": 0,
+   "status": "state site refuses automated reading (403)",
+   "error": "2026-11-21 05:15:58,419 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
   },
   "TX": {
-   "rows": 0,
-   "status": "no data from the state site",
-   "error": "Traceback (most recent call last): | raise Exception(\"Scraper isn't scraping.\") | Exception: Scraper isn't scraping."
+   "rows": 156,
+   "latest_notice": "2026-11-17",
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "UT": {
    "rows": 20,

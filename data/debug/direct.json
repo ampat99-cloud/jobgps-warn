@@ -161,10 +161,10 @@
      "jobs": 175
     },
     {
-     "company": "ADAC Automotive",
+     "company": "Family Endeavors, Inc.",
      "notice_date": "2026-11-04",
-     "location": "6138 Riverside Drive, Saranac, MI 48881",
-     "jobs": 98
+     "location": "Remote",
+     "jobs": 8
     }
    ]
   },
@@ -298,41 +298,22 @@
    ]
   },
   "MO": {
-   "ok": true,
-   "rows": 86,
-   "sample": [
-    {
-     "company": "TelaForce, LLC",
-     "notice_date": "01/19/2026",
-     "location": "Kansas City",
-     "jobs": 104
-    },
-    {
-     "company": "Greenbrier Manufacturing",
-     "notice_date": "01/22/2026",
-     "location": "Kennett",
-     "jobs": 94
-    },
-    {
-     "company": "National Aviation Services (NAS)",
-     "notice_date": "01/31/2026",
-     "location": "St. Louis (city)",
-     "jobs": 48
-    }
-   ]
+   "ok": false,
+   "rows": 0,
+   "sample": []
   },
   "WV": {
    "ok": true,
    "rows": 57,
    "sample": [
     {
-     "company": "ECM Energy Services 8-19-26",
+     "company": "ECM Energy Services",
      "notice_date": "8/19/26",
      "location": "",
      "jobs": null
     },
     {
-     "company": "Eagle Horizon Resources 08-2026",
+     "company": "Eagle Horizon Resources",
      "notice_date": "2026-08-01",
      "location": "",
      "jobs": null
@@ -370,6 +351,55 @@
    ]
   },
   "AR": {
+   "ok": false,
+   "rows": 0,
+   "sample": []
+  },
+  "MN": {
+   "ok": false,
+   "rows": 0,
+   "sample": []
+  },
+  "NV": {
+   "ok": false,
+   "rows": 0,
+   "sample": []
+  },
+  "ND": {
+   "ok": true,
+   "rows": 53,
+   "sample": [
+    {
+     "company": "EGS Customer Care Inc",
+     "notice_date": "7/31/2015",
+     "location": "Fargo, ND",
+     "jobs": 95
+    },
+    {
+     "company": "Benchmark Electronics Inc",
+     "notice_date": "8/31/2015",
+     "location": "Dunseith, ND",
+     "jobs": 72
+    },
+    {
+     "company": "EGS Customer Care Inc",
+     "notice_date": "8/2/2015",
+     "location": "Fargo, ND",
+     "jobs": 40
+    }
+   ]
+  },
+  "NH": {
+   "ok": false,
+   "rows": 0,
+   "sample": []
+  },
+  "WY": {
+   "ok": false,
+   "rows": 0,
+   "sample": []
+  },
+  "MA": {
    "ok": false,
    "rows": 0,
    "sample": []
@@ -770,19 +800,732 @@
   ],
   "AR_discover": [
    [
-    "https://dws.arkansas.gov/",
-    0,
-    []
-   ],
-   [
-    "https://dws.arkansas.gov/workforce-services/employers/",
-    0,
-    []
-   ],
-   [
     "https://dws.arkansas.gov/workforce-services/employers/dislocated-worker-services/",
     0,
     []
+   ]
+  ],
+  "pdf_first_rows": [
+   [
+    [
+     "RR Start Date",
+     "Layoff Name",
+     "Account: City",
+     "Account: Industry",
+     "Layoff Start",
+     "",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "",
+     "",
+     "Layoff Status",
+     "Affected Workers",
+     "Layoff Count"
+    ],
+    [
+     "October 2026",
+     "Newport Academy",
+     "St Cloud",
+     "Health Care/Social Assist",
+     "9/30/2026",
+     "",
+     "Yes",
+     "10/1/2026",
+     "",
+     "Workforce",
+     "",
+     "Small Layoff Services",
+     "68",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Reduction",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Rosedale Center Roseville Real Estate & Rental 10/18/2026 No Closing Small Layoff Services 1",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ],
+   [
+    [
+     "RR Start Date",
+     "Layoff Name",
+     "Account: City",
+     "Account: Industry",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "",
+     "",
+     "Layoff Status",
+     "Affected Workers",
+     "Layoff Count"
+    ],
+    [
+     "September 2026",
+     "Cedar and Stone",
+     "Superior",
+     "Manufacturing",
+     "10/1/2026",
+     "No",
+     "",
+     "Closing",
+     "",
+     "",
+     "Small Layoff Services",
+     "14",
+     ""
+    ],
+    [
+     "Wonders Ice Cream Burnsville Dining Establishments 9/8/2026 No Closing Small Layoff Services 1",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "King Coil Spirits",
+     "St Paul",
+     "Other Services",
+     "9/8/2026",
+     "No",
+     "",
+     "",
+     "Temporary",
+     "",
+     "Temporary Layoff/Closure",
+     "1",
+     ""
+    ]
+   ],
+   [
+    [
+     "RR Start Date",
+     "Layoff Name",
+     "Account: City",
+     "Account: Industry",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "",
+     "",
+     "Layoff Status",
+     "Affected Workers",
+     "Layoff Count"
+    ],
+    [
+     "August 2026",
+     "Heliene 2nd",
+     "Mountain Iron",
+     "Manufacturing",
+     "10/4/2026",
+     "YES",
+     "8/4/2026",
+     "",
+     "Workforce",
+     "",
+     "RR in Progress",
+     "93",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Reduction",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Revol Greens Owatonna Agriculture 10/4/2026 YES Closing RR in Progress 89",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ],
+   [
+    [
+     "",
+     "Layoff Name",
+     "City",
+     "Industry",
+     "Layoff",
+     "WAR",
+     "WARN",
+     "Layoff Type",
+     "Layoff Status",
+     "Affected",
+     "Layoff"
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "Start",
+     "N Act",
+     "Received",
+     "",
+     "",
+     "Workers",
+     "Count"
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "July 2026",
+     "Transdev Rochester",
+     "Rochester",
+     "Transportation",
+     "8/31/2026",
+     "Yes",
+     "7/2/2026",
+     "Closing",
+     "Aversion/Retention",
+     "-",
+     ""
+    ]
+   ],
+   [
+    [
+     "",
+     "Layoff Name",
+     "City",
+     "Industry",
+     "Layoff",
+     "WAR",
+     "WARN",
+     "Layoff Type",
+     "Layoff Status",
+     "Affected",
+     "Layoff"
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "Start",
+     "N Act",
+     "Received",
+     "",
+     "",
+     "Workers",
+     "Count"
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "June 2026",
+     "Mezza9 Caf\u00e9",
+     "Rochester",
+     "Dining",
+     "6/30/2026",
+     "No",
+     "",
+     "Closing",
+     "Small Layoff Services",
+     "1",
+     ""
+    ]
+   ],
+   [
+    [
+     "RR Start Date",
+     "Layoff Name",
+     "City",
+     "",
+     "",
+     "Industry",
+     "",
+     "",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "Layoff Status",
+     "Affected Workers",
+     "Layoff Count"
+    ],
+    [
+     "May 2026",
+     "Ideal US Talent Worker OPCO LLC",
+     "Minneapolis",
+     "",
+     "",
+     "",
+     "Professional",
+     "",
+     "7/1/2026",
+     "Yes",
+     "5/4/2026",
+     "Closing",
+     "Small Layoff Services",
+     "23",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Services",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Gerten's Farm Market Inver Grove Agriculture 9/1/2026 No Closing Small Layoff Services 6 Heights",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ],
+   [
+    [
+     "RR Start Date",
+     "Layoff Name",
+     "City",
+     "Industry",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "Layoff Status",
+     "Affected Workers",
+     "Layoff Count"
+    ],
+    [
+     "April 2026",
+     "First Student",
+     "Red Wing",
+     "Transportation",
+     "6/16/2026",
+     "NO",
+     "",
+     "Closing",
+     "Small Layoff Services",
+     "49",
+     ""
+    ],
+    [
+     "Chartwells SCSU St Cloud Dining Establishments 7/1/2026 YES 4/23/2026 Transfer of Ownership Aversion/Retention 153",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "Shopkick Inc",
+     "Boston",
+     "Retail",
+     "3/26/2026",
+     "NO",
+     "",
+     "Closing",
+     "Small Layoff Services",
+     "70",
+     ""
+    ]
+   ],
+   [
+    [
+     "RR Start Date",
+     "Layoff Name",
+     "City",
+     "Industry",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "Layoff Status",
+     "Affected Workers",
+     "Layoff Count"
+    ],
+    [
+     "March 2026",
+     "Pace Industries",
+     "Maple Lake",
+     "Manufacturing",
+     "4/2/2026",
+     "No",
+     "",
+     "Closing",
+     "Small Layoff Services",
+     "1",
+     ""
+    ],
+    [
+     "Hooters Bloomington Dining Establishments 3/22/2026 No Closing Small Layoff Services 1",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "Jack Links",
+     "Mankato",
+     "Manufacturing",
+     "3/22/2026",
+     "No",
+     "",
+     "Workforce Reduction",
+     "Small Layoff Services",
+     "44",
+     ""
+    ]
+   ],
+   [
+    [
+     "Layoff Name",
+     "Account: City",
+     "Account: Industry",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "Layoff Status",
+     "Affected Workers"
+    ],
+    [
+     "Inbound Health 2025",
+     "Minneapolis",
+     "Health Care/Social Assist",
+     "12/1/2025",
+     "NO",
+     "",
+     "Closing",
+     "Small Layoff Services",
+     "1"
+    ],
+    [
+     "The Vollrath Company New Port Professional Services 2/6/2026 NO 12/4/2025 Closing Small Layoff Services 39",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Schram Haus Brewery 2025",
+     "Chaska",
+     "Dining Establishments",
+     "12/31/2025",
+     "NO",
+     "",
+     "Closing",
+     "Small Layoff Services",
+     "1"
+    ]
+   ],
+   [
+    [
+     "Layoff Name",
+     "Account: City",
+     "Account: Industry",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "Layoff Status",
+     "Affected Workers"
+    ],
+    [
+     "Central MN Mental Health",
+     "Waite Park",
+     "Health Care/Social Assist",
+     "1/1/2026",
+     "FALSE",
+     "",
+     "Workforce Reduction",
+     "Small Layoff Services",
+     "25"
+    ],
+    [
+     "Aljon Tool",
+     "Plymouth",
+     "Construction",
+     "10/30/2025",
+     "FALSE",
+     "",
+     "Closing",
+     "Small Layoff Services",
+     "25"
+    ],
+    [
+     "Gina Maria's Pizza",
+     "Eden Prairie",
+     "Dining Establishments",
+     "10/5/2025",
+     "FALSE",
+     "",
+     "Closing",
+     "Small Layoff Services",
+     "1"
+    ]
+   ],
+   [
+    [
+     "Layoff Name",
+     "Account: City",
+     "Account: Industry",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "Layoff Status",
+     "Affected Workers"
+    ],
+    [
+     "Centrex Rehab",
+     "Bloomington",
+     "Health Care/Social Assist",
+     "11/7/2025",
+     "YES",
+     "9/3/2025",
+     "Closing",
+     "Small Layoff Services",
+     "311"
+    ],
+    [
+     "At the Farm Waconia",
+     "Waconia",
+     "Agriculture",
+     "8/30/2025",
+     "NO",
+     "",
+     "Closing",
+     "Small Layoff Services",
+     "1"
+    ],
+    [
+     "RC Detox/Withdrawal Mgt Div",
+     "St Paul",
+     "Government",
+     "10/6/2025",
+     "NO",
+     "",
+     "Closing",
+     "Small Layoff Services",
+     "43"
+    ]
+   ]
+  ],
+  "MN_pdfs": [
+   [
+    "plant-closing-mass-layoff-warn-2026-october_tcm1045-773345.pdf",
+    [],
+    0
+   ],
+   [
+    "plant-closing-mass-layoff-warn-2026-september_tcm1045-770964.pdf",
+    [],
+    0
+   ],
+   [
+    "plant-closing-mass-layoff-warn-2026-august_tcm1045-767763.pdf",
+    [],
+    0
+   ],
+   [
+    "plant-closing-mass-layoff-warn-2026-july_tcm1045-766204.pdf",
+    [],
+    0
+   ],
+   [
+    "plant-closing-mass-layoff-warn-2026-june_tcm1045-758364.pdf",
+    [],
+    0
+   ],
+   [
+    "plant-closing-mass-layoff-warn-2026-may_tcm1045-752571.pdf",
+    [],
+    0
+   ],
+   [
+    "plant-closing-mass-layoff-warn-2026-april_tcm1045-749441.pdf",
+    [],
+    0
+   ],
+   [
+    "plant-closing-mass-layoff-warn-2026-march_tcm1045-742363.pdf",
+    [],
+    0
+   ],
+   [
+    "plant-closing-mass-layoff-warn-december-2025_tcm1045-720888.pdf",
+    [],
+    0
+   ],
+   [
+    "plant-closing-mass-layoff-warn-october-2025_tcm1045-712065.pdf",
+    [],
+    0
+   ],
+   [
+    "plant-closing-mass-layoff-warn-september-2025_tcm1045-712064.pdf",
+    [],
+    0
+   ]
+  ],
+  "NV_pdfs": [
+   [
+    "WARN_and_NonWARN_Master_w_Logo_2026.pdf",
+    "HTTPError: 403 Client Error: Forbidden for url: https://detr.nv.gov/content/media/WARN_and_NonWARN_Master_w_Logo_2026.pdf"
+   ],
+   [
+    "WARN_and_NonWARN_Master_w_Logo_2025.pdf",
+    "HTTPError: 403 Client Error: Forbidden for url: https://detr.nv.gov/content/media/WARN_and_NonWARN_Master_w_Logo_2025.pdf"
+   ]
+  ],
+  "ND_pdfs": [
+   [
+    "WARN%20Notices%202015%20to%20present.pdf",
+    [
+     "Company Name",
+     "Location",
+     "WARN Dated",
+     "Date of Layoff/Closure",
+     "Number Laid Off/Affected",
+     "Notes"
+    ],
+    53
+   ]
+  ],
+  "NH_pdfs": [
+   [
+    "mass-layoff.pdf",
+    "HTTPError: 403 Client Error: Forbidden for url: https://mm.nh.gov/files/uploads/nhes/documents/mass-layoff.pdf"
+   ]
+  ],
+  "WY_notes": [
+   [
+    "https://dws.wyo.gov/wp-json/wp/v2/posts?search=WARN&per_page=100",
+    "HTTPError"
+   ],
+   [
+    "https://dws.wyo.gov/category/public-notices/",
+    "HTTPError"
+   ]
+  ],
+  "MA_discover": [
+   [
+    "https://www.mass.gov/info-details/worker-adjustment-and-retraining-act-warn-weekly-report",
+    "HTTPError"
+   ],
+   [
+    "https://www.mass.gov/info-details/worker-adjustment-and-retraining-notification-act-warn-layoff-and-closure-updates",
+    "HTTPError"
    ]
   ]
  }
