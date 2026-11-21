@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T02:22:15.794974+00:00",
+ "updated_at": "2026-11-21T02:43:37.372618+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
@@ -19,7 +19,7 @@
    "status": "state WARN page has moved; no public list found yet"
   },
   "AZ": {
-   "rows": 25,
+   "rows": 29,
    "latest_notice": "2026-09-15",
    "status": "ok",
    "read_by": "cleaner"
@@ -66,9 +66,10 @@
    "read_by": "raw columns"
   },
   "HI": {
-   "rows": 0,
-   "status": "state WARN page has moved; no public list found yet",
-   "error": "2026-11-21 02:16:09,175 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
+   "rows": 17,
+   "latest_notice": "2026-07-31",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "IA": {
    "rows": 107,
@@ -123,7 +124,7 @@
    "read_by": "direct reader"
   },
   "ME": {
-   "rows": 7,
+   "rows": 8,
    "latest_notice": "2026-10-12",
    "status": "ok",
    "read_by": "cleaner"
@@ -139,9 +140,10 @@
    "status": "state site puts readers behind a bot check"
   },
   "MO": {
-   "rows": 0,
-   "status": "no notices in the last 400 days",
-   "read_by": "cleaner"
+   "rows": 43,
+   "latest_notice": "2026-11-17",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "MS": {
    "rows": 17,
@@ -246,10 +248,9 @@
    "read_by": "cleaner"
   },
   "TX": {
-   "rows": 156,
-   "latest_notice": "2026-11-17",
-   "status": "ok",
-   "read_by": "cleaner"
+   "rows": 0,
+   "status": "no data from the state site",
+   "error": "Traceback (most recent call last): | raise Exception(\"Scraper isn't scraping.\") | Exception: Scraper isn't scraping."
   },
   "UT": {
    "rows": 20,
@@ -282,8 +283,10 @@
    "read_by": "cleaner"
   },
   "WV": {
-   "rows": 0,
-   "status": "no public list found on the state site"
+   "rows": 9,
+   "latest_notice": "2026-08-19",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "WY": {
    "rows": 0,

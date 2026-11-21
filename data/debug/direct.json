@@ -161,10 +161,10 @@
      "jobs": 175
     },
     {
-     "company": "Family Endeavors, Inc.",
+     "company": "ADAC Automotive",
      "notice_date": "2026-11-04",
-     "location": "Remote",
-     "jobs": 8
+     "location": "6138 Riverside Drive, Saranac, MI 48881",
+     "jobs": 98
     }
    ]
   },
@@ -298,19 +298,76 @@
    ]
   },
   "MO": {
-   "ok": false,
-   "rows": 0,
-   "sample": []
+   "ok": true,
+   "rows": 86,
+   "sample": [
+    {
+     "company": "TelaForce, LLC",
+     "notice_date": "01/19/2026",
+     "location": "Kansas City",
+     "jobs": 104
+    },
+    {
+     "company": "Greenbrier Manufacturing",
+     "notice_date": "01/22/2026",
+     "location": "Kennett",
+     "jobs": 94
+    },
+    {
+     "company": "National Aviation Services (NAS)",
+     "notice_date": "01/31/2026",
+     "location": "St. Louis (city)",
+     "jobs": 48
+    }
+   ]
   },
   "WV": {
-   "ok": false,
-   "rows": 0,
-   "sample": []
+   "ok": true,
+   "rows": 57,
+   "sample": [
+    {
+     "company": "ECM Energy Services 8-19-26",
+     "notice_date": "8/19/26",
+     "location": "",
+     "jobs": null
+    },
+    {
+     "company": "Eagle Horizon Resources 08-2026",
+     "notice_date": "2026-08-01",
+     "location": "",
+     "jobs": null
+    },
+    {
+     "company": "Workforce July 2026 revisedsigned",
+     "notice_date": "2026-07-01",
+     "location": "",
+     "jobs": null
+    }
+   ]
   },
   "HI": {
-   "ok": false,
-   "rows": 0,
-   "sample": []
+   "ok": true,
+   "rows": 22,
+   "sample": [
+    {
+     "company": "Watabe Wedding Corporation Michels Restaurant",
+     "notice_date": "July 31, 2026",
+     "location": "",
+     "jobs": null
+    },
+    {
+     "company": "Bayer Research and Development Services",
+     "notice_date": "July 22, 2026",
+     "location": "",
+     "jobs": null
+    },
+    {
+     "company": "Adventist Health",
+     "notice_date": "June 30, 2026",
+     "location": "",
+     "jobs": null
+    }
+   ]
   },
   "AR": {
    "ok": false,
@@ -691,144 +748,24 @@
     201
    ]
   ],
-  "pdf_first_rows": [
-   [
-    [
-     "Field",
-     "Information"
-    ],
-    [
-     "Company Name",
-     "ECM Energy Services"
-    ],
-    [
-     "Site Address",
-     "1500 Industrial Rd W, Bridgeport, WV 26301"
-    ],
-    [
-     "Primary Contact",
-     "Michael Caseman, President & CEO"
-    ]
-   ],
-   [],
-   [],
-   [
-    [
-     "Position Titles",
-     "Number Impacted"
-    ],
-    [
-     "Customer Experience Associate I",
-     "3"
-    ],
-    [
-     "Customer Experience Associate II",
-     "3"
-    ]
-   ],
-   [],
-   [
-    [
-     "Oahu Lower Kunia Site",
-     ""
-    ],
-    [
-     "Total Full Time Employees",
-     "133"
-    ],
-    [
-     "No. of Affected Employees",
-     "62"
-    ],
-    [
-     "Site Address:",
-     ""
-    ]
-   ],
-   [],
-   []
-  ],
-  "WV_discover": [
+  "WV_letters": [
    [
     "https://workforcewv.org/businesses/layoffs-downsizing/warn-listing/",
-    0,
-    []
-   ],
-   [
-    "https://workforcewv.org/job-seeker/layoffs-downsizing/warn-listing/",
-    0,
-    []
-   ],
-   [
-    "https://www.ecfr.gov/current/title-20/chapter-V/part-639",
-    0,
-    []
-   ],
-   [
-    "https://uscode.house.gov/view.xhtml?path=/prelim@title29/chapter23&edition=prelim",
-    "HTTPError"
-   ],
-   [
-    "https://workforcewv.org/wp-content/uploads/2026/08/ECM-Energy-Services-WARN-8-19-26.pdf",
-    0,
-    []
-   ],
-   [
-    "https://workforcewv.org/wp-content/uploads/2026/08/Eagle-Horizon-Resources-WARN-08-2026.pdf",
-    0,
-    []
-   ],
-   [
-    "https://workforcewv.org/wp-content/uploads/2026/07/WARN-Notice-Workforce-July-2026-revisedsigned.pdf",
-    0,
-    []
-   ],
-   [
-    "https://workforcewv.org/wp-content/uploads/2026/07/WARN-Notice-State-West-Virginia-Conduent.pdf",
-    0,
-    []
+    57
    ]
   ],
-  "HI_discover": [
-   [
-    "https://labor.hawaii.gov/wdc/",
-    0,
-    []
-   ],
-   [
-    "https://labor.hawaii.gov/",
-    0,
-    []
-   ],
+  "HI_letters": [
    [
     "https://labor.hawaii.gov/wdc/2026-warn-notices/",
-    0,
-    []
+    13
+   ],
+   [
+    "https://labor.hawaii.gov/wdc/2025-warn-notices/",
+    9
    ],
    [
     "https://labor.hawaii.gov/wdd/warn-notices/",
-    0,
-    []
-   ],
-   [
-    "https://labor.hawaii.gov/wdd/files/2026/08/July-31-2026-Watabe-Wedding-Corporation-Michels-Restaurant_WARN.pdf",
-    0,
-    []
-   ],
-   [
-    "https://labor.hawaii.gov/wdd/files/2026/07/July-22-2026-Bayer-Research-and-Development-Services_WARN.pdf",
-    0,
-    []
-   ],
-   [
-    "https://labor.hawaii.gov/wdd/files/2026/07/June-30-2026-Adventist-Health_WARN.pdf",
-    0,
-    []
-   ],
-   [
-    "https://labor.hawaii.gov/wdd/files/2026/07/June-29-2026-Alii-Health-Center_WARN.pdf",
-    0,
-    []
+    0
    ]
   ],
   "AR_discover": [
