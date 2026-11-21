@@ -439,7 +439,7 @@ def letters_list(st, pages):
                 um = re.search(r"/uploads/(\d{4})/(\d{2})/", href)
                 d = f"{dm.group(1)}/{dm.group(2)}/{dm.group(3)}" if dm else (f"{um.group(1)}-{um.group(2)}-01" if um else None)
                 name = re.sub(r"\b(WARN|Notice|State|West Virginia|signed|revised)\b", " ", name, flags=re.I)
-            name = clean(name)
+            name = clean(re.sub(r"[\s_-]*\d{1,2}[-_./]\d{1,4}([-_./]\d{2,4})?\s*$", "", clean(name)))  # "ECM Energy Services 8-19-26" -> "ECM Energy Services"
             if d and len(name) > 2:
                 rows.append({"company": name, "notice_date": d, "location": "", "jobs": None})
                 n += 1

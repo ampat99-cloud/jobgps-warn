@@ -1,6 +1,12 @@
 {
  "items": [
   {
+   "id": "2026-11-20-v2.10.19",
+   "date": "20 Nov 2026",
+   "title": "JobGPS 2.10.19",
+   "body": "Reads the apply link on LinkedIn’s new job page, asks “Did you hear back?” two days after a check so every label can be measured against what really happened, and checks layoff notices in 42 states plus Washington DC (up from 26)."
+  },
+  {
    "id": "2026-11-19-v2.10.17",
    "date": "19 Nov 2026",
    "title": "JobGPS 2.10.17",
