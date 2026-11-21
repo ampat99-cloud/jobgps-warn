@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T05:20:24.687043+00:00",
+ "updated_at": "2026-11-21T05:35:59.579237+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
@@ -19,8 +19,8 @@
    "status": "state WARN page has moved; no public list found yet"
   },
   "AZ": {
-   "rows": 25,
-   "latest_notice": "2026-09-15",
+   "rows": 50,
+   "latest_notice": "2026-10-29",
    "status": "ok",
    "read_by": "cleaner"
   },
@@ -136,13 +136,16 @@
    "read_by": "direct reader"
   },
   "MN": {
-   "rows": 0,
-   "status": "state site puts readers behind a bot check"
+   "rows": 5,
+   "latest_notice": "2026-10-29",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "MO": {
-   "rows": 0,
-   "status": "no notices in the last 400 days",
-   "read_by": "cleaner"
+   "rows": 43,
+   "latest_notice": "2026-11-17",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "MS": {
    "rows": 17,
@@ -244,13 +247,14 @@
   "TN": {
    "rows": 0,
    "status": "state site refuses automated reading (403)",
-   "error": "2026-11-21 05:15:58,419 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
+   "error": "Traceback (most recent call last): | raise ConnectionError(err, request=request) | requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   "TX": {
    "rows": 156,
    "latest_notice": "2026-11-17",
    "status": "ok",
-   "read_by": "cleaner"
+   "error": "Traceback (most recent call last): | raise Exception(\"Scraper isn't scraping.\") | Exception: Scraper isn't scraping.",
+   "read_by": "kept from 2026-11-21 (state site did not answer today: no data from the state site)"
   },
   "UT": {
    "rows": 20,

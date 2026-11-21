@@ -298,9 +298,28 @@
    ]
   },
   "MO": {
-   "ok": false,
-   "rows": 0,
-   "sample": []
+   "ok": true,
+   "rows": 86,
+   "sample": [
+    {
+     "company": "TelaForce, LLC",
+     "notice_date": "01/19/2026",
+     "location": "Kansas City",
+     "jobs": 104
+    },
+    {
+     "company": "Greenbrier Manufacturing",
+     "notice_date": "01/22/2026",
+     "location": "Kennett",
+     "jobs": 94
+    },
+    {
+     "company": "National Aviation Services (NAS)",
+     "notice_date": "01/31/2026",
+     "location": "St. Louis (city)",
+     "jobs": 48
+    }
+   ]
   },
   "WV": {
    "ok": true,
@@ -356,9 +375,28 @@
    "sample": []
   },
   "MN": {
-   "ok": false,
-   "rows": 0,
-   "sample": []
+   "ok": true,
+   "rows": 7,
+   "sample": [
+    {
+     "company": "Newport Academy",
+     "notice_date": "10/1/2026",
+     "location": "St Cloud",
+     "jobs": 68
+    },
+    {
+     "company": "Family Endeavors Inc",
+     "notice_date": "10/29/2026",
+     "location": "San Antonio",
+     "jobs": 6
+    },
+    {
+     "company": "Heliene 2nd",
+     "notice_date": "8/4/2026",
+     "location": "Mountain Iron",
+     "jobs": 93
+    }
+   ]
   },
   "NV": {
    "ok": false,
@@ -808,196 +846,6 @@
   "pdf_first_rows": [
    [
     [
-     "RR Start Date",
-     "Layoff Name",
-     "Account: City",
-     "Account: Industry",
-     "Layoff Start",
-     "",
-     "WARN Act",
-     "WARN Received",
-     "Layoff Type",
-     "",
-     "",
-     "Layoff Status",
-     "Affected Workers",
-     "Layoff Count"
-    ],
-    [
-     "October 2026",
-     "Newport Academy",
-     "St Cloud",
-     "Health Care/Social Assist",
-     "9/30/2026",
-     "",
-     "Yes",
-     "10/1/2026",
-     "",
-     "Workforce",
-     "",
-     "Small Layoff Services",
-     "68",
-     ""
-    ],
-    [
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "Reduction",
-     "",
-     "",
-     "",
-     ""
-    ],
-    [
-     "Rosedale Center Roseville Real Estate & Rental 10/18/2026 No Closing Small Layoff Services 1",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     ""
-    ]
-   ],
-   [
-    [
-     "RR Start Date",
-     "Layoff Name",
-     "Account: City",
-     "Account: Industry",
-     "Layoff Start",
-     "WARN Act",
-     "WARN Received",
-     "Layoff Type",
-     "",
-     "",
-     "Layoff Status",
-     "Affected Workers",
-     "Layoff Count"
-    ],
-    [
-     "September 2026",
-     "Cedar and Stone",
-     "Superior",
-     "Manufacturing",
-     "10/1/2026",
-     "No",
-     "",
-     "Closing",
-     "",
-     "",
-     "Small Layoff Services",
-     "14",
-     ""
-    ],
-    [
-     "Wonders Ice Cream Burnsville Dining Establishments 9/8/2026 No Closing Small Layoff Services 1",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     ""
-    ],
-    [
-     "",
-     "King Coil Spirits",
-     "St Paul",
-     "Other Services",
-     "9/8/2026",
-     "No",
-     "",
-     "",
-     "Temporary",
-     "",
-     "Temporary Layoff/Closure",
-     "1",
-     ""
-    ]
-   ],
-   [
-    [
-     "RR Start Date",
-     "Layoff Name",
-     "Account: City",
-     "Account: Industry",
-     "Layoff Start",
-     "WARN Act",
-     "WARN Received",
-     "Layoff Type",
-     "",
-     "",
-     "Layoff Status",
-     "Affected Workers",
-     "Layoff Count"
-    ],
-    [
-     "August 2026",
-     "Heliene 2nd",
-     "Mountain Iron",
-     "Manufacturing",
-     "10/4/2026",
-     "YES",
-     "8/4/2026",
-     "",
-     "Workforce",
-     "",
-     "RR in Progress",
-     "93",
-     ""
-    ],
-    [
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "Reduction",
-     "",
-     "",
-     "",
-     ""
-    ],
-    [
-     "Revol Greens Owatonna Agriculture 10/4/2026 YES Closing RR in Progress 89",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     ""
-    ]
-   ],
-   [
-    [
      "",
      "Layoff Name",
      "City",
@@ -1103,339 +951,66 @@
      "1",
      ""
     ]
-   ],
-   [
-    [
-     "RR Start Date",
-     "Layoff Name",
-     "City",
-     "",
-     "",
-     "Industry",
-     "",
-     "",
-     "Layoff Start",
-     "WARN Act",
-     "WARN Received",
-     "Layoff Type",
-     "Layoff Status",
-     "Affected Workers",
-     "Layoff Count"
-    ],
-    [
-     "May 2026",
-     "Ideal US Talent Worker OPCO LLC",
-     "Minneapolis",
-     "",
-     "",
-     "",
-     "Professional",
-     "",
-     "7/1/2026",
-     "Yes",
-     "5/4/2026",
-     "Closing",
-     "Small Layoff Services",
-     "23",
-     ""
-    ],
-    [
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "Services",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     ""
-    ],
-    [
-     "Gerten's Farm Market Inver Grove Agriculture 9/1/2026 No Closing Small Layoff Services 6 Heights",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     ""
-    ]
-   ],
-   [
-    [
-     "RR Start Date",
-     "Layoff Name",
-     "City",
-     "Industry",
-     "Layoff Start",
-     "WARN Act",
-     "WARN Received",
-     "Layoff Type",
-     "Layoff Status",
-     "Affected Workers",
-     "Layoff Count"
-    ],
-    [
-     "April 2026",
-     "First Student",
-     "Red Wing",
-     "Transportation",
-     "6/16/2026",
-     "NO",
-     "",
-     "Closing",
-     "Small Layoff Services",
-     "49",
-     ""
-    ],
-    [
-     "Chartwells SCSU St Cloud Dining Establishments 7/1/2026 YES 4/23/2026 Transfer of Ownership Aversion/Retention 153",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     ""
-    ],
-    [
-     "",
-     "Shopkick Inc",
-     "Boston",
-     "Retail",
-     "3/26/2026",
-     "NO",
-     "",
-     "Closing",
-     "Small Layoff Services",
-     "70",
-     ""
-    ]
-   ],
-   [
-    [
-     "RR Start Date",
-     "Layoff Name",
-     "City",
-     "Industry",
-     "Layoff Start",
-     "WARN Act",
-     "WARN Received",
-     "Layoff Type",
-     "Layoff Status",
-     "Affected Workers",
-     "Layoff Count"
-    ],
-    [
-     "March 2026",
-     "Pace Industries",
-     "Maple Lake",
-     "Manufacturing",
-     "4/2/2026",
-     "No",
-     "",
-     "Closing",
-     "Small Layoff Services",
-     "1",
-     ""
-    ],
-    [
-     "Hooters Bloomington Dining Establishments 3/22/2026 No Closing Small Layoff Services 1",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     ""
-    ],
-    [
-     "",
-     "Jack Links",
-     "Mankato",
-     "Manufacturing",
-     "3/22/2026",
-     "No",
-     "",
-     "Workforce Reduction",
-     "Small Layoff Services",
-     "44",
-     ""
-    ]
-   ],
-   [
-    [
-     "Layoff Name",
-     "Account: City",
-     "Account: Industry",
-     "Layoff Start",
-     "WARN Act",
-     "WARN Received",
-     "Layoff Type",
-     "Layoff Status",
-     "Affected Workers"
-    ],
-    [
-     "Inbound Health 2025",
-     "Minneapolis",
-     "Health Care/Social Assist",
-     "12/1/2025",
-     "NO",
-     "",
-     "Closing",
-     "Small Layoff Services",
-     "1"
-    ],
-    [
-     "The Vollrath Company New Port Professional Services 2/6/2026 NO 12/4/2025 Closing Small Layoff Services 39",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     ""
-    ],
-    [
-     "Schram Haus Brewery 2025",
-     "Chaska",
-     "Dining Establishments",
-     "12/31/2025",
-     "NO",
-     "",
-     "Closing",
-     "Small Layoff Services",
-     "1"
-    ]
-   ],
-   [
-    [
-     "Layoff Name",
-     "Account: City",
-     "Account: Industry",
-     "Layoff Start",
-     "WARN Act",
-     "WARN Received",
-     "Layoff Type",
-     "Layoff Status",
-     "Affected Workers"
-    ],
-    [
-     "Central MN Mental Health",
-     "Waite Park",
-     "Health Care/Social Assist",
-     "1/1/2026",
-     "FALSE",
-     "",
-     "Workforce Reduction",
-     "Small Layoff Services",
-     "25"
-    ],
-    [
-     "Aljon Tool",
-     "Plymouth",
-     "Construction",
-     "10/30/2025",
-     "FALSE",
-     "",
-     "Closing",
-     "Small Layoff Services",
-     "25"
-    ],
-    [
-     "Gina Maria's Pizza",
-     "Eden Prairie",
-     "Dining Establishments",
-     "10/5/2025",
-     "FALSE",
-     "",
-     "Closing",
-     "Small Layoff Services",
-     "1"
-    ]
-   ],
-   [
-    [
-     "Layoff Name",
-     "Account: City",
-     "Account: Industry",
-     "Layoff Start",
-     "WARN Act",
-     "WARN Received",
-     "Layoff Type",
-     "Layoff Status",
-     "Affected Workers"
-    ],
-    [
-     "Centrex Rehab",
-     "Bloomington",
-     "Health Care/Social Assist",
-     "11/7/2025",
-     "YES",
-     "9/3/2025",
-     "Closing",
-     "Small Layoff Services",
-     "311"
-    ],
-    [
-     "At the Farm Waconia",
-     "Waconia",
-     "Agriculture",
-     "8/30/2025",
-     "NO",
-     "",
-     "Closing",
-     "Small Layoff Services",
-     "1"
-    ],
-    [
-     "RC Detox/Withdrawal Mgt Div",
-     "St Paul",
-     "Government",
-     "10/6/2025",
-     "NO",
-     "",
-     "Closing",
-     "Small Layoff Services",
-     "43"
-    ]
    ]
   ],
   "MN_pdfs": [
    [
     "plant-closing-mass-layoff-warn-2026-october_tcm1045-773345.pdf",
-    [],
-    0
+    [
+     "RR Start Date",
+     "Layoff Name",
+     "Account: City",
+     "Account: Industry",
+     "Layoff Start",
+     "",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "",
+     "",
+     "Layoff Status",
+     "Affected Workers",
+     "Layoff Count"
+    ],
+    7
    ],
    [
     "plant-closing-mass-layoff-warn-2026-september_tcm1045-770964.pdf",
-    [],
-    0
+    [
+     "RR Start Date",
+     "Layoff Name",
+     "Account: City",
+     "Account: Industry",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "",
+     "",
+     "Layoff Status",
+     "Affected Workers",
+     "Layoff Count"
+    ],
+    7
    ],
    [
     "plant-closing-mass-layoff-warn-2026-august_tcm1045-767763.pdf",
-    [],
-    0
+    [
+     "RR Start Date",
+     "Layoff Name",
+     "Account: City",
+     "Account: Industry",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "",
+     "",
+     "Layoff Status",
+     "Affected Workers",
+     "Layoff Count"
+    ],
+    5
    ],
    [
     "plant-closing-mass-layoff-warn-2026-july_tcm1045-766204.pdf",
@@ -1449,33 +1024,103 @@
    ],
    [
     "plant-closing-mass-layoff-warn-2026-may_tcm1045-752571.pdf",
-    [],
-    0
+    [
+     "RR Start Date",
+     "Layoff Name",
+     "City",
+     "",
+     "",
+     "Industry",
+     "",
+     "",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "Layoff Status",
+     "Affected Workers",
+     "Layoff Count"
+    ],
+    6
    ],
    [
     "plant-closing-mass-layoff-warn-2026-april_tcm1045-749441.pdf",
-    [],
-    0
+    [
+     "RR Start Date",
+     "Layoff Name",
+     "City",
+     "Industry",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "Layoff Status",
+     "Affected Workers",
+     "Layoff Count"
+    ],
+    5
    ],
    [
     "plant-closing-mass-layoff-warn-2026-march_tcm1045-742363.pdf",
-    [],
-    0
+    [
+     "RR Start Date",
+     "Layoff Name",
+     "City",
+     "Industry",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "Layoff Status",
+     "Affected Workers",
+     "Layoff Count"
+    ],
+    5
    ],
    [
     "plant-closing-mass-layoff-warn-december-2025_tcm1045-720888.pdf",
-    [],
-    0
+    [
+     "Layoff Name",
+     "Account: City",
+     "Account: Industry",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "Layoff Status",
+     "Affected Workers"
+    ],
+    19
    ],
    [
     "plant-closing-mass-layoff-warn-october-2025_tcm1045-712065.pdf",
-    [],
-    0
+    [
+     "Layoff Name",
+     "Account: City",
+     "Account: Industry",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "Layoff Status",
+     "Affected Workers"
+    ],
+    24
    ],
    [
     "plant-closing-mass-layoff-warn-september-2025_tcm1045-712064.pdf",
-    [],
-    0
+    [
+     "Layoff Name",
+     "Account: City",
+     "Account: Industry",
+     "Layoff Start",
+     "WARN Act",
+     "WARN Received",
+     "Layoff Type",
+     "Layoff Status",
+     "Affected Workers"
+    ],
+    41
    ]
   ],
   "NV_pdfs": [
