@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T05:35:59.579237+00:00",
+ "updated_at": "2026-11-21T17:56:47.439044+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
@@ -19,8 +19,8 @@
    "status": "state WARN page has moved; no public list found yet"
   },
   "AZ": {
-   "rows": 50,
-   "latest_notice": "2026-10-29",
+   "rows": 25,
+   "latest_notice": "2026-09-15",
    "status": "ok",
    "read_by": "cleaner"
   },
@@ -247,7 +247,7 @@
   "TN": {
    "rows": 0,
    "status": "state site refuses automated reading (403)",
-   "error": "Traceback (most recent call last): | raise ConnectionError(err, request=request) | requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+   "error": "2026-11-21 17:52:37,928 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError"
   },
   "TX": {
    "rows": 156,
