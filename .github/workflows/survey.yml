@@ -1,0 +1,24 @@
+name: Survey state WARN pages
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  survey:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install warn-scraper warn-transformer requests beautifulsoup4
+      - run: python survey.py
+      - name: Commit
+        run: |
+          git config user.name "jobgps-bot"
+          git config user.email "jobgps-bot@users.noreply.github.com"
+          git add data/debug
+          git diff --cached --quiet || git commit -m "survey of state WARN pages"
+          git pull --rebase
+          git push
