@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T18:11:16.950665+00:00",
+ "updated_at": "2026-11-23T22:29:51.949627+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
@@ -19,8 +19,8 @@
    "status": "state WARN page has moved; no public list found yet"
   },
   "AZ": {
-   "rows": 25,
-   "latest_notice": "2026-09-15",
+   "rows": 54,
+   "latest_notice": "2026-11-10",
    "status": "ok",
    "read_by": "cleaner"
   },
@@ -43,8 +43,8 @@
    "read_by": "cleaner"
   },
   "DC": {
-   "rows": 19,
-   "latest_notice": "2026-09-14",
+   "rows": 20,
+   "latest_notice": "2026-11-10",
    "status": "ok",
    "read_by": "direct reader"
   },
@@ -55,8 +55,8 @@
    "read_by": "cleaner"
   },
   "FL": {
-   "rows": 257,
-   "latest_notice": "2026-11-17",
+   "rows": 258,
+   "latest_notice": "2026-11-20",
    "status": "ok",
    "read_by": "direct reader"
   },
@@ -84,7 +84,7 @@
    "read_by": "direct reader"
   },
   "IL": {
-   "rows": 121,
+   "rows": 122,
    "latest_notice": "2026-11-05",
    "status": "ok",
    "read_by": "cleaner"
@@ -124,7 +124,7 @@
    "read_by": "direct reader"
   },
   "ME": {
-   "rows": 7,
+   "rows": 8,
    "latest_notice": "2026-10-12",
    "status": "ok",
    "read_by": "cleaner"
@@ -142,8 +142,8 @@
    "read_by": "direct reader"
   },
   "MO": {
-   "rows": 43,
-   "latest_notice": "2026-11-17",
+   "rows": 44,
+   "latest_notice": "2026-11-23",
    "status": "ok",
    "read_by": "direct reader"
   },
@@ -245,9 +245,10 @@
    "read_by": "cleaner"
   },
   "TN": {
-   "rows": 0,
-   "status": "state site refuses automated reading (403)",
-   "error": "Traceback (most recent call last): | raise ConnectionError(err, request=request) | requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+   "rows": 63,
+   "latest_notice": "2026-11-09",
+   "status": "ok",
+   "read_by": "cleaner"
   },
   "TX": {
    "rows": 156,
@@ -275,7 +276,7 @@
    "read_by": "cleaner"
   },
   "WA": {
-   "rows": 205,
+   "rows": 203,
    "latest_notice": "2027-01-18",
    "status": "ok",
    "read_by": "cleaner"
