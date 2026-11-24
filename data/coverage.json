@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T00:48:56.943882+00:00",
+ "updated_at": "2026-11-24T01:02:02.861936+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
@@ -61,9 +61,10 @@
    "read_by": "direct reader"
   },
   "GA": {
-   "rows": 0,
-   "status": "no notices in the last 400 days",
-   "read_by": "raw columns"
+   "rows": 99,
+   "latest_notice": "2026-11-17",
+   "status": "ok",
+   "read_by": "direct reader"
   },
   "HI": {
    "rows": 17,
@@ -124,7 +125,7 @@
    "read_by": "direct reader"
   },
   "ME": {
-   "rows": 8,
+   "rows": 7,
    "latest_notice": "2026-10-12",
    "status": "ok",
    "read_by": "cleaner"
@@ -249,8 +250,7 @@
    "rows": 63,
    "latest_notice": "2026-11-09",
    "status": "ok",
-   "error": "Traceback (most recent call last): | raise ConnectionError(err, request=request) | requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
-   "read_by": "kept from 2026-11-23 (state site did not answer today: state site refuses automated reading today (403))"
+   "read_by": "cleaner"
   },
   "TX": {
    "rows": 109,

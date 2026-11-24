@@ -161,17 +161,36 @@
      "jobs": 175
     },
     {
-     "company": "Family Endeavors, Inc.",
+     "company": "ADAC Automotive",
      "notice_date": "2026-11-04",
-     "location": "Remote",
-     "jobs": 8
+     "location": "6138 Riverside Drive, Saranac, MI 48881",
+     "jobs": 98
     }
    ]
   },
   "GA": {
-   "ok": false,
-   "rows": 0,
-   "sample": []
+   "ok": true,
+   "rows": 294,
+   "sample": [
+    {
+     "company": "KPS Global LLC",
+     "notice_date": "November 17, 2026",
+     "location": "",
+     "jobs": 82
+    },
+    {
+     "company": "Thompson Hotel",
+     "notice_date": "November 16, 2026",
+     "location": "",
+     "jobs": 140
+    },
+    {
+     "company": "Mueller Water Products",
+     "notice_date": "November 10, 2026",
+     "location": "",
+     "jobs": 66
+    }
+   ]
   },
   "NC": {
    "ok": true,
@@ -593,7 +612,7 @@
     "{\"code\":\"rest_forbidden\",\"message\":\"You are not allowed to view this content.\",\"data\":{\"status\":403}}"
    ],
    "rest_rows": 0,
-   "datatables_rows": 0
+   "datatables_rows": 294
   },
   "GA_cfg": {
    "keys": [
@@ -626,7 +645,24 @@
   },
   "GA_response_head": [
    200,
-   "{\"draw\":1,\"recordsTotal\":0,\"recordsFiltered\":0,\"data\":[],\"error\":\"This table could not load. Please try again.\",\"gv_error\":{\"code\":\"stale_config\",\"correlation_id\":\"0282621a-2f48-42ff-9fcd-782e00f5a11f\"}}"
+   "{\"draw\":1,\"recordsTotal\":294,\"recordsFiltered\":294,\"data\":[{\"0\":\"<a data-gv-export-label=\\\"1\\\" href=\\\"https:\\/\\/www.tcsg.edu\\/warn-public-view\\/entry\\/92174\\/\\\">GA202600030<\\/a>\",\"1\":\"KPS Global LLC\",\"2\":\"November 17, 2026\",\"3\":\"82\",\"4\":\"92174\",\"gv_marker\":[{\"mode\":\"address\",\"entry_id\":92174,\"address_field_id\":9,\"lat_field_id\":null,\"long_field_id\":null,\"lat\":33.67219200000000256522980635054409503936767578125,\"long\":-83.9884502000000026100678951479494571685791015625,\"icon\":null,\"url\":\"https:\\/\\/www.tcsg.edu\\/warn-public-view\\/entry\\/92174\\/\",\"content\":null,\"has_infowindow\":false}]},{\"0\":\"<a dat",
+   [
+    "action",
+    "view_id",
+    "post_id",
+    "embed",
+    "nonce",
+    "getData",
+    "hideUntilSearched",
+    "setUrlOnSearch",
+    "noEntriesOption",
+    "redirectURL",
+    "configHash",
+    "shortcode_atts[id]",
+    "shortcode_atts[class]",
+    "shortcode_atts[detail]",
+    "shortcode_atts[embed_state]"
+   ]
   ],
   "pdf_last_rows": [
    [
