@@ -342,7 +342,21 @@ def read_ga_datatables(r, sess):
     url = (aj.get("url") if isinstance(aj, dict) else aj) or "https://www.tcsg.edu/wp-admin/admin-ajax.php"
     base = dict(aj.get("data") or {}) if isinstance(aj, dict) else {}
     cols = cfg.get("columns") or [{} for _ in range(4)]
-    payload = {k: (json.dumps(v) if isinstance(v, (dict, list)) else v) for k, v in base.items()}
+    # Encode exactly like jQuery.param (what the page sends): nested keys as a[b][c], booleans as true/false, None as "".
+    # Sending nested values as JSON text makes GravityView answer "stale_config" (seen 2026-11-23).
+    pairs = []
+    def jq(prefix, v):
+        if isinstance(v, dict):
+            for k2, v2 in v.items():
+                jq(f"{prefix}[{k2}]", v2)
+        elif isinstance(v, list):
+            for i2, v2 in enumerate(v):
+                jq(f"{prefix}[{i2 if isinstance(v2, (dict, list)) else ''}]", v2)
+        else:
+            pairs.append((prefix, "true" if v is True else "false" if v is False else "" if v is None else v))
+    for k, v in base.items():
+        jq(k, v)
+    payload = {}
     payload.update({"draw": 1, "start": 0, "length": 2000, "search[value]": "", "search[regex]": "false", "order[0][column]": 2, "order[0][dir]": "desc"})
     for ci, c in enumerate(cols):
         payload[f"columns[{ci}][data]"] = (c.get("data") if isinstance(c, dict) and c.get("data") is not None else ci)
@@ -351,9 +365,9 @@ def read_ga_datatables(r, sess):
         payload[f"columns[{ci}][orderable]"] = "true"
         payload[f"columns[{ci}][search][value]"] = ""
         payload[f"columns[{ci}][search][regex]"] = "false"
-    resp = sess.post(url, data=payload, headers={**UA, "Accept": "application/json, text/javascript, */*; q=0.01", "Referer": page,
+    resp = sess.post(url, data=pairs + list(payload.items()), headers={**UA, "Accept": "application/json, text/javascript, */*; q=0.01", "Referer": page,
                                                  "Origin": "https://www.tcsg.edu", "X-Requested-With": "XMLHttpRequest"}, timeout=90)
-    DEBUG["GA_response_head"] = [resp.status_code, resp.text[:600]]
+    DEBUG["GA_response_head"] = [resp.status_code, resp.text[:600], [k for k, _ in pairs][:40]]
     data = resp.json().get("data") or []
     rows = []
     for item in data:
