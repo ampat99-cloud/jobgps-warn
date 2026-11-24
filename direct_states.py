@@ -167,6 +167,9 @@ def read_mo():
 
 
 # ---------------------------------------------------------------- Excel and spreadsheet helpers
+DATE_LIKE = re.compile(r"\b(\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|\d{4}-\d{2}-\d{2}|(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.? \d{1,2},? \d{4})\b")
+
+
 def rows_from_grid(grid, company_rx=r"company|employer|business|organization|notice name|site name|organi[sz]ation name|layoff name", date_rx=r"notice|received|notif|warn date|date"):
     """grid = list of lists. Finds the header row, then maps company / date / location / jobs by column name."""
     for hi, row in enumerate(grid[:30]):
@@ -186,10 +189,15 @@ def rows_from_grid(grid, company_rx=r"company|employer|business|organization|not
         out = []
         for row in grid[hi + 1:]:
             row = list(row) + [None] * 30
-            if not clean(row[ci]) or re.search(company_rx, clean(row[ci]), re.I) and len(clean(row[ci])) < 25:
+            # skip empty cells and header rows repeated on later pages (only an exact header, so "Dexter Axle Company" stays)
+            if not clean(row[ci]) or clean(row[ci]).lower() == cells[ci].lower() or re.fullmatch(r"(company|employer|business)( name)?", clean(row[ci]), re.I):
                 continue
             dv = row[di]
             dv = dv.date().isoformat() if isinstance(dv, datetime.datetime) else dv.isoformat() if isinstance(dv, datetime.date) else clean(dv)
+            if not DATE_LIKE.search(dv or ""):
+                # 2026-11-23: on page 2 of some PDFs (North Dakota) the cells shift; take the first real date after the company.
+                alt = next((clean(c) for c in row[ci + 1:] if isinstance(c, str) and DATE_LIKE.search(clean(c))), None)
+                dv = alt or dv
             out.append({"company": clean(row[ci]), "notice_date": dv, "location": clean(row[li]) if li is not None else "", "jobs": num(row[ji]) if ji is not None else None})
         return out, cells
     return [], []
@@ -265,8 +273,58 @@ def read_mi():
 
 # ---------------------------------------------------------------- Georgia: the public view loads its table from WordPress (GravityView).
 def read_ga():
+    """Georgia (TCSG GravityView list, 290+ notices, oldest first). 2026-11-23: try the full page table, then GravityView's
+    REST service, then the DataTables call; log what the page holds so a miss can be fixed."""
     page = "https://www.tcsg.edu/warn-public-view/"
     r = get(page)
+    html = r.text
+    note = {"status": r.status_code, "len": len(html), "ids_in_html": len(set(re.findall(r"GA\d{9}", html))), "tr": html.count("<tr")}
+    for kw in ("gvDT", "dataTable", "gv-container", "view_id", "gravityview/v1", "Showing"):
+        i = html.find(kw)
+        note[kw] = html[max(0, i - 200): i + 600] if i >= 0 else None
+    DEBUG["GA_v2"] = note
+    s = BeautifulSoup(html, "html.parser")
+    rows = []
+    for t in s.find_all("table"):
+        got, _ = rows_from_grid(grid_of_table(t), company_rx=r"company", date_rx=r"submitted|date")
+        rows += got
+    note["table_rows"] = len(rows)
+    if len(rows) > 30:
+        return rows
+    vid = re.search(r"gv-container-(\d+)|data-viewid=[\"'](\d+)|[\"']view_id[\"']\s*:\s*[\"']?(\d+)", html)
+    vid = next((g for g in (vid.groups() if vid else []) if g), None)
+    note["view_id"] = vid
+    if vid:
+        try:
+            resp = requests.get(f"https://www.tcsg.edu/wp-json/gravityview/v1/views/{vid}/entries.json?limit=1000", headers={**UA, "Referer": page}, timeout=90)
+            note["rest"] = [resp.status_code, resp.text[:400]]
+            data = resp.json()
+            ents = data if isinstance(data, list) else (data.get("entries") or data.get("data") or [])
+            out = []
+            for e in ents:
+                vals = [str(v) for k, v in (e.items() if isinstance(e, dict) else enumerate(e)) if v not in (None, "")]
+                d = next((v for v in vals if DATE_LIKE.search(v)), None)
+                n = next((v for v in vals if re.fullmatch(r"\d{1,6}", v.strip()) and not re.fullmatch(r"GA\d+", v)), None)
+                names = [v for v in vals if not DATE_LIKE.search(v) and not re.fullmatch(r"[\d.\-: ]+|GA\d+", v.strip()) and len(v) < 150 and re.search(r"[A-Za-z]{3}", v)]
+                if d and names:
+                    out.append({"company": clean(names[0]), "notice_date": DATE_LIKE.search(d).group(0), "location": "", "jobs": num(n) if n else None})
+            note["rest_rows"] = len(out)
+            if len(out) > len(rows):
+                return out
+        except Exception as e:
+            note["rest_error"] = f"{type(e).__name__}: {e}"[:200]
+    try:
+        old = read_ga_datatables(r)
+        note["datatables_rows"] = len(old)
+        if len(old) > len(rows):
+            return old
+    except Exception as e:
+        note["datatables_error"] = f"{type(e).__name__}: {e}"[:200]
+    return rows
+
+
+def read_ga_datatables(r):
+    page = "https://www.tcsg.edu/warn-public-view/"
     html = r.text
     DEBUG["GA_around"] = [html[max(0, i.start() - 200): i.start() + 900] for i in re.finditer(r"gvDTglobals|admin-ajax|nonce", html)][:6]
     m = re.search(r"gvDTglobals\.push\((\{.*?\})\);", html, re.S) or re.search(r"gvDTglobals\s*=\s*\[(\{.*?\})\]", html, re.S)
@@ -314,6 +372,7 @@ def pdf_rows(content):
             for t in p.extract_tables() or []:
                 grid += [[clean(c) for c in row] for row in t if row]
     rows, head = rows_from_grid(grid)
+    DEBUG.setdefault("pdf_last_rows", []).append(grid[-6:])
     if not rows:  # a header repeated on every page is fine; no header at all is not
         DEBUG.setdefault("pdf_first_rows", []).append(grid[:4])
     return rows, head
@@ -474,38 +533,21 @@ def read_mn():
     return read_pdfs("MN", list(dict.fromkeys(urls))[:16])
 
 
+def read_tx():
+    """Texas Workforce Commission WARN data on data.texas.gov (the same source the extension reads)."""
+    r = get("https://data.texas.gov/resource/8w53-c4f6.json?$limit=5000&$order=NOTICE_DATE%20DESC")
+    data = r.json()
+    DEBUG["TX_sample"] = data[:2] if isinstance(data, list) else str(data)[:300]
+    return [{"company": clean(d.get("JOB_SITE_NAME") or ""), "notice_date": (d.get("NOTICE_DATE") or "")[:10],
+             "location": clean(d.get("CITY_NAME") or ""), "jobs": num(str(d.get("TOTAL_LAYOFF_NUMBER") or ""))} for d in data if d.get("JOB_SITE_NAME")]
+
+
 def read_nv():
     return read_pdfs("NV", [f"https://detr.nv.gov/content/media/WARN_and_NonWARN_Master_w_Logo_{y}.pdf" for y in YEARS])
 
 
 def read_nd():
     return read_pdfs("ND", ["https://jobsnd.com/sites/www/files/documents/jsnd-documents/WARN%20Notices%202015%20to%20present.pdf"])
-
-
-def read_nh():
-    return read_pdfs("NH", ["https://mm.nh.gov/files/uploads/nhes/documents/mass-layoff.pdf"])
-
-
-def read_ar():
-    return discover("AR", ["https://dws.arkansas.gov/workforce-services/employers/dislocated-worker-services/"], follow=r"warn|closure|reduction|layoff")
-
-
-def read_wy():
-    rows, notes = [], []
-    for base in ["https://dws.wyo.gov/wp-json/wp/v2/posts?search=WARN&per_page=100", "https://dws.wyo.gov/category/public-notices/"]:
-        try:
-            r = get(base)
-            notes.append([base, r.status_code, r.headers.get("content-type", "")[:40]])
-            if base.endswith("per_page=100"):
-                for p in r.json():
-                    title = clean(BeautifulSoup(p.get("title", {}).get("rendered", ""), "html.parser").get_text(" "))
-                    if re.search(r"warn", title, re.I):
-                        name = clean(re.sub(r"(?i)\bwarn\b.*?(notice|notification)?\s*[-:–]?", "", title)) or title
-                        rows.append({"company": name, "notice_date": (p.get("date") or "")[:10], "location": "", "jobs": None})
-        except Exception as e:
-            notes.append([base, f"{type(e).__name__}"])
-    DEBUG["WY_notes"] = notes
-    return rows
 
 
 def read_ma():
@@ -516,7 +558,7 @@ def read_ma():
 
 READERS = {"OH": read_oh, "FL": read_fl, "MD": read_md, "DC": read_dc, "RI": read_ri, "CO": read_co, "MI": read_mi, "GA": read_ga,
            "NC": read_nc, "NM": read_nm, "LA": read_la, "MS": read_ms, "ID": read_id, "MO": read_mo,
-           "WV": read_wv, "HI": read_hi, "AR": read_ar, "MN": read_mn, "NV": read_nv, "ND": read_nd, "NH": read_nh, "WY": read_wy, "MA": read_ma}  # Texas and California are read by the extension itself
+           "WV": read_wv, "HI": read_hi, "MN": read_mn, "NV": read_nv, "ND": read_nd, "MA": read_ma, "TX": read_tx}  # California is read by the extension itself; MA and NV block data-centre servers and are also read in the browser
 
 
 def main():

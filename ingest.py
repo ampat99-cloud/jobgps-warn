@@ -108,14 +108,15 @@ def scrape_error(raw_dir: Path, st: str):
 
 # Every state plus DC, so the coverage file says something true about each one.
 ALL_STATES = ("ak al ar az ca co ct dc de fl ga hi ia id il in ks ky la ma md me mi mn mo ms mt nc nd ne nh nj nm nv ny oh ok or pa ri sc sd tn tx ut va vt wa wi wv wy").split()
-# Checked 20 Nov 2026 from GitHub's servers: these state sites refuse automated reading (or have no public list), so they stay empty here.
+# Checked 23 Nov 2026 by hand in a normal browser. Shown when a state has no rows today.
 NO_READER = {
-    "ma": "state site refuses automated reading (403)", "nv": "state site refuses automated reading (403)",
-    "tn": "state site refuses automated reading (403)", "nh": "state site refuses automated reading (403)",
-    "wy": "state site refuses automated reading (403)", "nd": "state site blocks readers outside its area",
-    "mn": "state site puts readers behind a bot check", "ar": "state WARN page has moved; no public list found yet",
-    "hi": "state WARN page has moved; no public list found yet", "wv": "no public list found on the state site",
-    "ga": "state list is loaded by a page script that is not read yet", "la": "state list could not be read", "nc": "state list could not be read",
+    "ma": "state site blocks data-centre servers (403); JobGPS reads it in the user's browser instead",
+    "nv": "state site blocks data-centre servers (403); JobGPS reads it in the user's browser instead",
+    "ar": "not published: Arkansas keeps WARN notices confidential by law (A.C.A. 11-10-314)",
+    "nh": "not published: New Hampshire does not post a WARN list (notices go to NH Employment Security)",
+    "wy": "not published: Wyoming does not post a WARN list",
+    "tn": "state site refuses automated reading today (403)",
+    "ga": "state list could not be read today", "la": "state list could not be read", "nc": "state list could not be read",
 }
 
 
