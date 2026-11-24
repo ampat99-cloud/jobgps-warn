@@ -167,7 +167,7 @@ def read_mo():
 
 
 # ---------------------------------------------------------------- Excel and spreadsheet helpers
-DATE_LIKE = re.compile(r"\b(\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|\d{4}-\d{2}-\d{2}|(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.? \d{1,2},? \d{4})\b")
+DATE_LIKE = re.compile(r"(?<!\d)(\d{1,2}[/-]\d{1,2}[/-](?:\d{4}|\d{2})|\d{4}-\d{2}-\d{2}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.? \d{1,2},? \d{4})(?!\d)")
 
 
 def rows_from_grid(grid, company_rx=r"company|employer|business|organization|notice name|site name|organi[sz]ation name|layoff name", date_rx=r"notice|received|notif|warn date|date"):
@@ -198,6 +198,9 @@ def rows_from_grid(grid, company_rx=r"company|employer|business|organization|not
                 # 2026-11-23: on page 2 of some PDFs (North Dakota) the cells shift; take the first real date after the company.
                 alt = next((clean(c) for c in row[ci + 1:] if isinstance(c, str) and DATE_LIKE.search(clean(c))), None)
                 dv = alt or dv
+            m1 = DATE_LIKE.search(dv or "")
+            if m1 and m1.group(0) != dv:
+                dv = m1.group(0)
             out.append({"company": clean(row[ci]), "notice_date": dv, "location": clean(row[li]) if li is not None else "", "jobs": num(row[ji]) if ji is not None else None})
         return out, cells
     return [], []
@@ -276,7 +279,9 @@ def read_ga():
     """Georgia (TCSG GravityView list, 290+ notices, oldest first). 2026-11-23: try the full page table, then GravityView's
     REST service, then the DataTables call; log what the page holds so a miss can be fixed."""
     page = "https://www.tcsg.edu/warn-public-view/"
-    r = get(page)
+    sess = requests.Session()
+    r = sess.get(page, headers=UA, timeout=60)
+    r.raise_for_status()
     html = r.text
     note = {"status": r.status_code, "len": len(html), "ids_in_html": len(set(re.findall(r"GA\d{9}", html))), "tr": html.count("<tr")}
     for kw in ("gvDT", "dataTable", "gv-container", "view_id", "gravityview/v1", "Showing"):
@@ -314,7 +319,7 @@ def read_ga():
         except Exception as e:
             note["rest_error"] = f"{type(e).__name__}: {e}"[:200]
     try:
-        old = read_ga_datatables(r)
+        old = read_ga_datatables(r, sess)
         note["datatables_rows"] = len(old)
         if len(old) > len(rows):
             return old
@@ -323,43 +328,42 @@ def read_ga():
     return rows
 
 
-def read_ga_datatables(r):
+def read_ga_datatables(r, sess):
+    """GravityView DataTables, server side: the page holds `const config = {...}`; the rows come from the same call the page makes."""
     page = "https://www.tcsg.edu/warn-public-view/"
     html = r.text
-    DEBUG["GA_around"] = [html[max(0, i.start() - 200): i.start() + 900] for i in re.finditer(r"gvDTglobals|admin-ajax|nonce", html)][:6]
-    m = re.search(r"gvDTglobals\.push\((\{.*?\})\);", html, re.S) or re.search(r"gvDTglobals\s*=\s*\[(\{.*?\})\]", html, re.S)
-    if not m:
+    i = html.find("const config = ")
+    if i < 0:
         raise ValueError("no table settings on the page")
-    g = json.loads(m.group(1))
-    DEBUG["GA_globals"] = {k: str(v)[:400] for k, v in g.items()}
-    s = BeautifulSoup(html, "html.parser")
-    heads = [clean(th.get_text(" ")) for th in s.select("table thead th")]
-    cols = g.get("columns") or [{"name": f"col{i}"} for i in range(len(heads))]
-    payload = {"draw": 1, "start": 0, "length": -1, "search[value]": "", "search[regex]": "false",
-               "action": g.get("ajax", {}).get("data", {}).get("action", "gv_datatables_data") if isinstance(g.get("ajax"), dict) else "gv_datatables_data",
-               "view_id": g.get("view_id"), "post_id": g.get("post_id"), "nonce": g.get("nonce"), "getData": "[]", "hideUntilSearched": 0}
-    for i, c in enumerate(cols):
-        payload[f"columns[{i}][data]"] = i
-        payload[f"columns[{i}][name]"] = c.get("name", "") if isinstance(c, dict) else ""
-        payload[f"columns[{i}][searchable]"] = "true"
-        payload[f"columns[{i}][orderable]"] = "true"
-    payload["order[0][column]"] = 2
-    payload["order[0][dir]"] = "desc"
-    ajax = g.get("ajaxurl") or "https://www.tcsg.edu/wp-admin/admin-ajax.php"
-    resp = requests.post(ajax, data=payload, headers={**UA, "Referer": page, "X-Requested-With": "XMLHttpRequest"}, timeout=90)
-    DEBUG["GA_response_head"] = resp.text[:600]
+    cfg, _ = json.JSONDecoder().raw_decode(html[i + len("const config = "):])
+    aj = cfg.get("ajax") or {}
+    DEBUG["GA_cfg"] = {"keys": list(cfg.keys())[:40], "ajax": {k: str(v)[:300] for k, v in aj.items()} if isinstance(aj, dict) else str(aj)[:300],
+                       "columns": str(cfg.get("columns"))[:400]}
+    url = (aj.get("url") if isinstance(aj, dict) else aj) or "https://www.tcsg.edu/wp-admin/admin-ajax.php"
+    base = dict(aj.get("data") or {}) if isinstance(aj, dict) else {}
+    cols = cfg.get("columns") or [{} for _ in range(4)]
+    payload = {k: (json.dumps(v) if isinstance(v, (dict, list)) else v) for k, v in base.items()}
+    payload.update({"draw": 1, "start": 0, "length": 2000, "search[value]": "", "search[regex]": "false", "order[0][column]": 2, "order[0][dir]": "desc"})
+    for ci, c in enumerate(cols):
+        payload[f"columns[{ci}][data]"] = (c.get("data") if isinstance(c, dict) and c.get("data") is not None else ci)
+        payload[f"columns[{ci}][name]"] = c.get("name", "") if isinstance(c, dict) else ""
+        payload[f"columns[{ci}][searchable]"] = "true"
+        payload[f"columns[{ci}][orderable]"] = "true"
+        payload[f"columns[{ci}][search][value]"] = ""
+        payload[f"columns[{ci}][search][regex]"] = "false"
+    resp = sess.post(url, data=payload, headers={**UA, "Accept": "application/json, text/javascript, */*; q=0.01", "Referer": page,
+                                                 "Origin": "https://www.tcsg.edu", "X-Requested-With": "XMLHttpRequest"}, timeout=90)
+    DEBUG["GA_response_head"] = [resp.status_code, resp.text[:600]]
     data = resp.json().get("data") or []
-    hd = heads[: len(heads) // 2] if len(heads) % 2 == 0 and heads[: len(heads) // 2] == heads[len(heads) // 2:] else heads
-    ci = next((i for i, h in enumerate(hd) if re.search(r"company", h, re.I)), 1)
-    di = next((i for i, h in enumerate(hd) if re.search(r"submitted|date", h, re.I)), 2)
-    ji = next((i for i, h in enumerate(hd) if re.search(r"affected|employees", h, re.I)), 3)
     rows = []
     for item in data:
-        vals = [item.get(str(i)) for i in range(len(hd))] if isinstance(item, dict) else list(item)
+        vals = list(item.values()) if isinstance(item, dict) else list(item)
         vals = [clean(BeautifulSoup(str(v or ""), "html.parser").get_text(" ")) for v in vals]
-        if len(vals) <= max(ci, di):
-            continue
-        rows.append({"company": vals[ci], "notice_date": vals[di], "location": "", "jobs": num(vals[ji]) if ji < len(vals) else None})
+        d = next((v for v in vals if DATE_LIKE.search(v)), None)
+        names = [v for v in vals if v and not DATE_LIKE.search(v) and not re.fullmatch(r"GA\d+|[\d,. ]+", v)]
+        n = next((v for v in vals if re.fullmatch(r"\d[\d,]{0,6}", v)), None)
+        if d and names:
+            rows.append({"company": names[0], "notice_date": DATE_LIKE.search(d).group(0), "location": "", "jobs": num(n) if n else None})
     return rows
 
 
@@ -534,12 +538,14 @@ def read_mn():
 
 
 def read_tx():
-    """Texas Workforce Commission WARN data on data.texas.gov (the same source the extension reads)."""
-    r = get("https://data.texas.gov/resource/8w53-c4f6.json?$limit=5000&$order=NOTICE_DATE%20DESC")
+    """Texas Workforce Commission WARN data on data.texas.gov (the same source the extension reads). Field names are
+    lower case since Nov 2026 (job_site_name, notice_date, city_name, total_layoff_number); upper case is still accepted."""
+    r = get("https://data.texas.gov/resource/8w53-c4f6.json?$limit=5000&$order=notice_date%20DESC")
     data = r.json()
     DEBUG["TX_sample"] = data[:2] if isinstance(data, list) else str(data)[:300]
-    return [{"company": clean(d.get("JOB_SITE_NAME") or ""), "notice_date": (d.get("NOTICE_DATE") or "")[:10],
-             "location": clean(d.get("CITY_NAME") or ""), "jobs": num(str(d.get("TOTAL_LAYOFF_NUMBER") or ""))} for d in data if d.get("JOB_SITE_NAME")]
+    f = lambda d, k: d.get(k) or d.get(k.upper()) or ""
+    return [{"company": clean(f(d, "job_site_name")), "notice_date": str(f(d, "notice_date"))[:10], "location": clean(f(d, "city_name")),
+             "jobs": num(str(f(d, "total_layoff_number")))} for d in data if f(d, "job_site_name")]
 
 
 def read_nv():
