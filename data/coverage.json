@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T22:29:51.949627+00:00",
+ "updated_at": "2026-11-24T00:28:58.476009+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
@@ -16,11 +16,11 @@
   },
   "AR": {
    "rows": 0,
-   "status": "state WARN page has moved; no public list found yet"
+   "status": "not published: Arkansas keeps WARN notices confidential by law (A.C.A. 11-10-314)"
   },
   "AZ": {
-   "rows": 54,
-   "latest_notice": "2026-11-10",
+   "rows": 52,
+   "latest_notice": "2026-11-18",
    "status": "ok",
    "read_by": "cleaner"
   },
@@ -31,7 +31,7 @@
    "read_by": "cleaner"
   },
   "CO": {
-   "rows": 59,
+   "rows": 61,
    "latest_notice": "2026-11-19",
    "status": "ok",
    "read_by": "direct reader"
@@ -108,14 +108,14 @@
    "read_by": "cleaner"
   },
   "LA": {
-   "rows": 23,
+   "rows": 25,
    "latest_notice": "2026-11-10",
    "status": "ok",
    "read_by": "direct reader"
   },
   "MA": {
    "rows": 0,
-   "status": "state site refuses automated reading (403)"
+   "status": "state site blocks data-centre servers (403); JobGPS reads it in the user's browser instead"
   },
   "MD": {
    "rows": 161,
@@ -136,8 +136,8 @@
    "read_by": "direct reader"
   },
   "MN": {
-   "rows": 5,
-   "latest_notice": "2026-10-29",
+   "rows": 52,
+   "latest_notice": "2026-12-04",
    "status": "ok",
    "read_by": "direct reader"
   },
@@ -160,7 +160,7 @@
    "read_by": "cleaner"
   },
   "NC": {
-   "rows": 48,
+   "rows": 49,
    "latest_notice": "2026-03-24",
    "status": "ok",
    "read_by": "direct reader"
@@ -178,7 +178,7 @@
   },
   "NH": {
    "rows": 0,
-   "status": "state site refuses automated reading (403)"
+   "status": "not published: New Hampshire does not post a WARN list (notices go to NH Employment Security)"
   },
   "NJ": {
    "rows": 94,
@@ -194,7 +194,7 @@
   },
   "NV": {
    "rows": 0,
-   "status": "state site refuses automated reading (403)"
+   "status": "state site blocks data-centre servers (403); JobGPS reads it in the user's browser instead"
   },
   "NY": {
    "rows": 243,
@@ -248,7 +248,8 @@
    "rows": 63,
    "latest_notice": "2026-11-09",
    "status": "ok",
-   "read_by": "cleaner"
+   "error": "Traceback (most recent call last): | raise ConnectionError(err, request=request) | requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+   "read_by": "kept from 2026-11-23 (state site did not answer today: state site refuses automated reading today (403))"
   },
   "TX": {
    "rows": 156,
@@ -295,7 +296,7 @@
   },
   "WY": {
    "rows": 0,
-   "status": "state site refuses automated reading (403)"
+   "status": "not published: Wyoming does not post a WARN list"
   }
  }
 }

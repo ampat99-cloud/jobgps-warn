@@ -98,7 +98,7 @@
   },
   "RI": {
    "ok": true,
-   "rows": 124,
+   "rows": 128,
    "sample": [
     {
      "company": "Endeavors",
@@ -122,7 +122,7 @@
   },
   "CO": {
    "ok": true,
-   "rows": 116,
+   "rows": 118,
    "sample": [
     {
      "company": "TIAA",
@@ -170,16 +170,12 @@
   },
   "GA": {
    "ok": false,
-   "error": "ValueError: no table settings on the page",
-   "where": [
-    "  File \"/home/runner/work/jobgps-warn/jobgps-warn/direct_states.py\", line 274, in read_ga",
-    "    raise ValueError(\"no table settings on the page\")",
-    "ValueError: no table settings on the page"
-   ]
+   "rows": 0,
+   "sample": []
   },
   "NC": {
    "ok": true,
-   "rows": 119,
+   "rows": 120,
    "sample": [
     {
      "company": "Avelo Airlines, Inc.",
@@ -227,7 +223,7 @@
   },
   "LA": {
    "ok": true,
-   "rows": 44,
+   "rows": 45,
    "sample": [
     {
      "company": "Dr. Reddy\u2019s Laboratories 8800 Line Ave Shreveport, LA 71106",
@@ -251,7 +247,7 @@
   },
   "MS": {
    "ok": true,
-   "rows": 43,
+   "rows": 42,
    "sample": [
     {
      "company": "Conduent Commercial Solutions, LLC",
@@ -369,14 +365,9 @@
     }
    ]
   },
-  "AR": {
-   "ok": false,
-   "rows": 0,
-   "sample": []
-  },
   "MN": {
    "ok": true,
-   "rows": 7,
+   "rows": 82,
    "sample": [
     {
      "company": "Newport Academy",
@@ -385,16 +376,16 @@
      "jobs": 68
     },
     {
-     "company": "Family Endeavors Inc",
-     "notice_date": "10/29/2026",
-     "location": "San Antonio",
-     "jobs": 6
+     "company": "HOURCAR",
+     "notice_date": "10/15/2026",
+     "location": "St Paul",
+     "jobs": 22
     },
     {
-     "company": "Heliene 2nd",
-     "notice_date": "8/4/2026",
-     "location": "Mountain Iron",
-     "jobs": 93
+     "company": "Travelodge",
+     "notice_date": "10/16/2026",
+     "location": "Brooklyn Center",
+     "jobs": 1
     }
    ]
   },
@@ -405,7 +396,7 @@
   },
   "ND": {
    "ok": true,
-   "rows": 53,
+   "rows": 54,
    "sample": [
     {
      "company": "EGS Customer Care Inc",
@@ -427,17 +418,12 @@
     }
    ]
   },
-  "NH": {
-   "ok": false,
-   "rows": 0,
-   "sample": []
-  },
-  "WY": {
-   "ok": false,
-   "rows": 0,
-   "sample": []
-  },
   "MA": {
+   "ok": false,
+   "rows": 0,
+   "sample": []
+  },
+  "TX": {
    "ok": false,
    "rows": 0,
    "sample": []
@@ -571,13 +557,1142 @@
    "Name": "None",
    "Html": "<div class=\"com-wrapper search-results__section\"><div class=\"p-1\">\r\n<div class=\"row\">\r\n    <div class=\"col-12 col-md-12 col-lg-12\">\r\n        <div class=\"search-results__section-content\">\r\n            <div><a class=\"content-title-link\" href=\"\" target=\"_blank\" rel=\"noopener noreferrer\"></a></div>\r\n            <div><h3>AUTOKINITON (Euclid Manufacturing Co.)</h3>\n<ul class=\"disc\">\n    <li><strong>Site address: </strong>1500 Euclid Ave., Detroit, MI 48211</li>\n    <li><strong>County:</strong> Wayne</li>\n    <li><strong>Type of company action:</strong> Facility closure</li>\n    <li><strong>Reason for company action: </strong>Not reported</li>\n    <li><strong>First layoff date:</strong> 1/18/2027</li>\n    <li><strong>Closure date:</strong> Not reported</li>\n    <li><strong>Number of jobs impacted:</strong> 136</li>\n</ul></div>\r\n            <div>\r\n                \r\n                                    Closure\r\n                                \r\n                                    2026\r\n                                \r\n                                    Wayne\r\n                                \r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n</div></div>"
   },
+  "GA_v2": {
+   "status": 200,
+   "len": 159523,
+   "ids_in_html": 0,
+   "tr": 2,
+   "gvDT": "99999 */ }\n\t\t\t.admin-bar .fancybox__container { margin-top: 32px; }\n/*# sourceURL=gravityview-fancybox-init-inline-css */\n</style>\n\t\t<script type=\"text/javascript\">\n\t\t\t(function() {\n\t\t\t\tif ( ! window.gvDTglobals ) {\n\t\t\t\t\twindow.gvDTglobals = [];\n\t\t\t\t}\n\n\t\t\t\tconst config = {\"processing\":true,\"deferRender\":true,\"serverSide\":true,\"retrieve\":true,\"stateSave\":true,\"stateDuration\":-1,\"lengthMenu\":[[10,25,50,-1],[10,25,50,\"All\"]],\"language\":{\"processing\":\"Loading data&hellip;\",\"zeroRecords\":\"No entries match your request.\",\"emptyTable\":\"This search returned no results.\",\"emptyServerResponse\":\"The server returned an empty response. Check the server logs for more details.\",\"loadError\":\"This table could not load. Please try again.\",\"retry\":\"Retry\",\"errorDetails\":\"Error details (visible to admins only",
+   "dataTable": "ref='https://www.tcsg.edu/wp-content/plugins/bb-plugin/css/build/wp-editor.bundle.min.css' media='all' />\n<link rel='stylesheet' id='datatables-css' href='https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css' media='all' />\n<link rel='stylesheet' id='datatables-responsive-css' href='https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css' media='all' />\n<link rel='stylesheet' id='font-awesome-official-v4shim-css' href='https://use.fontawesome.com/releases/v6.5.0/css/v4-shims.css' media='all' integrity=\"sha384-Gchs3pk5vJ6rNXyLYEW0h4LxMtAZtY6TI1xrFSBYD6AVTmQTwqBWkrQgHYjVFH98\" crossorigin=\"anonymous\" />\n<style id=\"global-styles-inline-css\">\n:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--w",
+   "gv-container": "b9c06eff7394bde17d6003e1fb372bc62b79eb19fec15915c05e1&quot;}\" data-gv-history=\"1\"><div id=\"gv-view-77460-1\" class=\"gv-template-datatables\"><div id=\"gv-datatables-77460\" class=\"gv-datatables-container gv-container gv-container-77460 gv-container-no-results\">\n<section data-gv-entries=\"gv-view-77460-1\" class=\"gv-entries\" role=\"region\" aria-labelledby=\"gv-view-77460-1-entries-label gv-view-77460-title\"><h2 id=\"gv-view-77460-1-entries-label\" class=\"gv-entries-title screen-reader-text\">Results</h2><table data-viewid=\"77460\" class=\"gv-datatables display dataTable  nowrap\">\n\t<thead>\n\t\t\t\t<tr>\n\t\t\t<th id=\"gv-field-57-96\" class=\"gv-field-57-96 \"  scope=\"col\"><span class=\"gv-field-label\">GA WARN ID</span></th><th id=\"gv-field-57-4\" class=\"gv-field-57-4 \"  scope=\"col\"><span class=\"gv-field-label\">Compan",
+   "view_id": "77460",
+   "gravityview/v1": "iew-title\" hidden>, WFD WARN Notice (Public)</span><div class=\"gv-view-scaffold gv-view-scaffold--bare\"><div class=\"gv-view-output\" data-view-id=\"77460\" data-gv-endpoint=\"https://www.tcsg.edu/wp-json/gravityview/v1/views/77460/refresh\" data-gv-nonce=\"\" data-gv-scope=\"{&quot;post_id&quot;:77462,&quot;embed&quot;:&quot;523d5378892e&quot;,&quot;embed_state&quot;:&quot;eyJ2IjoxLCJzaXRlIjoxLCJ2aWV3Ijo3NzQ2MCwicG9zdCI6Nzc0NjIsInVzZXIiOjAsImVtYmVkIjoiNTIzZDUzNzg4OTJlIiwiYXR0cyI6eyJpZCI6Nzc0NjAsImNsYXNzIjoiIiwiZGV0YWlsIjpudWxsfX0.d5af087bbb0b9c06eff7394bde17d6003e1fb372bc62b79eb19fec15915c05e1&quot;}\" data-gv-history=\"1\"><div id=\"gv-view-77460-1\" class=\"gv-template-datatables\"><div id=\"gv-datatables-77460\" class=\"gv-datatables-container gv-container gv-container-77460 gv-container-no-results\">\n<se",
+   "Showing": "\"sort_ascending\":\": activate to sort column ascending\",\"sort_descending\":\": activate to sort column descending\"},\"length_menu\":\"Show _MENU_ entries\",\"empty_table\":\"No data available in table\",\"info\":\"Showing _START_ to _END_ of _TOTAL_ entries\",\"info_empty\":\"Showing 0 to 0 of 0 entries\",\"info_filtered\":\"(filtered from _MAX_ total entries)\",\"zero_records\":\"No matching records found\",\"search\":\"Search:\",\"all_selected_text\":\"All items on this page were selected. \",\"select_all_link\":\"Select all pages\",\"clear_selection\":\"Clear Selection.\",\"pagination\":{\"all\":\"All\",\"next\":\"Next\",\"previous\":\"Previous\"},\"select\":{\"rows\":{\"0\":\"\",\"_\":\": Selected %d rows\",\"1\":\": Selected 1 row\"}},\"datepicker\":{\"dayNames\":[\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"],\"dayNamesShort\":[\"Sun\",\"M",
+   "table_rows": 0,
+   "rest": [
+    403,
+    "{\"code\":\"rest_forbidden\",\"message\":\"You are not allowed to view this content.\",\"data\":{\"status\":403}}"
+   ],
+   "rest_rows": 0,
+   "datatables_error": "ValueError: no table settings on the page"
+  },
   "GA_around": [
-   "www.tcsg.edu/wp-includes/js/dist/api-fetch.min.js\"></script>\n<script id=\"wp-api-fetch-js-after\">\nwp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( \"https://www.tcsg.edu/wp-json/\" ) );\nwp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( \"e87f3d2058\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"586a7205e9\",\"hash_nonce\":\"03dbf971a8\",\"logout_nonce\":\"43a64325a4\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<s",
-   "p.apiFetch.use( wp.apiFetch.createRootURLMiddleware( \"https://www.tcsg.edu/wp-json/\" ) );\nwp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( \"e87f3d2058\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"586a7205e9\",\"hash_nonce\":\"03dbf971a8\",\"logout_nonce\":\"43a64325a4\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/asset",
-   ") );\nwp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( \"e87f3d2058\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"586a7205e9\",\"hash_nonce\":\"03dbf971a8\",\"logout_nonce\":\"43a64325a4\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https",
-   "createNonceMiddleware( \"e87f3d2058\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"586a7205e9\",\"hash_nonce\":\"03dbf971a8\",\"logout_nonce\":\"43a64325a4\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https://www.tcsg.edu/wp-json/\" /><link rel=\"alternat",
-   "f3d2058\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"586a7205e9\",\"hash_nonce\":\"03dbf971a8\",\"logout_nonce\":\"43a64325a4\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https://www.tcsg.edu/wp-json/\" /><link rel=\"alternate\" title=\"JSON\" type=\"appli",
-   "e-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"586a7205e9\",\"hash_nonce\":\"03dbf971a8\",\"logout_nonce\":\"43a64325a4\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https://www.tcsg.edu/wp-json/\" /><link rel=\"alternate\" title=\"JSON\" type=\"application/json\" href=\"https://www.tcsg.edu/wp-json/wp/v2/pages/77462\" /><link rel=\"EditURI\" type=\"application/rsd+xml\" title=\"RSD\" href=\"https://www.tcsg.edu/xmlrpc.php?rsd\" />\n<link rel=\"canonical\" href=\"https://www.tcsg.edu/warn-public-view/\" />\n<link rel='shortlink' href='https:/"
+   "www.tcsg.edu/wp-includes/js/dist/api-fetch.min.js\"></script>\n<script id=\"wp-api-fetch-js-after\">\nwp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( \"https://www.tcsg.edu/wp-json/\" ) );\nwp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( \"cd8d9e240b\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"b22e9be61d\",\"hash_nonce\":\"865565456f\",\"logout_nonce\":\"d64ea7246d\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<s",
+   "p.apiFetch.use( wp.apiFetch.createRootURLMiddleware( \"https://www.tcsg.edu/wp-json/\" ) );\nwp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( \"cd8d9e240b\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"b22e9be61d\",\"hash_nonce\":\"865565456f\",\"logout_nonce\":\"d64ea7246d\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/asset",
+   ") );\nwp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( \"cd8d9e240b\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"b22e9be61d\",\"hash_nonce\":\"865565456f\",\"logout_nonce\":\"d64ea7246d\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https",
+   "createNonceMiddleware( \"cd8d9e240b\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"b22e9be61d\",\"hash_nonce\":\"865565456f\",\"logout_nonce\":\"d64ea7246d\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https://www.tcsg.edu/wp-json/\" /><link rel=\"alternat",
+   "d9e240b\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"b22e9be61d\",\"hash_nonce\":\"865565456f\",\"logout_nonce\":\"d64ea7246d\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https://www.tcsg.edu/wp-json/\" /><link rel=\"alternate\" title=\"JSON\" type=\"appli",
+   "e-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"b22e9be61d\",\"hash_nonce\":\"865565456f\",\"logout_nonce\":\"d64ea7246d\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https://www.tcsg.edu/wp-json/\" /><link rel=\"alternate\" title=\"JSON\" type=\"application/json\" href=\"https://www.tcsg.edu/wp-json/wp/v2/pages/77462\" /><link rel=\"EditURI\" type=\"application/rsd+xml\" title=\"RSD\" href=\"https://www.tcsg.edu/xmlrpc.php?rsd\" />\n<link rel=\"canonical\" href=\"https://www.tcsg.edu/warn-public-view/\" />\n<link rel='shortlink' href='https:/"
+  ],
+  "pdf_last_rows": [
+   [
+    [
+     "",
+     "Wake County",
+     "202600025",
+     "3/19/2026",
+     "3/19/2026",
+     "9/18/2026",
+     "Red Storm Entertainment, Inc.",
+     "Layoff",
+     "Permanent",
+     "105",
+     "3001 Weston Pkwy",
+     "Cary",
+     ""
+    ],
+    [
+     "",
+     "Mecklenburg County",
+     "202600026",
+     "3/20/2026",
+     "3/20/2026",
+     "6/30/2026",
+     "AmeriPark LLC and Republic Parking System LLC dba Reimagined Parking",
+     "Closure",
+     "Permanent",
+     "188",
+     "5601 Wilkinson Blvd",
+     "Charlotte",
+     ""
+    ],
+    [
+     "",
+     "Wake County",
+     "202600027",
+     "3/24/2026",
+     "3/24/2026",
+     "3/27/2026",
+     "Epic Games, Inc.",
+     "Layoff",
+     "Permanent",
+     "211",
+     "620 Crossroads Boulevard",
+     "Cary",
+     ""
+    ],
+    [
+     "",
+     "Pitt County",
+     "202600028",
+     "3/19/2026",
+     "4/7/2026",
+     "5/1/2026",
+     "ECU Health Home Health and Hospice",
+     "Closure",
+     "Permanent",
+     "161",
+     "1005 WH Smith Blvd",
+     "Greenville",
+     ""
+    ],
+    [
+     "",
+     "Total 31",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "3563",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "31",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ],
+   [
+    [
+     "",
+     "Brunswick County",
+     "202500065",
+     "12/22/2025",
+     "12/22/2025",
+     "2/27/2026",
+     "Railcrew Xpress (RCX)",
+     "Closure",
+     "Permanent",
+     "4",
+     "407 Old Mill Road NE",
+     "Leland",
+     ""
+    ],
+    [
+     "",
+     "Mecklenburg County",
+     "202500065",
+     "12/22/2025",
+     "12/22/2025",
+     "2/27/2026",
+     "Railcrew Xpress (RCX)",
+     "Closure",
+     "Permanent",
+     "18",
+     "112 S. Ramsey Street",
+     "Charlotte",
+     ""
+    ],
+    [
+     "",
+     "Rutherford County",
+     "202500065",
+     "12/22/2025",
+     "12/22/2025",
+     "2/27/2026",
+     "Railcrew Xpress (RCX)",
+     "Closure",
+     "Permanent",
+     "2",
+     "279 Bostic Yard Road",
+     "Bostic",
+     ""
+    ],
+    [
+     "",
+     "Catawba County",
+     "202500066",
+     "12/29/2025",
+     "12/30/2025",
+     "12/31/2025",
+     "Kroehler Furniture Co.",
+     "Closure",
+     "Permanent",
+     "275",
+     "1800 Conover Blvd E",
+     "Conover",
+     ""
+    ],
+    [
+     "",
+     "Total Sum Count",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "7365",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "89",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ],
+   [
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ],
+   [
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ],
+   [
+    [
+     "SafeSource Direct, L.L.C. \u2013 MMF PPE Manufacturing Facility",
+     "8/22/25",
+     "10/21/25",
+     "87",
+     "PPE Manufacturing (Man-Made Fiber)"
+    ],
+    [
+     "SafeSource Direct, L.L.C. \u2013 MMF Facility (Second WARN)",
+     "9/16/25",
+     "11/25/25",
+     "56",
+     "PPE Manufacturing (Man-Made Fiber)"
+    ],
+    [
+     "SafeSource Direct, L.L.C. \u2013 Nitrile Plant Facility",
+     "8/22/25",
+     "10/21/25",
+     "454",
+     "PPE / Chemical Manufacturing"
+    ],
+    [
+     "Ensco Offshore LLC \u2013 DS-18 Drilling Rig",
+     "12/5/25",
+     "2/10/26",
+     "75",
+     "Offshore Oil & Gas Drilling"
+    ],
+    [
+     "The Service Companies, Inc. (Full Service Systems Corp.) \u2013 Horseshoe Bossier City",
+     "12/2/25",
+     "2/1/26",
+     "76",
+     "Hospitality / Facilities Services"
+    ],
+    [
+     "General Dynamics Information Technology (GDIT)",
+     "Not specified",
+     "11/14/25",
+     "103",
+     "IT Services / Federal Contracting"
+    ]
+   ],
+   [
+    [
+     "Company Name",
+     "Address",
+     "Notice Date",
+     "Layoff Date",
+     "Employees Affected",
+     "Industry"
+    ],
+    [
+     "Sodexo, SDH Services East, LLC",
+     "4801 Ambassador Caffery Parkway 4600 Ambassador Caffery Parkway Lafayette, LA 70506",
+     "10/22/26",
+     "12/31/26",
+     "189",
+     "Food Services"
+    ],
+    [
+     "Sodexo, SDH Services East, LLC",
+     "309 Jackson Street Monroe, LA 71201",
+     "10/28/26",
+     "12/31/26",
+     "89",
+     "Food Services"
+    ],
+    [
+     "Hurwitz Mintz Furniture Company",
+     "1751 Airline Drive Metairie, LA 70001",
+     "10/31/26",
+     "12/31/26",
+     "53",
+     "Retail"
+    ],
+    [
+     "New Dairy Texas, LLC",
+     "1308 Bertrand Drive Lafayette, LA 70506",
+     "11/10/26",
+     "1/9/27",
+     "149",
+     "Food Manufacturing"
+    ],
+    [
+     "Sysco Acadiana",
+     "113 Kol Dr. Broussard, LA 70518",
+     "11/10/26",
+     "2/28/27",
+     "112",
+     "Food Service Delivery"
+    ]
+   ],
+   [
+    [
+     "irreparable"
+    ],
+    [
+     "facility damage."
+    ],
+    [
+     "Types of Notices",
+     "Notices Received",
+     "Number Affected"
+    ],
+    [
+     "WARN",
+     "3",
+     "345"
+    ],
+    [
+     "NON-WARN",
+     "1",
+     "35"
+    ],
+    [
+     "TOTAL",
+     "4",
+     "380"
+    ]
+   ],
+   [
+    [
+     "Reason / Comments"
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "Types of Notices Received",
+     "",
+     "",
+     "# Of Notices Received",
+     "",
+     "",
+     "# Affected",
+     ""
+    ],
+    [
+     "# WARN Notices Received",
+     "",
+     "",
+     "2",
+     "",
+     "",
+     "178",
+     "",
+     ""
+    ],
+    [
+     "#NON-WARN Notices Received",
+     "",
+     "",
+     "1",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "TOTAL",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "178",
+     "",
+     ""
+    ]
+   ],
+   [
+    [
+     "Reason \u2013"
+    ],
+    [
+     "Comments"
+    ],
+    [
+     "Types of Notices",
+     "Notices Received",
+     "Number Affected"
+    ],
+    [
+     "WARN",
+     "6",
+     "1,123"
+    ],
+    [
+     "NON-WARN",
+     "0",
+     ""
+    ],
+    [
+     "TOTAL",
+     "6",
+     "1,123"
+    ]
+   ],
+   [
+    [
+     "RR-MS-"
+    ],
+    [
+     "2025-0016"
+    ],
+    [
+     "Types of Notices",
+     "Notices Received",
+     "Number Affected"
+    ],
+    [
+     "WARN",
+     "4",
+     "588"
+    ],
+    [
+     "NON-WARN",
+     "3",
+     "105"
+    ],
+    [
+     "TOTAL",
+     "7",
+     "693"
+    ]
+   ],
+   [
+    [
+     "Date of"
+    ],
+    [
+     "Action"
+    ],
+    [
+     "Types of Notices",
+     "Number Of Notices Received",
+     "Number Affected"
+    ],
+    [
+     "WARN Notices",
+     "6",
+     "851"
+    ],
+    [
+     "NON-WARN Notices",
+     "1",
+     "69"
+    ],
+    [
+     "TOTAL",
+     "7",
+     "920"
+    ]
+   ],
+   [
+    [
+     "Types of Notices",
+     "Number Of Notices Received",
+     "Number Affected"
+    ],
+    [
+     "WARN Notices",
+     "2",
+     "163"
+    ],
+    [
+     "NON-WARN Notices",
+     "5",
+     "233"
+    ],
+    [
+     "TOTAL",
+     "7",
+     "396"
+    ],
+    [
+     "Number Of Notices"
+    ],
+    [
+     "Received"
+    ]
+   ],
+   [
+    [
+     "3/11/2009",
+     "",
+     "Sportsman's Warehouse",
+     "1844 Hurley Drive",
+     "Pocatello",
+     "ID",
+     "83204",
+     "46",
+     "5/11/2009"
+    ],
+    [
+     "3/6/2009",
+     "",
+     "MPC Computers, LLC",
+     "906 E. Karcher Road",
+     "Nampa",
+     "ID",
+     "83687",
+     "6",
+     "3/6/2009"
+    ],
+    [
+     "2/27/2009",
+     "",
+     "Tamarack Resort",
+     "311 Village Dr.",
+     "Tamarack",
+     "ID",
+     "83615",
+     "217",
+     "3/4/2009"
+    ],
+    [
+     "2/23/2009",
+     "",
+     "Micron Technology Inc",
+     "8000 S Federal Way",
+     "Boise",
+     "ID",
+     "83707",
+     "2000",
+     "3/9/2009"
+    ],
+    [
+     "2/7/2009",
+     "",
+     "Freedom Plastics",
+     "640 S. Highway 91",
+     "Preston",
+     "ID",
+     "83262",
+     "26",
+     "4/8/2009"
+    ],
+    [
+     "1/9/2009",
+     "",
+     "Nashua Homes of Idaho",
+     "5200 Federal Way",
+     "Boise",
+     "ID",
+     "83717",
+     "171",
+     "1/9/2009"
+    ]
+   ],
+   [
+    [
+     "Layoff"
+    ],
+    [
+     "Type"
+    ],
+    [
+     "Affected"
+    ],
+    [
+     "Workers"
+    ],
+    [
+     "Layoff"
+    ],
+    [
+     "Count"
+    ]
+   ],
+   [
+    [
+     "Layoff"
+    ],
+    [
+     "Type"
+    ],
+    [
+     "Affected"
+    ],
+    [
+     "Workers"
+    ],
+    [
+     "Layoff"
+    ],
+    [
+     "Count"
+    ]
+   ],
+   [
+    [
+     "WARN"
+    ],
+    [
+     "Received"
+    ],
+    [
+     "Affected"
+    ],
+    [
+     "Workers"
+    ],
+    [
+     "Layoff"
+    ],
+    [
+     "Count"
+    ]
+   ],
+   [
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Woody's Pet Food Deli Eagan Dining 7/25/2026 No Closing Small Layoff Services 1 Establishments",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "Northern Iron",
+     "St Paul",
+     "Manufacturing",
+     "10/1/2026",
+     "Yes",
+     "7/30/2026",
+     "Closing",
+     "Small Layoff Services",
+     "86",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Total Sum",
+     "9",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "131",
+     "9"
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ],
+   [
+    [
+     "Vestis Services Hibbing Admin & 8/15/2026 Yes 6/15/2026 Workforce Small Layoff Services 1 Support Reduction Services",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "El Mezcal Restaurant",
+     "Sauk Centre",
+     "Dining",
+     "5/31/2026",
+     "No",
+     "",
+     "Disaster",
+     "Temporary",
+     "1",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "Establishments",
+     "",
+     "",
+     "",
+     "",
+     "Layoff/Closure",
+     "",
+     ""
+    ],
+    [
+     "Minnesota Attorney General's St Paul Government 6/24/2026 No Workforce Small Layoff Services 17 Office Reduction",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Total Sum",
+     "16",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "200",
+     "16"
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ],
+   [
+    [
+     "WARN"
+    ],
+    [
+     "Received"
+    ],
+    [
+     "Affected"
+    ],
+    [
+     "Workers"
+    ],
+    [
+     "Layoff"
+    ],
+    [
+     "Count"
+    ]
+   ],
+   [
+    [
+     "WARN"
+    ],
+    [
+     "Received"
+    ],
+    [
+     "Affected"
+    ],
+    [
+     "Workers"
+    ],
+    [
+     "Layoff"
+    ],
+    [
+     "Count"
+    ]
+   ],
+   [
+    [
+     "WARN"
+    ],
+    [
+     "Received"
+    ],
+    [
+     "Affected"
+    ],
+    [
+     "Workers"
+    ],
+    [
+     "Layoff"
+    ],
+    [
+     "Count"
+    ]
+   ],
+   [
+    [
+     "WARN"
+    ],
+    [
+     "Received"
+    ],
+    [
+     "Layoff"
+    ],
+    [
+     "Type"
+    ],
+    [
+     "Affected"
+    ],
+    [
+     "Workers"
+    ]
+   ],
+   [
+    [
+     "WARN"
+    ],
+    [
+     "Act"
+    ],
+    [
+     "WARN"
+    ],
+    [
+     "Received"
+    ],
+    [
+     "Affected"
+    ],
+    [
+     "Workers"
+    ]
+   ],
+   [
+    [
+     "Century College Trio Programs",
+     "Mahtomedi",
+     "Education",
+     "10/9/2025",
+     "NO",
+     "",
+     "Workforce Reduction",
+     "Small Layoff Services",
+     "7"
+    ],
+    [
+     "KD Fine Jewlers",
+     "Rochester",
+     "Retail",
+     "12/31/2025",
+     "NO",
+     "",
+     "Closing",
+     "Small Layoff Services",
+     "3"
+    ],
+    [
+     "Starbucks",
+     "Seattle",
+     "Dining Establishments",
+     "9/26/2025",
+     "NO",
+     "",
+     "Closing",
+     "Small Layoff Services",
+     "65"
+    ],
+    [
+     "Taco JED",
+     "Rochester",
+     "Dining Establishments",
+     "10/18/2025",
+     "NO",
+     "",
+     "Closing",
+     "Small Layoff Services",
+     "1"
+    ],
+    [
+     "Milkweed",
+     "Minneapolis",
+     "Dining Establishments",
+     "10/5/2025",
+     "NO",
+     "",
+     "Closing",
+     "Small Layoff Services",
+     "1"
+    ],
+    [
+     "Count 34",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "882"
+    ]
+   ],
+   [
+    [
+     "Cygnus Home Service, LLC (dba Yelloh)",
+     "Nationwide",
+     "9/23/2024 11/22/2024",
+     "",
+     "1",
+     "Affected employee working remotely in North Dakota."
+    ],
+    [
+     "Vimo, dba GetInsured",
+     "Nationwide - Remote",
+     "12/20/2024 2/19/2025",
+     "",
+     "430",
+     "Affected employee working remotely in North Dakota."
+    ],
+    [
+     "Accelerate360 Distribution",
+     "Nationwide - Remote",
+     "4/25/2025 6/28/2025",
+     "",
+     "324",
+     "Dakota Remote Work Unit closure; 10 remote workers reside in North Dakota"
+    ],
+    [
+     "Hess Corporation",
+     "Minot, ND",
+     "7/21/2025beginning 9/26/2025",
+     "",
+     "111",
+     "Permanent layoffs"
+    ],
+    [
+     "Transdev Services, Inc.",
+     "Fargo, ND",
+     "10/21/2025 12/21/2025",
+     "",
+     "112",
+     "Closure due to contract termination."
+    ],
+    [
+     "Noridian Healthcare Solutions",
+     "Statewide",
+     "1/15/2026 1/28/2026",
+     "",
+     "47",
+     "Mass separation"
+    ]
+   ]
   ],
   "NC_pdfs": [
    [
@@ -597,7 +1712,7 @@
      "City",
      ""
     ],
-    30
+    31
    ],
    [
     "open",
@@ -671,7 +1786,7 @@
      "Employees Affected",
      "Industry"
     ],
-    20
+    21
    ]
   ],
   "MS_pdfs": [
@@ -765,7 +1880,7 @@
      "Date of Action",
      "Reason / Comments"
     ],
-    12
+    11
    ],
    [
     "warn-py2024-q4-warn-apr2025-jun2025.pdf",
@@ -834,13 +1949,6 @@
    [
     "https://labor.hawaii.gov/wdd/warn-notices/",
     0
-   ]
-  ],
-  "AR_discover": [
-   [
-    "https://dws.arkansas.gov/workforce-services/employers/dislocated-worker-services/",
-    0,
-    []
    ]
   ],
   "pdf_first_rows": [
@@ -1144,24 +2252,7 @@
      "Number Laid Off/Affected",
      "Notes"
     ],
-    53
-   ]
-  ],
-  "NH_pdfs": [
-   [
-    "mass-layoff.pdf",
-    "HTTPError: 403 Client Error: Forbidden for url: https://mm.nh.gov/files/uploads/nhes/documents/mass-layoff.pdf"
-   ]
-  ],
-  "WY_notes": [
-   [
-    "https://dws.wyo.gov/wp-json/wp/v2/posts?search=WARN&per_page=100",
-    200,
-    "application/json; charset=UTF-8"
-   ],
-   [
-    "https://dws.wyo.gov/category/public-notices/",
-    "HTTPError"
+    54
    ]
   ],
   "MA_discover": [
@@ -1173,6 +2264,28 @@
     "https://www.mass.gov/info-details/worker-adjustment-and-retraining-notification-act-warn-layoff-and-closure-updates",
     "HTTPError"
    ]
+  ],
+  "TX_sample": [
+   {
+    "notice_date": "2026-06-23T00:00:00.000",
+    "job_site_name": "JPMorgan Chase & Co.",
+    "county_name": "Collin",
+    "wda_name": "North Central Texas WDA",
+    "total_layoff_number": "244",
+    "layoff_date": "2026-08-21T00:00:00.000",
+    "wfdd_received_date": "2026-06-23T00:00:00.000",
+    "city_name": "Plano"
+   },
+   {
+    "notice_date": "2026-06-16T00:00:00.000",
+    "job_site_name": "KUEHNE + NAGEL (KN) 2026",
+    "county_name": "Denton",
+    "wda_name": "North Central Texas WDA",
+    "total_layoff_number": "90",
+    "layoff_date": "2026-06-29T00:00:00.000",
+    "wfdd_received_date": "2026-06-16T00:00:00.000",
+    "city_name": "Lewisville"
+   }
   ]
  }
 }
