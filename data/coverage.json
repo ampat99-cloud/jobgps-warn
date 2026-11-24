@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T01:02:02.861936+00:00",
+ "updated_at": "2026-11-24T21:02:41.480204+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
@@ -19,8 +19,8 @@
    "status": "not published: Arkansas keeps WARN notices confidential by law (A.C.A. 11-10-314)"
   },
   "AZ": {
-   "rows": 50,
-   "latest_notice": "2026-11-10",
+   "rows": 25,
+   "latest_notice": "2026-09-15",
    "status": "ok",
    "read_by": "cleaner"
   },
@@ -37,8 +37,8 @@
    "read_by": "direct reader"
   },
   "CT": {
-   "rows": 20,
-   "latest_notice": "2026-10-29",
+   "rows": 21,
+   "latest_notice": "2026-11-23",
    "status": "ok",
    "read_by": "cleaner"
   },
@@ -146,7 +146,7 @@
    "rows": 44,
    "latest_notice": "2026-11-23",
    "status": "ok",
-   "read_by": "direct reader"
+   "read_by": "kept from 2026-11-24 (state site did not answer today: no notices in the last 400 days)"
   },
   "MS": {
    "rows": 17,
@@ -250,7 +250,8 @@
    "rows": 63,
    "latest_notice": "2026-11-09",
    "status": "ok",
-   "read_by": "cleaner"
+   "error": "Traceback (most recent call last): | raise ConnectionError(err, request=request) | requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+   "read_by": "kept from 2026-11-24 (state site did not answer today: state site refuses automated reading today (403))"
   },
   "TX": {
    "rows": 109,
