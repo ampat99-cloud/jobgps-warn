@@ -424,9 +424,28 @@
    "sample": []
   },
   "TX": {
-   "ok": false,
-   "rows": 0,
-   "sample": []
+   "ok": true,
+   "rows": 2367,
+   "sample": [
+    {
+     "company": "JPMorgan Chase & Co.",
+     "notice_date": "2026-06-23",
+     "location": "Plano",
+     "jobs": 244
+    },
+    {
+     "company": "KUEHNE + NAGEL (KN) 2026",
+     "notice_date": "2026-06-16",
+     "location": "Lewisville",
+     "jobs": 90
+    },
+    {
+     "company": "Fortrex (John Soules Foods, Inc.)",
+     "notice_date": "2026-06-12",
+     "location": "Tyler",
+     "jobs": 85
+    }
+   ]
   }
  },
  "notes": {
@@ -574,15 +593,40 @@
     "{\"code\":\"rest_forbidden\",\"message\":\"You are not allowed to view this content.\",\"data\":{\"status\":403}}"
    ],
    "rest_rows": 0,
-   "datatables_error": "ValueError: no table settings on the page"
+   "datatables_rows": 0
   },
-  "GA_around": [
-   "www.tcsg.edu/wp-includes/js/dist/api-fetch.min.js\"></script>\n<script id=\"wp-api-fetch-js-after\">\nwp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( \"https://www.tcsg.edu/wp-json/\" ) );\nwp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( \"cd8d9e240b\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"b22e9be61d\",\"hash_nonce\":\"865565456f\",\"logout_nonce\":\"d64ea7246d\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<s",
-   "p.apiFetch.use( wp.apiFetch.createRootURLMiddleware( \"https://www.tcsg.edu/wp-json/\" ) );\nwp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( \"cd8d9e240b\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"b22e9be61d\",\"hash_nonce\":\"865565456f\",\"logout_nonce\":\"d64ea7246d\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/asset",
-   ") );\nwp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( \"cd8d9e240b\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"b22e9be61d\",\"hash_nonce\":\"865565456f\",\"logout_nonce\":\"d64ea7246d\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https",
-   "createNonceMiddleware( \"cd8d9e240b\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"b22e9be61d\",\"hash_nonce\":\"865565456f\",\"logout_nonce\":\"d64ea7246d\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https://www.tcsg.edu/wp-json/\" /><link rel=\"alternat",
-   "d9e240b\" );\nwp.apiFetch.use( wp.apiFetch.nonceMiddleware );\nwp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );\nwp.apiFetch.nonceEndpoint = \"https://www.tcsg.edu/wp-admin/admin-ajax.php?action=rest-nonce\";\n//# sourceURL=wp-api-fetch-js-after\n</script>\n<script id=\"passster-cookie-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"b22e9be61d\",\"hash_nonce\":\"865565456f\",\"logout_nonce\":\"d64ea7246d\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https://www.tcsg.edu/wp-json/\" /><link rel=\"alternate\" title=\"JSON\" type=\"appli",
-   "e-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/cookie.js\"></script>\n<script id=\"passster-public-js-extra\">\nvar ps_ajax = {\"ajax_url\":\"https://www.tcsg.edu/wp-admin/admin-ajax.php\",\"rest_url\":\"https://www.tcsg.edu/wp-json/\",\"nonce\":\"b22e9be61d\",\"hash_nonce\":\"865565456f\",\"logout_nonce\":\"d64ea7246d\",\"post_id\":\"77462\",\"shortcodes\":[],\"permalink\":\"https://www.tcsg.edu/warn-public-view/\",\"cookie_duration_unit\":\"days\",\"cookie_duration\":\"1\",\"disable_cookie\":\"\",\"unlock_mode\":\"\"};\n//# sourceURL=passster-public-js-extra\n</script>\n<script id=\"passster-public-js\" src=\"https://www.tcsg.edu/wp-content/plugins/content-protector/assets/public/passster-public.min.js\"></script>\n<link rel=\"https://api.w.org/\" href=\"https://www.tcsg.edu/wp-json/\" /><link rel=\"alternate\" title=\"JSON\" type=\"application/json\" href=\"https://www.tcsg.edu/wp-json/wp/v2/pages/77462\" /><link rel=\"EditURI\" type=\"application/rsd+xml\" title=\"RSD\" href=\"https://www.tcsg.edu/xmlrpc.php?rsd\" />\n<link rel=\"canonical\" href=\"https://www.tcsg.edu/warn-public-view/\" />\n<link rel='shortlink' href='https:/"
+  "GA_cfg": {
+   "keys": [
+    "processing",
+    "deferRender",
+    "serverSide",
+    "retrieve",
+    "stateSave",
+    "stateDuration",
+    "lengthMenu",
+    "language",
+    "canSeeDiagnostics",
+    "gvExportError",
+    "ajax",
+    "stateKey",
+    "pageLength",
+    "primaryFormId",
+    "columns",
+    "columnDefs",
+    "order",
+    "inlineEditRefresh",
+    "searching"
+   ],
+   "ajax": {
+    "url": "https://www.tcsg.edu/wp-admin/admin-ajax.php",
+    "type": "POST",
+    "data": "{'action': 'gv_datatables_data', 'view_id': 77460, 'post_id': 77462, 'embed': '523d5378892e', 'nonce': '38e28661ab', 'getData': False, 'hideUntilSearched': '0', 'setUrlOnSearch': True, 'noEntriesOption': 0, 'redirectURL': '', 'configHash': '23272366cf1b', 'shortcode_atts': {'id': 77460, 'class': '',"
+   },
+   "columns": "[{'name': 'gv_96', 'sortName': '96', 'width': None, 'form_id': '57', 'className': '', 'type': 'string', 'field_type': 'uid'}, {'name': 'gv_4', 'sortName': '4', 'width': None, 'form_id': '57', 'className': '', 'type': 'string', 'field_type': 'text'}, {'name': 'gv_date_created', 'sortName': 'date_created', 'width': None, 'form_id': '57', 'className': '', 'type': 'num', 'field_type': 'date'}, {'name'"
+  },
+  "GA_response_head": [
+   200,
+   "{\"draw\":1,\"recordsTotal\":0,\"recordsFiltered\":0,\"data\":[],\"error\":\"This table could not load. Please try again.\",\"gv_error\":{\"code\":\"stale_config\",\"correlation_id\":\"0282621a-2f48-42ff-9fcd-782e00f5a11f\"}}"
   ],
   "pdf_last_rows": [
    [

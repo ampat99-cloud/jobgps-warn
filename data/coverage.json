@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T00:28:58.476009+00:00",
+ "updated_at": "2026-11-24T00:48:56.943882+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
@@ -19,8 +19,8 @@
    "status": "not published: Arkansas keeps WARN notices confidential by law (A.C.A. 11-10-314)"
   },
   "AZ": {
-   "rows": 52,
-   "latest_notice": "2026-11-18",
+   "rows": 50,
+   "latest_notice": "2026-11-10",
    "status": "ok",
    "read_by": "cleaner"
   },
@@ -166,8 +166,9 @@
    "read_by": "direct reader"
   },
   "ND": {
-   "rows": 0,
-   "status": "no notices in the last 400 days",
+   "rows": 2,
+   "latest_notice": "2026-01-15",
+   "status": "ok",
    "read_by": "direct reader"
   },
   "NE": {
@@ -252,11 +253,10 @@
    "read_by": "kept from 2026-11-23 (state site did not answer today: state site refuses automated reading today (403))"
   },
   "TX": {
-   "rows": 156,
-   "latest_notice": "2026-11-17",
+   "rows": 109,
+   "latest_notice": "2026-06-23",
    "status": "ok",
-   "error": "Traceback (most recent call last): | raise Exception(\"Scraper isn't scraping.\") | Exception: Scraper isn't scraping.",
-   "read_by": "kept from 2026-11-21 (state site did not answer today: no data from the state site)"
+   "read_by": "direct reader"
   },
   "UT": {
    "rows": 20,
