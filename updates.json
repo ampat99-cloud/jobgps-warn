@@ -1,6 +1,12 @@
 {
  "items": [
   {
+   "id": "2026-11-23-v2.10.22",
+   "date": "23 Nov 2026",
+   "title": "JobGPS 2.10.22",
+   "body": "Layoff notices are now checked in 47 states plus Washington DC: every state that publishes a WARN list. Georgia, North Dakota, Massachusetts and Nevada were added, and Texas is read again after the state changed its data format. Arkansas, New Hampshire and Wyoming do not publish a list."
+  },
+  {
    "id": "2026-11-21-v2.10.21",
    "date": "21 Nov 2026",
    "title": "JobGPS 2.10.21",
