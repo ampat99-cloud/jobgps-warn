@@ -1,6 +1,12 @@
 {
  "items": [
   {
+   "id": "2026-11-25-v2.10.25",
+   "date": "25 Nov 2026",
+   "title": "JobGPS 2.10.25",
+   "body": "Easy Apply jobs and employer-page checks: after you allow a site, JobGPS now checks the job again by itself (Chrome’s permission window could close the panel before), and every permission note shows the three steps with its own Scan again button."
+  },
+  {
    "id": "2026-11-25-v2.10.24",
    "date": "25 Nov 2026",
    "title": "JobGPS 2.10.24",
