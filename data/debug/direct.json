@@ -313,9 +313,28 @@
    ]
   },
   "MO": {
-   "ok": false,
-   "rows": 0,
-   "sample": []
+   "ok": true,
+   "rows": 88,
+   "sample": [
+    {
+     "company": "TelaForce, LLC",
+     "notice_date": "01/19/2026",
+     "location": "Kansas City",
+     "jobs": 104
+    },
+    {
+     "company": "Greenbrier Manufacturing",
+     "notice_date": "01/22/2026",
+     "location": "Kennett",
+     "jobs": 94
+    },
+    {
+     "company": "National Aviation Services (NAS)",
+     "notice_date": "01/31/2026",
+     "location": "St. Louis (city)",
+     "jobs": 48
+    }
+   ]
   },
   "WV": {
    "ok": true,
@@ -578,7 +597,7 @@
   },
   "GA_v2": {
    "status": 200,
-   "len": 159523,
+   "len": 159524,
    "ids_in_html": 0,
    "tr": 2,
    "gvDT": "99999 */ }\n\t\t\t.admin-bar .fancybox__container { margin-top: 32px; }\n/*# sourceURL=gravityview-fancybox-init-inline-css */\n</style>\n\t\t<script type=\"text/javascript\">\n\t\t\t(function() {\n\t\t\t\tif ( ! window.gvDTglobals ) {\n\t\t\t\t\twindow.gvDTglobals = [];\n\t\t\t\t}\n\n\t\t\t\tconst config = {\"processing\":true,\"deferRender\":true,\"serverSide\":true,\"retrieve\":true,\"stateSave\":true,\"stateDuration\":-1,\"lengthMenu\":[[10,25,50,-1],[10,25,50,\"All\"]],\"language\":{\"processing\":\"Loading data&hellip;\",\"zeroRecords\":\"No entries match your request.\",\"emptyTable\":\"This search returned no results.\",\"emptyServerResponse\":\"The server returned an empty response. Check the server logs for more details.\",\"loadError\":\"This table could not load. Please try again.\",\"retry\":\"Retry\",\"errorDetails\":\"Error details (visible to admins only",
@@ -620,7 +639,7 @@
    "ajax": {
     "url": "https://www.tcsg.edu/wp-admin/admin-ajax.php",
     "type": "POST",
-    "data": "{'action': 'gv_datatables_data', 'view_id': 77460, 'post_id': 77462, 'embed': '523d5378892e', 'nonce': 'a08ef989e1', 'getData': False, 'hideUntilSearched': '0', 'setUrlOnSearch': True, 'noEntriesOption': 0, 'redirectURL': '', 'configHash': '23272366cf1b', 'shortcode_atts': {'id': 77460, 'class': '',"
+    "data": "{'action': 'gv_datatables_data', 'view_id': 77460, 'post_id': 77462, 'embed': '523d5378892e', 'nonce': '6299688aea', 'getData': False, 'hideUntilSearched': '0', 'setUrlOnSearch': True, 'noEntriesOption': 0, 'redirectURL': '', 'configHash': '23272366cf1b', 'shortcode_atts': {'id': 77460, 'class': '',"
    },
    "columns": "[{'name': 'gv_96', 'sortName': '96', 'width': None, 'form_id': '57', 'className': '', 'type': 'string', 'field_type': 'uid'}, {'name': 'gv_4', 'sortName': '4', 'width': None, 'form_id': '57', 'className': '', 'type': 'string', 'field_type': 'text'}, {'name': 'gv_date_created', 'sortName': 'date_created', 'width': None, 'form_id': '57', 'className': '', 'type': 'num', 'field_type': 'date'}, {'name'"
   },
