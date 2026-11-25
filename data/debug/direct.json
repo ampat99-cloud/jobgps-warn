@@ -155,16 +155,16 @@
      "jobs": 136
     },
     {
-     "company": "Detroit Chassis, LLC",
-     "notice_date": "2026-11-04",
-     "location": "6501 Lynch Road, Detroit, MI 48234",
-     "jobs": 175
-    },
-    {
      "company": "Family Endeavors, Inc.",
      "notice_date": "2026-11-04",
      "location": "Remote",
      "jobs": 8
+    },
+    {
+     "company": "Northpointe Bank",
+     "notice_date": "2026-11-04",
+     "location": "Clinton, Kent",
+     "jobs": 338
     }
    ]
   },
@@ -2345,6 +2345,13 @@
     "HTTPError"
    ]
   ],
+  "TX_twc": {
+   "rows": 0,
+   "errors": [
+    "2026: BadZipFile: File is not a zip file",
+    "2025: BadZipFile: File is not a zip file"
+   ]
+  },
   "TX_sample": [
    {
     "notice_date": "2026-06-23T00:00:00.000",
