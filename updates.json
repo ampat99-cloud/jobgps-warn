@@ -1,6 +1,12 @@
 {
  "items": [
   {
+   "id": "2026-11-25-v2.10.24",
+   "date": "25 Nov 2026",
+   "title": "JobGPS 2.10.24",
+   "body": "Reads UKG job links on UKG’s Canadian site, reads Rippling job pages again after Rippling changed how they load (open jobs were being reported as closed), and Easy Apply jobs now also look for the company’s BambooHR job board."
+  },
+  {
    "id": "2026-11-25-v2.10.23",
    "date": "25 Nov 2026",
    "title": "JobGPS 2.10.23",
