@@ -552,8 +552,39 @@ def read_mn():
 
 
 def read_tx():
-    """Texas Workforce Commission WARN data on data.texas.gov (the same source the extension reads). Field names are
-    lower case since Nov 2026 (job_site_name, notice_date, city_name, total_layoff_number); upper case is still accepted."""
+    """Texas: TWC's own yearly Excel lists first (updated every few days); the data.texas.gov copy stopped at 23 Jun 2026
+    and is only the fallback (25 Nov 2026)."""
+    out, errs = [], []
+    for y in YEARS:
+        try:
+            from openpyxl import load_workbook
+            wb = load_workbook(io.BytesIO(get(f"https://www.twc.texas.gov/sites/default/files/oei/docs/warn-act-listings-{y}-twc.xlsx").content), read_only=True, data_only=True)
+            grid = [list(r) for r in wb.worksheets[0].iter_rows(values_only=True)]
+            hi = next(i for i, r in enumerate(grid) if any(str(c or "").strip().upper() == "JOB_SITE_NAME" for c in r))
+            h = [str(c or "").strip().upper() for c in grid[hi]]
+            ci, di, li, ji = h.index("JOB_SITE_NAME"), h.index("NOTICE_DATE"), h.index("CITY_NAME"), h.index("TOTAL_LAYOFF_NUMBER")
+            for r in grid[hi + 1:]:
+                if not r[ci]:
+                    continue
+                d = r[di]
+                d = d.strftime("%Y-%m-%d") if hasattr(d, "strftime") else (excel_date(d) if isinstance(d, (int, float)) else str(d or "")[:10])
+                co = re.sub(r"\s*\((?:updated|amended)[^)]*\)\s*$", "", clean(r[ci]), flags=re.I)
+                out.append({"company": co, "notice_date": d, "location": clean(r[li]), "jobs": num(r[ji])})
+        except Exception as e:
+            errs.append(f"{y}: {type(e).__name__}: {e}"[:160])
+    DEBUG["TX_twc"] = {"rows": len(out), "errors": errs}
+    if out:
+        return out
+    return read_tx_api()
+
+
+def excel_date(n):
+    return (datetime.date(1899, 12, 30) + datetime.timedelta(days=int(n))).isoformat()
+
+
+def read_tx_api():
+    """Texas Workforce Commission WARN data on data.texas.gov. Field names are lower case since Nov 2026
+    (job_site_name, notice_date, city_name, total_layoff_number); upper case is still accepted."""
     r = get("https://data.texas.gov/resource/8w53-c4f6.json?$limit=5000&$order=notice_date%20DESC")
     data = r.json()
     DEBUG["TX_sample"] = data[:2] if isinstance(data, list) else str(data)[:300]
