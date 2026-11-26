@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T20:56:51.871260+00:00",
+ "updated_at": "2026-11-26T20:01:45.847619+00:00",
  "keep_days": 400,
  "states": {
   "AK": {
@@ -19,13 +19,13 @@
    "status": "not published: Arkansas keeps WARN notices confidential by law (A.C.A. 11-10-314)"
   },
   "AZ": {
-   "rows": 50,
-   "latest_notice": "2026-11-16",
+   "rows": 25,
+   "latest_notice": "2026-09-15",
    "status": "ok",
    "read_by": "cleaner"
   },
   "CA": {
-   "rows": 1687,
+   "rows": 1683,
    "latest_notice": "2026-11-18",
    "status": "ok",
    "read_by": "cleaner"
@@ -37,7 +37,7 @@
    "read_by": "direct reader"
   },
   "CT": {
-   "rows": 21,
+   "rows": 20,
    "latest_notice": "2026-11-23",
    "status": "ok",
    "read_by": "cleaner"
@@ -55,7 +55,7 @@
    "read_by": "cleaner"
   },
   "FL": {
-   "rows": 258,
+   "rows": 257,
    "latest_notice": "2026-11-20",
    "status": "ok",
    "read_by": "direct reader"
@@ -131,7 +131,7 @@
    "read_by": "cleaner"
   },
   "MI": {
-   "rows": 71,
+   "rows": 70,
    "latest_notice": "2026-11-20",
    "status": "ok",
    "read_by": "direct reader"
@@ -167,7 +167,7 @@
    "read_by": "direct reader"
   },
   "ND": {
-   "rows": 2,
+   "rows": 1,
    "latest_notice": "2026-01-15",
    "status": "ok",
    "read_by": "direct reader"
@@ -202,7 +202,7 @@
    "rows": 207,
    "latest_notice": "2026-11-04",
    "status": "ok",
-   "error": "2026-11-25 20:51:43,053 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError",
+   "error": "2026-11-26 19:56:00,009 - retry.api - AssertionError:  in warn.utils.get_url, retrying in 30 seconds... | Traceback (most recent call last): | AssertionError",
    "read_by": "kept from 2026-11-24 (state site did not answer today: no data from the state site)"
   },
   "OH": {
@@ -251,7 +251,8 @@
    "rows": 63,
    "latest_notice": "2026-11-09",
    "status": "ok",
-   "read_by": "cleaner"
+   "error": "Traceback (most recent call last): | raise ConnectionError(err, request=request) | requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+   "read_by": "kept from 2026-11-25 (state site did not answer today: state site refuses automated reading today (403))"
   },
   "TX": {
    "rows": 109,

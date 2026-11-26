@@ -155,16 +155,16 @@
      "jobs": 136
     },
     {
-     "company": "Family Endeavors, Inc.",
+     "company": "Detroit Chassis, LLC",
      "notice_date": "2026-11-04",
-     "location": "Remote",
-     "jobs": 8
+     "location": "6501 Lynch Road, Detroit, MI 48234",
+     "jobs": 175
     },
     {
-     "company": "Northpointe Bank",
+     "company": "ADAC Automotive",
      "notice_date": "2026-11-04",
-     "location": "Clinton, Kent",
-     "jobs": 338
+     "location": "6138 Riverside Drive, Saranac, MI 48881",
+     "jobs": 98
     }
    ]
   },
@@ -639,7 +639,7 @@
    "ajax": {
     "url": "https://www.tcsg.edu/wp-admin/admin-ajax.php",
     "type": "POST",
-    "data": "{'action': 'gv_datatables_data', 'view_id': 77460, 'post_id': 77462, 'embed': '523d5378892e', 'nonce': '6299688aea', 'getData': False, 'hideUntilSearched': '0', 'setUrlOnSearch': True, 'noEntriesOption': 0, 'redirectURL': '', 'configHash': '23272366cf1b', 'shortcode_atts': {'id': 77460, 'class': '',"
+    "data": "{'action': 'gv_datatables_data', 'view_id': 77460, 'post_id': 77462, 'embed': '523d5378892e', 'nonce': '4832939f66', 'getData': False, 'hideUntilSearched': '0', 'setUrlOnSearch': True, 'noEntriesOption': 0, 'redirectURL': '', 'configHash': '23272366cf1b', 'shortcode_atts': {'id': 77460, 'class': '',"
    },
    "columns": "[{'name': 'gv_96', 'sortName': '96', 'width': None, 'form_id': '57', 'className': '', 'type': 'string', 'field_type': 'uid'}, {'name': 'gv_4', 'sortName': '4', 'width': None, 'form_id': '57', 'className': '', 'type': 'string', 'field_type': 'text'}, {'name': 'gv_date_created', 'sortName': 'date_created', 'width': None, 'form_id': '57', 'className': '', 'type': 'num', 'field_type': 'date'}, {'name'"
   },
