@@ -1,6 +1,12 @@
 {
  "items": [
   {
+   "id": "2026-11-25-v2.10.26",
+   "date": "25 Nov 2026",
+   "title": "JobGPS 2.10.26",
+   "body": "Easy Apply jobs: JobGPS now finds the employer’s real website on the company’s LinkedIn About page (once per company) instead of guessing it from the name, so it can look for the role on the company’s own career site and check how old the website is. Also fixes scans that could fail silently when the extension’s local storage filled up."
+  },
+  {
    "id": "2026-11-25-v2.10.25",
    "date": "25 Nov 2026",
    "title": "JobGPS 2.10.25",
