@@ -386,7 +386,7 @@
   },
   "MN": {
    "ok": true,
-   "rows": 82,
+   "rows": 71,
    "sample": [
     {
      "company": "Newport Academy",
@@ -639,7 +639,7 @@
    "ajax": {
     "url": "https://www.tcsg.edu/wp-admin/admin-ajax.php",
     "type": "POST",
-    "data": "{'action': 'gv_datatables_data', 'view_id': 77460, 'post_id': 77462, 'embed': '523d5378892e', 'nonce': '4832939f66', 'getData': False, 'hideUntilSearched': '0', 'setUrlOnSearch': True, 'noEntriesOption': 0, 'redirectURL': '', 'configHash': '23272366cf1b', 'shortcode_atts': {'id': 77460, 'class': '',"
+    "data": "{'action': 'gv_datatables_data', 'view_id': 77460, 'post_id': 77462, 'embed': '523d5378892e', 'nonce': 'ce2ec0d107', 'getData': False, 'hideUntilSearched': '0', 'setUrlOnSearch': True, 'noEntriesOption': 0, 'redirectURL': '', 'configHash': '23272366cf1b', 'shortcode_atts': {'id': 77460, 'class': '',"
    },
    "columns": "[{'name': 'gv_96', 'sortName': '96', 'width': None, 'form_id': '57', 'className': '', 'type': 'string', 'field_type': 'uid'}, {'name': 'gv_4', 'sortName': '4', 'width': None, 'form_id': '57', 'className': '', 'type': 'string', 'field_type': 'text'}, {'name': 'gv_date_created', 'sortName': 'date_created', 'width': None, 'form_id': '57', 'className': '', 'type': 'num', 'field_type': 'date'}, {'name'"
   },
@@ -1583,46 +1583,6 @@
      "Received"
     ],
     [
-     "Affected"
-    ],
-    [
-     "Workers"
-    ],
-    [
-     "Layoff"
-    ],
-    [
-     "Count"
-    ]
-   ],
-   [
-    [
-     "WARN"
-    ],
-    [
-     "Received"
-    ],
-    [
-     "Affected"
-    ],
-    [
-     "Workers"
-    ],
-    [
-     "Layoff"
-    ],
-    [
-     "Count"
-    ]
-   ],
-   [
-    [
-     "WARN"
-    ],
-    [
-     "Received"
-    ],
-    [
      "Layoff"
     ],
     [
@@ -2212,41 +2172,11 @@
    ],
    [
     "plant-closing-mass-layoff-warn-2026-may_tcm1045-752571.pdf",
-    [
-     "RR Start Date",
-     "Layoff Name",
-     "City",
-     "",
-     "",
-     "Industry",
-     "",
-     "",
-     "Layoff Start",
-     "WARN Act",
-     "WARN Received",
-     "Layoff Type",
-     "Layoff Status",
-     "Affected Workers",
-     "Layoff Count"
-    ],
-    6
+    "HTTPError: 502 Server Error: Bad Gateway for url: https://mn.gov/deed/assets/plant-closing-mass-layoff-warn-2026-may_tcm1045-752571.pdf"
    ],
    [
     "plant-closing-mass-layoff-warn-2026-april_tcm1045-749441.pdf",
-    [
-     "RR Start Date",
-     "Layoff Name",
-     "City",
-     "Industry",
-     "Layoff Start",
-     "WARN Act",
-     "WARN Received",
-     "Layoff Type",
-     "Layoff Status",
-     "Affected Workers",
-     "Layoff Count"
-    ],
-    5
+    "HTTPError: 502 Server Error: Bad Gateway for url: https://mn.gov/deed/assets/plant-closing-mass-layoff-warn-2026-april_tcm1045-749441.pdf"
    ],
    [
     "plant-closing-mass-layoff-warn-2026-march_tcm1045-742363.pdf",
